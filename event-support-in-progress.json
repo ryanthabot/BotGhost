@@ -1,0 +1,1718 @@
+[
+ {
+  "id": "root",
+  "type": "root",
+  "data": {
+   "event": true,
+   "enabled": true,
+   "data": {
+    "name": "Support In Progress",
+    "type": "messageCreate",
+    "validated": true
+   }
+  },
+  "draggable": false,
+  "position": {
+   "x": 1363,
+   "y": 0
+  },
+  "width": 600,
+  "height": 133
+ },
+ {
+  "id": "error_handler",
+  "type": "error",
+  "position": {
+   "x": 911,
+   "y": 0
+  },
+  "draggable": false,
+  "data": {
+   "node_options": {
+    "title": "Error Handler",
+    "description": "Handle errors that occur during the event execution"
+   },
+   "data": {}
+  },
+  "width": 332,
+  "height": 127
+ },
+ {
+  "id": "$else_4_da44_1b00",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 1335,
+   "y": 464
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_4_a9e9_c395",
+  "target": "$else_4_da44_1b00",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_4_a9e9_c395-$else_4_da44_1b00"
+ },
+ {
+  "id": "condition_4_a9e9_c395",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{event_message_channel_type}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 1489,
+   "y": 243
+  },
+  "width": 348,
+  "height": 111
+ },
+ {
+  "source": "root",
+  "sourceHandle": "action",
+  "target": "condition_4_a9e9_c395",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-rootaction-condition_4_a9e9_c395action"
+ },
+ {
+  "id": "conChild8_e6a3",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "GUILD_PUBLIC_THREAD",
+    "nodeID": "conChild8_e6a3"
+   }
+  },
+  "position": {
+   "x": 1675,
+   "y": 464
+  },
+  "width": 371,
+  "height": 93
+ },
+ {
+  "source": "condition_4_a9e9_c395",
+  "target": "conChild8_e6a3",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_4_a9e9_c395-conChild8_e6a3"
+ },
+ {
+  "id": "action_9_cde4_2446",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send an API Request",
+    "description": "Send a HTTP request to an external API"
+   },
+   "data": {
+    "type": "api_action",
+    "ephemeral": false,
+    "name": "getparent",
+    "request_options": {
+     "method": "GET",
+     "url": "https://discord.com/api/v10/channels/{event_message_channel_id}",
+     "params": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "headers": [
+      {
+       "key": "Authorization",
+       "value": "Bot {TOKEN_SECRET}"
+      }
+     ],
+     "body": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "options": {
+      "excludeEmptyFields": true,
+      "replaceParams": true,
+      "replaceURL": true,
+      "replaceHeaders": true,
+      "replaceBody": true
+     }
+    },
+    "linked": true,
+    "nodeID": "action_9_cde4_2446"
+   }
+  },
+  "position": {
+   "x": 1577,
+   "y": 667
+  },
+  "width": 567,
+  "height": 111
+ },
+ {
+  "source": "conChild8_e6a3",
+  "sourceHandle": "action",
+  "target": "action_9_cde4_2446",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild8_e6a3action-action_9_cde4_2446action"
+ },
+ {
+  "id": "$else_12_4239_7eef",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 1795,
+   "y": 1957
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_12_75b0_2398",
+  "target": "$else_12_4239_7eef",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_12_75b0_2398-$else_12_4239_7eef"
+ },
+ {
+  "id": "condition_12_75b0_2398",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{getparent.response.parent_id}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true,
+    "nodeID": "condition_12_75b0_2398"
+   }
+  },
+  "position": {
+   "x": 2257,
+   "y": 1736
+  },
+  "width": 347,
+  "height": 111
+ },
+ {
+  "id": "$else_18_c7f4_361b",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 0,
+   "y": 1109
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_18_4b34_fc95",
+  "target": "$else_18_c7f4_361b",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_18_4b34_fc95-$else_18_c7f4_361b"
+ },
+ {
+  "id": "condition_18_4b34_fc95",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{getparent.response.applied_tags.0}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true,
+    "nodeID": "condition_18_4b34_fc95"
+   }
+  },
+  "position": {
+   "x": 1670,
+   "y": 888
+  },
+  "width": 381,
+  "height": 111
+ },
+ {
+  "id": "$else_23_87cf_b2aa",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 1897,
+   "y": 1533
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_23_f7d2_883a",
+  "target": "$else_23_87cf_b2aa",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_23_f7d2_883a-$else_23_87cf_b2aa"
+ },
+ {
+  "id": "condition_23_f7d2_883a",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{hasRole({BGVAR_support_roles})}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true,
+    "nodeID": "condition_23_f7d2_883a"
+   }
+  },
+  "position": {
+   "x": 2047,
+   "y": 1312
+  },
+  "width": 363,
+  "height": 111
+ },
+ {
+  "id": "conChild28_497e",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "true",
+    "nodeID": "conChild28_497e",
+    "ignoreCase": true
+   }
+  },
+  "position": {
+   "x": 2237,
+   "y": 1533
+  },
+  "width": 386,
+  "height": 93
+ },
+ {
+  "source": "condition_23_f7d2_883a",
+  "target": "conChild28_497e",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_23_f7d2_883a-conChild28_497e"
+ },
+ {
+  "id": "conChild31_5bd9",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "{BGVAR_support.category_staff_forum_admin}",
+    "ignoreCase": true
+   }
+  },
+  "position": {
+   "x": 2135,
+   "y": 1957
+  },
+  "width": 470,
+  "height": 93
+ },
+ {
+  "source": "condition_12_75b0_2398",
+  "target": "conChild31_5bd9",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_12_75b0_2398-conChild31_5bd9"
+ },
+ {
+  "id": "conChild35_f8b2",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "{BGVAR_support.category_support_forum_private}",
+    "ignoreCase": true
+   }
+  },
+  "position": {
+   "x": 2685,
+   "y": 1957
+  },
+  "width": 501,
+  "height": 93
+ },
+ {
+  "source": "condition_12_75b0_2398",
+  "target": "conChild35_f8b2",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_12_75b0_2398-conChild35_f8b2"
+ },
+ {
+  "id": "conChild39_24ba",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "{BGVAR_support.category_staff_forum_admin_tag_pending}",
+    "ignoreCase": true
+   }
+  },
+  "position": {
+   "x": 340,
+   "y": 1109
+  },
+  "width": 579,
+  "height": 93
+ },
+ {
+  "source": "condition_18_4b34_fc95",
+  "target": "conChild39_24ba",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_18_4b34_fc95-conChild39_24ba"
+ },
+ {
+  "id": "conChild41_a674",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "{BGVAR_support.category_staff_forum_admin_tag_inactive}",
+    "ignoreCase": true
+   }
+  },
+  "position": {
+   "x": 1940,
+   "y": 1109
+  },
+  "width": 577,
+  "height": 93
+ },
+ {
+  "source": "condition_18_4b34_fc95",
+  "target": "conChild41_a674",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_18_4b34_fc95-conChild41_a674"
+ },
+ {
+  "id": "conChild47_5974",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "{BGVAR_support.category_support_forum_private_tag_pending}",
+    "ignoreCase": true
+   }
+  },
+  "position": {
+   "x": 2597,
+   "y": 1109
+  },
+  "width": 610,
+  "height": 93
+ },
+ {
+  "source": "condition_18_4b34_fc95",
+  "target": "conChild47_5974",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_18_4b34_fc95-conChild47_5974"
+ },
+ {
+  "id": "conChild49_662f",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "{BGVAR_support.category_support_forum_private_tag_inactive}",
+    "ignoreCase": true
+   }
+  },
+  "position": {
+   "x": 3287,
+   "y": 1109
+  },
+  "width": 607,
+  "height": 93
+ },
+ {
+  "source": "condition_18_4b34_fc95",
+  "target": "conChild49_662f",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_18_4b34_fc95-conChild49_662f"
+ },
+ {
+  "source": "conChild41_a674",
+  "sourceHandle": "action",
+  "target": "condition_23_f7d2_883a",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild41_a674action-condition_23_f7d2_883aaction"
+ },
+ {
+  "source": "conChild49_662f",
+  "sourceHandle": "action",
+  "target": "condition_23_f7d2_883a",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild49_662faction-condition_23_f7d2_883aaction"
+ },
+ {
+  "source": "action_9_cde4_2446",
+  "sourceHandle": "action",
+  "target": "condition_18_4b34_fc95",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_9_cde4_2446action-condition_18_4b34_fc95action"
+ },
+ {
+  "source": "conChild28_497e",
+  "sourceHandle": "action",
+  "target": "condition_12_75b0_2398",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild28_497eaction-condition_12_75b0_2398action"
+ },
+ {
+  "id": "action_1718796068763",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send an API Request",
+    "description": "Send a HTTP request to an external API"
+   },
+   "data": {
+    "type": "api_action",
+    "ephemeral": false,
+    "name": "tag12",
+    "request_options": {
+     "method": "PATCH",
+     "url": "https://discord.com/api/v10/channels/{event_message_channel_id}",
+     "params": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "headers": [
+      {
+       "key": "Authorization",
+       "value": "Bot {TOKEN_SECRET}"
+      }
+     ],
+     "body": [
+      {
+       "key": "applied_tags",
+       "value": "[\"{BGVAR_support.category_staff_forum_admin_tag_inprogress}\"]"
+      }
+     ],
+     "options": {
+      "excludeEmptyFields": true,
+      "replaceParams": true,
+      "replaceURL": true,
+      "replaceHeaders": true,
+      "replaceBody": true
+     }
+    },
+    "linked": true,
+    "nodeID": "action_29_8a5f_7e49",
+    "command_label": "Send an API Request"
+   }
+  },
+  "position": {
+   "x": 2129,
+   "y": 2160
+  },
+  "width": 482,
+  "height": 111
+ },
+ {
+  "source": "conChild31_5bd9",
+  "sourceHandle": "action",
+  "target": "action_1718796068763",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild31_5bd9action-action_1718796068763action"
+ },
+ {
+  "id": "action_1718796073358",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send an API Request",
+    "description": "Send a HTTP request to an external API"
+   },
+   "data": {
+    "type": "api_action",
+    "ephemeral": false,
+    "name": "tag32",
+    "request_options": {
+     "method": "PATCH",
+     "url": "https://discord.com/api/v10/channels/{event_message_channel_id}",
+     "params": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "headers": [
+      {
+       "key": "Authorization",
+       "value": "Bot {TOKEN_SECRET}"
+      }
+     ],
+     "body": [
+      {
+       "key": "applied_tags",
+       "value": "[\"{BGVAR_support.category_support_forum_private_tag_inprogress}\"]"
+      }
+     ],
+     "options": {
+      "excludeEmptyFields": true,
+      "replaceParams": true,
+      "replaceURL": true,
+      "replaceHeaders": true,
+      "replaceBody": true
+     }
+    },
+    "linked": true,
+    "nodeID": "action_29_8a5f_7e49",
+    "command_label": "Send an API Request"
+   }
+  },
+  "position": {
+   "x": 2694,
+   "y": 2160
+  },
+  "width": 482,
+  "height": 111
+ },
+ {
+  "source": "conChild35_f8b2",
+  "sourceHandle": "action",
+  "target": "action_1718796073358",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild35_f8b2action-action_1718796073358action"
+ },
+ {
+  "id": "action_1718796331409",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send an API Request",
+    "description": "Send a HTTP request to an external API"
+   },
+   "data": {
+    "type": "api_action",
+    "ephemeral": false,
+    "name": "tag13",
+    "request_options": {
+     "method": "PATCH",
+     "url": "https://discord.com/api/v10/channels/{BGVAR_psr_admin}",
+     "params": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "headers": [
+      {
+       "key": "Authorization",
+       "value": "Bot {TOKEN_SECRET}"
+      }
+     ],
+     "body": [
+      {
+       "key": "name",
+       "value": "{BGVAR_support.category_support_forum_private_user_tag_inprogress}{BGVAR_popen_ticketu_name[{BGVAR_psr_admin[{event_message_channel_id}]}]}"
+      }
+     ],
+     "options": {
+      "excludeEmptyFields": true,
+      "replaceParams": true,
+      "replaceURL": true,
+      "replaceHeaders": true,
+      "replaceBody": true
+     }
+    },
+    "linked": true,
+    "nodeID": "action_29_8a5f_7e49",
+    "command_label": "Send an API Request",
+    "validated": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 2129,
+   "y": 2381
+  },
+  "width": 482,
+  "height": 111
+ },
+ {
+  "source": "action_1718796068763",
+  "sourceHandle": "action",
+  "target": "action_1718796331409",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1718796068763action-action_1718796331409action"
+ },
+ {
+  "id": "else_1719232823745_8013_d45e",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 68,
+   "y": 1957
+  },
+  "width": 260,
+  "height": 93,
+  "oldId": "$else_12_4239_7eef"
+ },
+ {
+  "id": "condition_1719232823745_1843_9f4a",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{getparent.response.parent_id}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true,
+    "nodeID": "condition_12_75b0_2398"
+   }
+  },
+  "position": {
+   "x": 658,
+   "y": 1736
+  },
+  "width": 347,
+  "height": 111,
+  "oldId": "condition_12_75b0_2398"
+ },
+ {
+  "id": "else_1719232823745_6101_38e5",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 298,
+   "y": 1533
+  },
+  "width": 260,
+  "height": 93,
+  "oldId": "$else_23_87cf_b2aa"
+ },
+ {
+  "id": "condition_1719232823745_7ca9_96a9",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{hasRole({BGVAR_support_roles})}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true,
+    "nodeID": "condition_23_f7d2_883a"
+   }
+  },
+  "position": {
+   "x": 448,
+   "y": 1312
+  },
+  "width": 363,
+  "height": 111,
+  "oldId": "condition_23_f7d2_883a"
+ },
+ {
+  "id": "conChild_1719232823745_339b_87bd",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "true",
+    "nodeID": "conChild28_497e",
+    "ignoreCase": true
+   }
+  },
+  "position": {
+   "x": 638,
+   "y": 1533
+  },
+  "width": 386,
+  "height": 93,
+  "oldId": "conChild28_497e"
+ },
+ {
+  "id": "conChild_1719232823745_ddf4_7b30",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "{BGVAR_support.category_staff_forum_admin}",
+    "ignoreCase": true
+   }
+  },
+  "position": {
+   "x": 408,
+   "y": 1957
+  },
+  "width": 470,
+  "height": 93,
+  "oldId": "conChild31_5bd9"
+ },
+ {
+  "id": "conChild_1719232823745_a8a6_7171",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "{BGVAR_support.category_support_forum_private}",
+    "ignoreCase": true
+   }
+  },
+  "position": {
+   "x": 1214,
+   "y": 1957
+  },
+  "width": 501,
+  "height": 93,
+  "oldId": "conChild35_f8b2"
+ },
+ {
+  "id": "action_1719232823745_2925_c6f5",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send an API Request",
+    "description": "Send a HTTP request to an external API"
+   },
+   "data": {
+    "type": "api_action",
+    "ephemeral": false,
+    "name": "tag1",
+    "request_options": {
+     "method": "PATCH",
+     "url": "https://discord.com/api/v10/channels/{event_message_channel_id}",
+     "params": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "headers": [
+      {
+       "key": "Authorization",
+       "value": "Bot {TOKEN_SECRET}"
+      }
+     ],
+     "body": [
+      {
+       "key": "applied_tags",
+       "value": "[\"{BGVAR_support.category_staff_forum_admin_tag_inprogress}\"]"
+      }
+     ],
+     "options": {
+      "excludeEmptyFields": true,
+      "replaceParams": true,
+      "replaceURL": true,
+      "replaceHeaders": true,
+      "replaceBody": true
+     }
+    },
+    "linked": true,
+    "nodeID": "action_29_8a5f_7e49",
+    "command_label": "Send an API Request"
+   }
+  },
+  "position": {
+   "x": 402,
+   "y": 2160
+  },
+  "width": 482,
+  "height": 111,
+  "oldId": "action_1718796068763"
+ },
+ {
+  "id": "action_1719232823745_35db_3037",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send an API Request",
+    "description": "Send a HTTP request to an external API"
+   },
+   "data": {
+    "type": "api_action",
+    "ephemeral": false,
+    "name": "tag3",
+    "request_options": {
+     "method": "PATCH",
+     "url": "https://discord.com/api/v10/channels/{event_message_channel_id}",
+     "params": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "headers": [
+      {
+       "key": "Authorization",
+       "value": "Bot {TOKEN_SECRET}"
+      }
+     ],
+     "body": [
+      {
+       "key": "applied_tags",
+       "value": "[\"{BGVAR_support.category_support_forum_private_tag_inprogress}\"]"
+      }
+     ],
+     "options": {
+      "excludeEmptyFields": true,
+      "replaceParams": true,
+      "replaceURL": true,
+      "replaceHeaders": true,
+      "replaceBody": true
+     }
+    },
+    "linked": true,
+    "nodeID": "action_29_8a5f_7e49",
+    "command_label": "Send an API Request"
+   }
+  },
+  "position": {
+   "x": 1223,
+   "y": 2160
+  },
+  "width": 482,
+  "height": 111,
+  "oldId": "action_1718796073358"
+ },
+ {
+  "id": "action_1719232823745_cbd4_ef7d",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send an API Request",
+    "description": "Send a HTTP request to an external API"
+   },
+   "data": {
+    "type": "api_action",
+    "ephemeral": false,
+    "name": "tag19",
+    "request_options": {
+     "method": "PATCH",
+     "url": "https://discord.com/api/v10/channels/{BGVAR_psr_admin}",
+     "params": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "headers": [
+      {
+       "key": "Authorization",
+       "value": "Bot {TOKEN_SECRET}"
+      }
+     ],
+     "body": [
+      {
+       "key": "name",
+       "value": "{BGVAR_support.category_support_forum_private_user_tag_inprogress}{BGVAR_popen_ticketu_name[{BGVAR_psr_admin[{event_message_channel_id}]}]}"
+      }
+     ],
+     "options": {
+      "excludeEmptyFields": true,
+      "replaceParams": true,
+      "replaceURL": true,
+      "replaceHeaders": true,
+      "replaceBody": true
+     }
+    },
+    "linked": true,
+    "nodeID": "action_29_8a5f_7e49",
+    "command_label": "Send an API Request"
+   }
+  },
+  "position": {
+   "x": 402,
+   "y": 2381
+  },
+  "width": 482,
+  "height": 111,
+  "oldId": "action_1718796331409"
+ },
+ {
+  "source": "condition_1719232823745_1843_9f4a",
+  "target": "else_1719232823745_8013_d45e",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "edge_1719232823745_7b0d_9e80"
+ },
+ {
+  "source": "condition_1719232823745_7ca9_96a9",
+  "target": "else_1719232823745_6101_38e5",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "edge_1719232823745_344e_726f"
+ },
+ {
+  "source": "condition_1719232823745_7ca9_96a9",
+  "target": "conChild_1719232823745_339b_87bd",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "edge_1719232823745_e124_927a"
+ },
+ {
+  "source": "condition_1719232823745_1843_9f4a",
+  "target": "conChild_1719232823745_ddf4_7b30",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "edge_1719232823745_db09_7c5f"
+ },
+ {
+  "source": "condition_1719232823745_1843_9f4a",
+  "target": "conChild_1719232823745_a8a6_7171",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "edge_1719232823745_0be2_e716"
+ },
+ {
+  "source": "conChild_1719232823745_339b_87bd",
+  "sourceHandle": "action",
+  "target": "condition_1719232823745_1843_9f4a",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "edge_1719232823745_ff9b_38c0"
+ },
+ {
+  "source": "conChild_1719232823745_ddf4_7b30",
+  "sourceHandle": "action",
+  "target": "action_1719232823745_2925_c6f5",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "edge_1719232823745_0307_2f19"
+ },
+ {
+  "source": "conChild_1719232823745_a8a6_7171",
+  "sourceHandle": "action",
+  "target": "action_1719232823745_35db_3037",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "edge_1719232823745_e7dd_23dc"
+ },
+ {
+  "source": "action_1719232823745_2925_c6f5",
+  "sourceHandle": "action",
+  "target": "action_1719232823745_cbd4_ef7d",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "edge_1719232823745_0c21_e00e"
+ },
+ {
+  "source": "conChild39_24ba",
+  "sourceHandle": "action",
+  "target": "condition_1719232823745_7ca9_96a9",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild39_24baaction-condition_1719232823745_7ca9_96a9action"
+ },
+ {
+  "source": "conChild47_5974",
+  "sourceHandle": "action",
+  "target": "condition_1719232823745_7ca9_96a9",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild47_5974action-condition_1719232823745_7ca9_96a9action"
+ },
+ {
+  "id": "action_67_f4d2_2d77",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Set Variable",
+    "description": "Set the value of a custom variable"
+   },
+   "data": {
+    "type": "set_var",
+    "reference": "helper_admin",
+    "value": "{event_user_id}",
+    "key": "",
+    "target": {
+     "id": "{BGVAR_psr_admin}"
+    },
+    "operation": "unshift",
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 436,
+   "y": 3699
+  },
+  "width": 437,
+  "height": 125
+ },
+ {
+  "id": "action_1719233927464",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send an API Request",
+    "description": "Send a HTTP request to an external API"
+   },
+   "data": {
+    "type": "api_action",
+    "ephemeral": false,
+    "name": "tag123",
+    "request_options": {
+     "method": "PATCH",
+     "url": "https://discord.com/api/v10/channels/{BGVAR_psr_staff}",
+     "params": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "headers": [
+      {
+       "key": "Authorization",
+       "value": "Bot {TOKEN_SECRET}"
+      }
+     ],
+     "body": [
+      {
+       "key": "name",
+       "value": "{BGVAR_support.category_support_forum_private_user_tag_inprogress}{BGVAR_popen_ticketu_name[{BGVAR_psr_staff[{event_message_channel_id}]}]}"
+      }
+     ],
+     "options": {
+      "excludeEmptyFields": true,
+      "replaceParams": true,
+      "replaceURL": true,
+      "replaceHeaders": true,
+      "replaceBody": true
+     }
+    },
+    "linked": true,
+    "nodeID": "action_29_8a5f_7e49",
+    "command_label": "Send an API Request"
+   }
+  },
+  "position": {
+   "x": 2694,
+   "y": 2381
+  },
+  "width": 482,
+  "height": 111
+ },
+ {
+  "source": "action_1718796073358",
+  "sourceHandle": "action",
+  "target": "action_1719233927464",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1718796073358action-action_1719233927464action"
+ },
+ {
+  "id": "action_1719233943915",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send an API Request",
+    "description": "Send a HTTP request to an external API"
+   },
+   "data": {
+    "type": "api_action",
+    "ephemeral": false,
+    "name": "tag196",
+    "request_options": {
+     "method": "PATCH",
+     "url": "https://discord.com/api/v10/channels/{BGVAR_psr_staff}",
+     "params": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "headers": [
+      {
+       "key": "Authorization",
+       "value": "Bot {TOKEN_SECRET}"
+      }
+     ],
+     "body": [
+      {
+       "key": "name",
+       "value": "{BGVAR_support.category_support_forum_private_user_tag_inprogress}{BGVAR_popen_ticketu_name[{BGVAR_psr_staff[{event_message_channel_id}]}]}"
+      }
+     ],
+     "options": {
+      "excludeEmptyFields": true,
+      "replaceParams": true,
+      "replaceURL": true,
+      "replaceHeaders": true,
+      "replaceBody": true
+     }
+    },
+    "linked": true,
+    "nodeID": "action_29_8a5f_7e49",
+    "command_label": "Send an API Request"
+   }
+  },
+  "position": {
+   "x": 1223,
+   "y": 2381
+  },
+  "width": 482,
+  "height": 111
+ },
+ {
+  "source": "action_1719232823745_35db_3037",
+  "sourceHandle": "action",
+  "target": "action_1719233943915",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1719232823745_35db_3037action-action_1719233943915action"
+ },
+ {
+  "id": "action_1719234056918",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Set Variable",
+    "description": "Set the value of a custom variable"
+   },
+   "data": {
+    "type": "set_var",
+    "reference": "helper",
+    "value": "{event_user_id}",
+    "key": "",
+    "target": {
+     "id": "{BGVAR_psr_staff}"
+    },
+    "operation": "unshift",
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 1478,
+   "y": 3026
+  },
+  "width": 380,
+  "height": 125
+ },
+ {
+  "id": "$else_73_76b2_0192",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 1131,
+   "y": 2823
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_73_7b23_f8f6",
+  "target": "$else_73_76b2_0192",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_73_7b23_f8f6-$else_73_76b2_0192"
+ },
+ {
+  "id": "condition_73_7b23_f8f6",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{BGVAR_helper[{BGVAR_psr_staff}]}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 1278,
+   "y": 2602
+  },
+  "width": 372,
+  "height": 111
+ },
+ {
+  "id": "conChild75_bdd2",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "null",
+    "ignoreCase": true
+   }
+  },
+  "position": {
+   "x": 1471,
+   "y": 2823
+  },
+  "width": 394,
+  "height": 93
+ },
+ {
+  "source": "condition_73_7b23_f8f6",
+  "target": "conChild75_bdd2",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_73_7b23_f8f6-conChild75_bdd2"
+ },
+ {
+  "source": "action_1719233943915",
+  "sourceHandle": "action",
+  "target": "condition_73_7b23_f8f6",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1719233943915action-condition_73_7b23_f8f6action"
+ },
+ {
+  "id": "$else_79_229a_b4dd",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 307,
+   "y": 2823
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_79_c354_a2e7",
+  "target": "$else_79_229a_b4dd",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_79_c354_a2e7-$else_79_229a_b4dd"
+ },
+ {
+  "id": "condition_79_c354_a2e7",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{BGVAR_helper[{BGVAR_psr_admin}]}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 452,
+   "y": 2602
+  },
+  "width": 381,
+  "height": 111
+ },
+ {
+  "source": "conChild75_bdd2",
+  "sourceHandle": "action",
+  "target": "action_1719234056918",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild75_bdd2action-action_1719234056918action"
+ },
+ {
+  "source": "action_1719232823745_cbd4_ef7d",
+  "sourceHandle": "action",
+  "target": "condition_79_c354_a2e7",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1719232823745_cbd4_ef7daction-condition_79_c354_a2e7action"
+ },
+ {
+  "id": "conChild83_220e",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "{event_user_id}",
+    "ignoreCase": true
+   }
+  },
+  "position": {
+   "x": 647,
+   "y": 2823
+  },
+  "width": 404,
+  "height": 93
+ },
+ {
+  "source": "condition_79_c354_a2e7",
+  "target": "conChild83_220e",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_79_c354_a2e7-conChild83_220e"
+ },
+ {
+  "id": "$else_84_2b06_5eec",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 89,
+   "y": 3261
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_84_55fe_2e9d",
+  "target": "$else_84_2b06_5eec",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_84_55fe_2e9d-$else_84_2b06_5eec"
+ },
+ {
+  "id": "condition_84_55fe_2e9d",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{BGVAR_helper_admin[{BGVAR_psr_admin}]}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 223,
+   "y": 3026
+  },
+  "width": 428,
+  "height": 111
+ },
+ {
+  "source": "$else_79_229a_b4dd",
+  "sourceHandle": "action",
+  "target": "condition_84_55fe_2e9d",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-$else_79_229a_b4ddaction-condition_84_55fe_2e9daction"
+ },
+ {
+  "id": "conChild89_28a9",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "null",
+    "ignoreCase": true
+   }
+  },
+  "position": {
+   "x": 429,
+   "y": 3261
+  },
+  "width": 451,
+  "height": 93
+ },
+ {
+  "source": "condition_84_55fe_2e9d",
+  "target": "conChild89_28a9",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_84_55fe_2e9d-conChild89_28a9"
+ },
+ {
+  "id": "action_1719286584761",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Set Variable",
+    "description": "Set the value of a custom variable"
+   },
+   "data": {
+    "type": "set_var",
+    "reference": "helper",
+    "value": "{event_user_id}",
+    "key": "",
+    "target": {
+     "id": "{BGVAR_psr_admin}"
+    },
+    "operation": "unshift",
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 460,
+   "y": 3464
+  },
+  "width": 390,
+  "height": 125
+ },
+ {
+  "source": "conChild89_28a9",
+  "sourceHandle": "action",
+  "target": "action_1719286584761",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild89_28a9action-action_1719286584761action"
+ },
+ {
+  "source": "action_1719286584761",
+  "sourceHandle": "action",
+  "target": "action_67_f4d2_2d77",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1719286584761action-action_67_f4d2_2d77action"
+ }
+]

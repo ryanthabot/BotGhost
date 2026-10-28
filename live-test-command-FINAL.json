@@ -1,0 +1,187 @@
+[
+  {
+    "id": "root",
+    "type": "root",
+    "data": {
+      "title": "test",
+      "description": "test blocks",
+      "data": {
+        "command_type": "slash",
+        "ephemeral": false,
+        "permissions": {
+          "allowed_roles": [
+            {
+              "name": "@everyone",
+              "id": "everyone"
+            }
+          ],
+          "banned_roles": [],
+          "banned_channels": [],
+          "banned_users": [],
+          "required_permissions": []
+        },
+        "cooldown": {
+          "type": "disabled",
+          "interval": 1,
+          "interval_type": "minutes"
+        },
+        "handleErrors": true,
+        "errors": [],
+        "error_mode": "simple",
+        "error_reply": "friendly"
+      }
+    },
+    "draggable": false,
+    "position": {
+      "x": 26,
+      "y": 0
+    },
+    "width": 600,
+    "height": 200
+  },
+  {
+    "id": "error_handler",
+    "type": "error",
+    "position": {
+      "x": -385,
+      "y": 0
+    },
+    "draggable": false,
+    "data": {
+      "node_options": {
+        "title": "Error Handler",
+        "description": "Handle errors that occur during the command execution",
+        "icon": {
+          "prefix": "fas",
+          "iconName": "exclamation-triangle",
+          "icon": [
+            576,
+            512,
+            [],
+            "f071",
+            "M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+          ]
+        }
+      },
+      "data": {}
+    },
+    "width": 291,
+    "height": 114
+  },
+  {
+    "id": "action_3_2f43_9ac5",
+    "type": "action",
+    "data": {
+      "node_options": {
+        "title": "Send or Edit a Message",
+        "description": "Send or edit a message with optional buttons and select menus.",
+        "icon": {
+          "prefix": "fas",
+          "iconName": "reply",
+          "icon": [
+            512,
+            512,
+            [],
+            "f3e5",
+            "M8.309 189.836L184.313 37.851C199.719 24.546 224 35.347 224 56.015v80.053c160.629 1.839 288 34.032 288 186.258 0 61.441-39.581 122.309-83.333 154.132-13.653 9.931-33.111-2.533-28.077-18.631 45.344-145.012-21.507-183.51-176.59-185.742V360c0 20.7-24.3 31.453-39.687 18.164l-176.004-152c-11.071-9.562-11.086-26.753 0-36.328z"
+          ]
+        }
+      },
+      "data": {
+        "type": "advanced_message",
+        "success_handles": false,
+        "message": {
+          "content": "",
+          "embeds": []
+        },
+        "messageType": "basic",
+        "components": [],
+        "componentsV2Data": null,
+        "useComponentsV2": false,
+        "target": {
+          "reply": true
+        },
+        "validated": false,
+        "linked": true
+      }
+    },
+    "position": {
+      "x": -5.428571428571445,
+      "y": 341.42857142857144
+    },
+    "width": 651,
+    "height": 111,
+    "selected": false,
+    "positionAbsolute": {
+      "x": -5.428571428571445,
+      "y": 341.42857142857144
+    },
+    "dragging": false
+  },
+  {
+    "source": "root",
+    "sourceHandle": "action",
+    "target": "action_3_2f43_9ac5",
+    "targetHandle": "action",
+    "animated": false,
+    "arrowHeadType": "arrowclosed",
+    "type": "custom",
+    "id": "reactflow__edge-rootaction-action_3_2f43_9ac5action"
+  },
+  {
+    "id": "action_5_4d62_f06d",
+    "type": "action",
+    "data": {
+      "node_options": {
+        "title": "Send or Edit a Message",
+        "description": "Send or edit a message with optional buttons and select menus.",
+        "icon": {
+          "prefix": "fas",
+          "iconName": "reply",
+          "icon": [
+            512,
+            512,
+            [],
+            "f3e5",
+            "M8.309 189.836L184.313 37.851C199.719 24.546 224 35.347 224 56.015v80.053c160.629 1.839 288 34.032 288 186.258 0 61.441-39.581 122.309-83.333 154.132-13.653 9.931-33.111-2.533-28.077-18.631 45.344-145.012-21.507-183.51-176.59-185.742V360c0 20.7-24.3 31.453-39.687 18.164l-176.004-152c-11.071-9.562-11.086-26.753 0-36.328z"
+          ]
+        },
+        "isActionBlock": false
+      },
+      "data": {
+        "type": "advanced_message",
+        "success_handles": false,
+        "message": {
+          "content": "",
+          "embeds": []
+        },
+        "messageType": "basic",
+        "components": [],
+        "componentsV2Data": null,
+        "useComponentsV2": false,
+        "target": {
+          "reply": true
+        },
+        "validated": false,
+        "linked": true
+      }
+    },
+    "position": {
+      "x": 131.71428571428578,
+      "y": 221.42857142857144
+    },
+    "width": 651,
+    "height": 111,
+    "selected": true
+  },
+  {
+    "source": "action_3_2f43_9ac5",
+    "sourceHandle": "action",
+    "target": "action_5_4d62_f06d",
+    "targetHandle": "action",
+    "animated": false,
+    "arrowHeadType": "arrowclosed",
+    "type": "custom",
+    "id": "reactflow__edge-action_3_2f43_9ac5action-action_5_4d62_f06daction"
+  }
+]

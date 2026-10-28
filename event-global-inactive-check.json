@@ -1,0 +1,1690 @@
+[
+ {
+  "id": "root",
+  "type": "root",
+  "data": {
+   "event": true,
+   "enabled": true,
+   "data": {
+    "name": "Global Inactive Check",
+    "type": "timedEvent",
+    "timer_id": "iro0fhckfyj3r37apqe7py",
+    "guild_id": "1249470055696175274",
+    "validated": true
+   }
+  },
+  "draggable": false,
+  "position": {
+   "x": 1622,
+   "y": 0
+  },
+  "width": 600,
+  "height": 133
+ },
+ {
+  "id": "error_handler",
+  "type": "error",
+  "position": {
+   "x": 438,
+   "y": 0
+  },
+  "draggable": false,
+  "data": {
+   "node_options": {
+    "title": "Error Handler",
+    "description": "Handle errors that occur during the event execution"
+   },
+   "data": {}
+  },
+  "width": 332,
+  "height": 127
+ },
+ {
+  "id": "action_3_dd9a_8906",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send an API Request",
+    "description": "Send a HTTP request to an external API"
+   },
+   "data": {
+    "type": "api_action",
+    "ephemeral": false,
+    "name": "api1",
+    "request_options": {
+     "method": "GET",
+     "url": "https://discord.com/api/v10/guilds/{BGVAR_serverloopid}/threads/active",
+     "params": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "headers": [
+      {
+       "key": "Authorization",
+       "value": "Bot {TOKEN_SECRET}"
+      }
+     ],
+     "body": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "options": {
+      "excludeEmptyFields": true,
+      "replaceParams": true,
+      "replaceURL": true,
+      "replaceHeaders": true,
+      "replaceBody": true
+     }
+    },
+    "validated": true,
+    "linked": true,
+    "command_label": "Get Active Threads"
+   }
+  },
+  "position": {
+   "x": 932,
+   "y": 1156
+  },
+  "width": 464,
+  "height": 111
+ },
+ {
+  "id": "$else_5_d52e_9b78",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 1495,
+   "y": 2087
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_5_b7b5_60e1",
+  "target": "$else_5_d52e_9b78",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_5_b7b5_60e1-$else_5_d52e_9b78"
+ },
+ {
+  "id": "condition_5_b7b5_60e1",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{api1.response.threads.{loop_index}.last_message_id}",
+    "multiple": false,
+    "target": {
+     "user_id": ""
+    },
+    "validated": true,
+    "linked": true,
+    "command_label": "Check if Loop has Ended"
+   }
+  },
+  "position": {
+   "x": 1713,
+   "y": 1834
+  },
+  "width": 293,
+  "height": 111
+ },
+ {
+  "id": "conChild9_cd51",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "starts_with",
+    "comparison_value": "{api1.response.threads.{loop_index}.last_message_id"
+   }
+  },
+  "position": {
+   "x": 1835,
+   "y": 2087
+  },
+  "width": 520,
+  "height": 93
+ },
+ {
+  "source": "condition_5_b7b5_60e1",
+  "target": "conChild9_cd51",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_5_b7b5_60e1-conChild9_cd51"
+ },
+ {
+  "id": "action_14_495f_1d95",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Run a Loop",
+    "description": "Loop through actions and conditions a set amount of times"
+   },
+   "data": {
+    "type": "loop",
+    "count": "1000",
+    "timeout": 100,
+    "validated": true,
+    "linked": true,
+    "command_label": "Loop through active threads"
+   }
+  },
+  "position": {
+   "x": 1001,
+   "y": 1377
+  },
+  "width": 326,
+  "height": 143
+ },
+ {
+  "id": "loop_actions15_faed_d0df",
+  "type": "loopChild",
+  "data": {
+   "type": "loop_actions"
+  },
+  "position": {
+   "x": 1644,
+   "y": 1630
+  },
+  "width": 432,
+  "height": 94
+ },
+ {
+  "source": "action_14_495f_1d95",
+  "target": "loop_actions15_faed_d0df",
+  "type": "step",
+  "sourceHandle": "loop_actions",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-action_14_495f_1d95loop_actions-loop_actions15_faed_d0df"
+ },
+ {
+  "id": "loop_after17_3baa_89e3",
+  "type": "loopChild",
+  "data": {
+   "type": "loop_after"
+  },
+  "position": {
+   "x": 344,
+   "y": 1630
+  },
+  "width": 247,
+  "height": 94
+ },
+ {
+  "source": "action_14_495f_1d95",
+  "target": "loop_after17_3baa_89e3",
+  "type": "step",
+  "sourceHandle": "loop_after",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-action_14_495f_1d95loop_after-loop_after17_3baa_89e3"
+ },
+ {
+  "id": "action_25_eff5_6d3a",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Stop a Loop",
+    "description": "Break out of and stop any active loop"
+   },
+   "data": {
+    "type": "break_loop",
+    "validated": true,
+    "linked": true,
+    "nodeID": "action_25_eff5_6d3a"
+   }
+  },
+  "position": {
+   "x": 1925,
+   "y": 2291
+  },
+  "width": 339,
+  "height": 93
+ },
+ {
+  "id": "action_23_fd13_c28e",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Set Variable",
+    "description": "Set the value of a custom variable"
+   },
+   "data": {
+    "type": "set_var",
+    "reference": "threadloop",
+    "value": "{api1.response.threads.{loop_index}.id} ",
+    "key": "",
+    "target": {
+     "user_id": ""
+    },
+    "operation": "push",
+    "validated": true,
+    "linked": true,
+    "command_label": "Add Thread to Active List"
+   }
+  },
+  "position": {
+   "x": 1430,
+   "y": 2747
+  },
+  "width": 298,
+  "height": 125
+ },
+ {
+  "id": "action_37_6c57_dd5c",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Run a Loop",
+    "description": "Loop through actions and conditions a set amount of times"
+   },
+   "data": {
+    "type": "loop",
+    "count": "{lengthOfCollection({BGVAR_threadloop})}",
+    "timeout": 100,
+    "validated": true,
+    "linked": true,
+    "command_label": "Loop Collection of Approved Active Threads"
+   }
+  },
+  "position": {
+   "x": 244,
+   "y": 1834
+  },
+  "width": 447,
+  "height": 143
+ },
+ {
+  "id": "loop_actions38_db2a_d29d",
+  "type": "loopChild",
+  "data": {
+   "type": "loop_actions"
+  },
+  "position": {
+   "x": 403,
+   "y": 2087
+  },
+  "width": 665,
+  "height": 94
+ },
+ {
+  "source": "action_37_6c57_dd5c",
+  "target": "loop_actions38_db2a_d29d",
+  "type": "step",
+  "sourceHandle": "loop_actions",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-action_37_6c57_dd5cloop_actions-loop_actions38_db2a_d29d"
+ },
+ {
+  "id": "loop_after40_cb28_b90b",
+  "type": "loopChild",
+  "data": {
+   "type": "loop_after"
+  },
+  "position": {
+   "x": 76,
+   "y": 2087
+  },
+  "width": 247,
+  "height": 94
+ },
+ {
+  "source": "action_37_6c57_dd5c",
+  "target": "loop_after40_cb28_b90b",
+  "type": "step",
+  "sourceHandle": "loop_after",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-action_37_6c57_dd5cloop_after-loop_after40_cb28_b90b"
+ },
+ {
+  "id": "$else_43_3d32_0d6b",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 120,
+   "y": 3203
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_43_5537_6fa6",
+  "target": "$else_43_3d32_0d6b",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_43_5537_6fa6-$else_43_3d32_0d6b"
+ },
+ {
+  "id": "condition_43_5537_6fa6",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{ISO_to_UNIX[{api2.response.{loop_index}.timestamp}]}",
+    "multiple": false,
+    "target": {
+     "user_id": ""
+    },
+    "validated": true,
+    "linked": true,
+    "command_label": "Check if Inactive Trigger Should Happen"
+   }
+  },
+  "position": {
+   "x": 297,
+   "y": 2982
+  },
+  "width": 419,
+  "height": 111
+ },
+ {
+  "id": "action_1718343137485",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send an API Request",
+    "description": "Send a HTTP request to an external API"
+   },
+   "data": {
+    "type": "api_action",
+    "ephemeral": false,
+    "name": "api2",
+    "request_options": {
+     "method": "GET",
+     "url": "https://discord.com/api/v10/channels/{valueAtPosition({BGVAR_threadloop}),[{loop_index}]}/messages",
+     "params": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "headers": [
+      {
+       "key": "Authorization",
+       "value": "Bot {TOKEN_SECRET}"
+      }
+     ],
+     "body": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "options": {
+      "excludeEmptyFields": true,
+      "replaceParams": true,
+      "replaceURL": true,
+      "replaceHeaders": true,
+      "replaceBody": true
+     }
+    },
+    "validated": true,
+    "linked": true,
+    "command_label": "Check Thread Last Message Timestamp"
+   }
+  },
+  "position": {
+   "x": 419,
+   "y": 2291
+  },
+  "width": 633,
+  "height": 111
+ },
+ {
+  "id": "conChild45_897e",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "less_than_equal_to",
+    "comparison_value": "{solve_equation[{time_now_unix}-43200]}",
+    "ignoreCase": true
+   }
+  },
+  "position": {
+   "x": 460,
+   "y": 3203
+  },
+  "width": 603,
+  "height": 93
+ },
+ {
+  "source": "condition_43_5537_6fa6",
+  "target": "conChild45_897e",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_43_5537_6fa6-conChild45_897e"
+ },
+ {
+  "id": "$else_65_9fd5_dc8c",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 376,
+   "y": 2747
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_65_0636_1469",
+  "target": "$else_65_9fd5_dc8c",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_65_0636_1469-$else_65_9fd5_dc8c"
+ },
+ {
+  "id": "condition_65_0636_1469",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{api2.response.{loop_index}.timestamp}",
+    "multiple": false,
+    "target": {
+     "user_id": ""
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 535,
+   "y": 2512
+  },
+  "width": 402,
+  "height": 111
+ },
+ {
+  "id": "conChild68_d5b1",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "starts_with",
+    "comparison_value": "{api2.response.{loop_index}.timestamp"
+   }
+  },
+  "position": {
+   "x": 751,
+   "y": 2747
+  },
+  "width": 428,
+  "height": 93
+ },
+ {
+  "source": "condition_65_0636_1469",
+  "target": "conChild68_d5b1",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_65_0636_1469-conChild68_d5b1"
+ },
+ {
+  "id": "action_1718345624843",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Stop a Loop",
+    "description": "Break out of and stop any active loop"
+   },
+   "data": {
+    "type": "break_loop",
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 796,
+   "y": 2982
+  },
+  "width": 339,
+  "height": 93
+ },
+ {
+  "source": "conChild68_d5b1",
+  "sourceHandle": "action",
+  "target": "action_1718345624843",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild68_d5b1action-action_1718345624843action"
+ },
+ {
+  "id": "action_83_9a43_ef2a",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send an API Request",
+    "description": "Send a HTTP request to an external API"
+   },
+   "data": {
+    "type": "api_action",
+    "ephemeral": false,
+    "name": "name",
+    "request_options": {
+     "method": "PATCH",
+     "url": "https://discord.com/api/v10/channels/{api2.response.{loop_index}.channel_id}",
+     "params": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "headers": [
+      {
+       "key": "Authorization",
+       "value": "Bot {TOKEN_SECRET}"
+      }
+     ],
+     "body": [
+      {
+       "key": "name",
+       "value": "{newname}"
+      }
+     ],
+     "options": {
+      "excludeEmptyFields": true,
+      "replaceParams": true,
+      "replaceURL": true,
+      "replaceHeaders": true,
+      "replaceBody": true
+     }
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 478,
+   "y": 3848
+  },
+  "width": 567,
+  "height": 111
+ },
+ {
+  "id": "action_86_2dc8_030f",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Delete Variable",
+    "description": "Delete the value of a custom variable"
+   },
+   "data": {
+    "type": "delete_var",
+    "reference": "threadloop",
+    "target": {
+     "user_id": ""
+    },
+    "key_target_all": false,
+    "key": "",
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 70,
+   "y": 2291
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "id": "action_1718347342609",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send an API Request",
+    "description": "Send a HTTP request to an external API"
+   },
+   "data": {
+    "type": "api_action",
+    "ephemeral": false,
+    "name": "test1",
+    "request_options": {
+     "method": "GET",
+     "url": "https://discord.com/api/v10/guilds/1251136457834496042/threads/active",
+     "params": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "headers": [
+      {
+       "key": "Authorization",
+       "value": "Bot {TOKEN_SECRET}"
+      }
+     ],
+     "body": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "options": {
+      "excludeEmptyFields": true,
+      "replaceParams": true,
+      "replaceURL": true,
+      "replaceHeaders": true,
+      "replaceBody": true
+     }
+    },
+    "validated": true,
+    "linked": true,
+    "command_label": "Get Active Threads",
+    "nodeID": "action_1718347342609"
+   }
+  },
+  "position": {
+   "x": 372,
+   "y": 237
+  },
+  "width": 464,
+  "height": 111
+ },
+ {
+  "source": "error_handler",
+  "sourceHandle": "action",
+  "target": "action_1718347342609",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-error_handleraction-action_1718347342609action"
+ },
+ {
+  "id": "action_1718347350678",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send an API Request",
+    "description": "Send a HTTP request to an external API"
+   },
+   "data": {
+    "type": "api_action",
+    "ephemeral": false,
+    "name": "test2",
+    "request_options": {
+     "method": "GET",
+     "url": "https://discord.com/api/v10/channels/1251078543513882696/messages",
+     "params": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "headers": [
+      {
+       "key": "Authorization",
+       "value": "Bot {TOKEN_SECRET}"
+      }
+     ],
+     "body": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "options": {
+      "excludeEmptyFields": true,
+      "replaceParams": true,
+      "replaceURL": true,
+      "replaceHeaders": true,
+      "replaceBody": true
+     }
+    },
+    "validated": true,
+    "linked": true,
+    "command_label": "Check Thread Last Message Timestamp",
+    "nodeID": "action_1718347350678"
+   }
+  },
+  "position": {
+   "x": 287,
+   "y": 458
+  },
+  "width": 633,
+  "height": 111
+ },
+ {
+  "source": "action_1718347342609",
+  "sourceHandle": "action",
+  "target": "action_1718347350678",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1718347342609action-action_1718347350678action"
+ },
+ {
+  "id": "action_1718347358632",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send an API Request",
+    "description": "Send a HTTP request to an external API"
+   },
+   "data": {
+    "type": "api_action",
+    "ephemeral": false,
+    "name": "test3",
+    "request_options": {
+     "method": "GET",
+     "url": "https://discord.com/api/v10/channels/{api2.response.{loop_index}}",
+     "params": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "headers": [
+      {
+       "key": "Authorization",
+       "value": "Bot {TOKEN_SECRET}"
+      }
+     ],
+     "body": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "options": {
+      "excludeEmptyFields": true,
+      "replaceParams": true,
+      "replaceURL": true,
+      "replaceHeaders": true,
+      "replaceBody": true
+     }
+    },
+    "validated": true,
+    "linked": true,
+    "nodeID": "action_1718347358632"
+   }
+  },
+  "position": {
+   "x": 320,
+   "y": 679
+  },
+  "width": 567,
+  "height": 111
+ },
+ {
+  "source": "action_1718347350678",
+  "sourceHandle": "action",
+  "target": "action_1718347358632",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1718347350678action-action_1718347358632action"
+ },
+ {
+  "id": "$else_108_c29f_b4bd",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 1017,
+   "y": 2512
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_108_339f_57c8",
+  "target": "$else_108_c29f_b4bd",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_108_339f_57c8-$else_108_c29f_b4bd"
+ },
+ {
+  "id": "condition_108_339f_57c8",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{api1.response.threads.{loop_index}.name}",
+    "multiple": false,
+    "target": {
+     "user_id": ""
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 1417,
+   "y": 2291
+  },
+  "width": 416,
+  "height": 111
+ },
+ {
+  "id": "conChild114_e85e",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "starts_with",
+    "comparison_value": "🟨",
+    "ignoreCase": true
+   }
+  },
+  "position": {
+   "x": 1357,
+   "y": 2512
+  },
+  "width": 444,
+  "height": 93
+ },
+ {
+  "source": "condition_108_339f_57c8",
+  "target": "conChild114_e85e",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_108_339f_57c8-conChild114_e85e"
+ },
+ {
+  "id": "action_1718363726729",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send an API Request",
+    "description": "Send a HTTP request to an external API"
+   },
+   "data": {
+    "type": "api_action",
+    "ephemeral": false,
+    "name": "servers",
+    "request_options": {
+     "method": "GET",
+     "url": "https://discord.com/api/v10/users/@me/guilds",
+     "params": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "headers": [
+      {
+       "key": "Authorization",
+       "value": "Bot {TOKEN_SECRET}"
+      }
+     ],
+     "body": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "options": {
+      "excludeEmptyFields": true,
+      "replaceParams": true,
+      "replaceURL": true,
+      "replaceHeaders": true,
+      "replaceBody": true
+     }
+    },
+    "validated": true,
+    "linked": true,
+    "command_label": "Get Servers",
+    "nodeID": "action_1718363726729"
+   }
+  },
+  "position": {
+   "x": 1698,
+   "y": 243
+  },
+  "width": 448,
+  "height": 111
+ },
+ {
+  "id": "action_122_2bbe_6d3e",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Run a Loop",
+    "description": "Loop through actions and conditions a set amount of times"
+   },
+   "data": {
+    "type": "loop",
+    "count": "{bot_serverCount}",
+    "timeout": 100,
+    "validated": true,
+    "linked": true,
+    "nodeID": "action_122_2bbe_6d3e"
+   }
+  },
+  "position": {
+   "x": 1681,
+   "y": 464
+  },
+  "width": 482,
+  "height": 143
+ },
+ {
+  "id": "loop_actions123_00ef_0908",
+  "type": "loopChild",
+  "data": {
+   "type": "loop_actions"
+  },
+  "position": {
+   "x": 2424,
+   "y": 717
+  },
+  "width": 514,
+  "height": 94
+ },
+ {
+  "source": "action_122_2bbe_6d3e",
+  "target": "loop_actions123_00ef_0908",
+  "type": "step",
+  "sourceHandle": "loop_actions",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-action_122_2bbe_6d3eloop_actions-loop_actions123_00ef_0908"
+ },
+ {
+  "id": "loop_after125_fc40_a9f8",
+  "type": "loopChild",
+  "data": {
+   "type": "loop_after"
+  },
+  "position": {
+   "x": 1040,
+   "y": 717
+  },
+  "width": 247,
+  "height": 94
+ },
+ {
+  "source": "action_122_2bbe_6d3e",
+  "target": "loop_after125_fc40_a9f8",
+  "type": "step",
+  "sourceHandle": "loop_after",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-action_122_2bbe_6d3eloop_after-loop_after125_fc40_a9f8"
+ },
+ {
+  "source": "action_1718363726729",
+  "sourceHandle": "action",
+  "target": "action_122_2bbe_6d3e",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1718363726729action-action_122_2bbe_6d3eaction"
+ },
+ {
+  "id": "$else_127_3bba_ec85",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 2352,
+   "y": 1156
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_127_90a1_ee37",
+  "target": "$else_127_3bba_ec85",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_127_90a1_ee37-$else_127_3bba_ec85"
+ },
+ {
+  "id": "condition_127_90a1_ee37",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{servers.response.{loop_index}}",
+    "multiple": false,
+    "target": {
+     "user_id": ""
+    },
+    "validated": true,
+    "linked": true,
+    "nodeID": "condition_127_90a1_ee37"
+   }
+  },
+  "position": {
+   "x": 2507,
+   "y": 921
+  },
+  "width": 347,
+  "height": 111
+ },
+ {
+  "id": "conChild131_4169",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "starts_with",
+    "comparison_value": "{servers.response.{loop_index}",
+    "ignoreCase": true,
+    "nodeID": "conChild131_4169"
+   }
+  },
+  "position": {
+   "x": 2692,
+   "y": 1156
+  },
+  "width": 373,
+  "height": 93
+ },
+ {
+  "source": "condition_127_90a1_ee37",
+  "target": "conChild131_4169",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_127_90a1_ee37-conChild131_4169"
+ },
+ {
+  "id": "action_134_aa9f_484e",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Stop a Loop",
+    "description": "Break out of and stop any active loop"
+   },
+   "data": {
+    "type": "break_loop",
+    "linked": true,
+    "nodeID": "action_134_aa9f_484e"
+   }
+  },
+  "position": {
+   "x": 2709,
+   "y": 1377
+  },
+  "width": 339,
+  "height": 93
+ },
+ {
+  "source": "conChild131_4169",
+  "sourceHandle": "action",
+  "target": "action_134_aa9f_484e",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild131_4169action-action_134_aa9f_484eaction"
+ },
+ {
+  "id": "action_99_29c7_9de2",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Set Variable",
+    "description": "Set the value of a custom variable"
+   },
+   "data": {
+    "type": "set_var",
+    "reference": "serverloop",
+    "value": "{servers.response.{loop_index}.id}",
+    "key": "",
+    "target": {
+     "user_id": ""
+    },
+    "operation": "push",
+    "linked": true,
+    "nodeID": "action_99_29c7_9de2"
+   }
+  },
+  "position": {
+   "x": 2443,
+   "y": 1834
+  },
+  "width": 473,
+  "height": 125
+ },
+ {
+  "source": "conChild9_cd51",
+  "sourceHandle": "action",
+  "target": "action_25_eff5_6d3a",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild9_cd51action-action_25_eff5_6d3aaction"
+ },
+ {
+  "id": "action_133_2b33_7081",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Set Variable",
+    "description": "Set the value of a custom variable"
+   },
+   "data": {
+    "type": "set_var",
+    "reference": "serverloopid",
+    "value": "{valueAtPosition({BGVAR_serverloop}),[0]}",
+    "key": "",
+    "target": {
+     "user_id": ""
+    },
+    "operation": "unshift",
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 970,
+   "y": 921
+  },
+  "width": 388,
+  "height": 125
+ },
+ {
+  "id": "action_1718375637569",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Set Variable",
+    "description": "Set the value of a custom variable"
+   },
+   "data": {
+    "type": "set_var",
+    "reference": "serverloop",
+    "value": "{BGVAR_serverloopid}",
+    "key": "",
+    "target": {
+     "user_id": ""
+    },
+    "operation": "remove_value",
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 0,
+   "y": 2512
+  },
+  "width": 399,
+  "height": 125
+ },
+ {
+  "source": "loop_actions38_db2a_d29d",
+  "sourceHandle": "action",
+  "target": "action_1718343137485",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-loop_actions38_db2a_d29daction-action_1718343137485action"
+ },
+ {
+  "id": "$else_184_c381_f289",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 2156,
+   "y": 1630
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_184_b508_6483",
+  "target": "$else_184_c381_f289",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_184_b508_6483-$else_184_c381_f289"
+ },
+ {
+  "id": "condition_184_b508_6483",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{BGVAR_serverloop}",
+    "multiple": false,
+    "target": {
+     "user_id": ""
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 2346,
+   "y": 1377
+  },
+  "width": 272,
+  "height": 111
+ },
+ {
+  "id": "conChild187_e7d4",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "not_contains",
+    "comparison_value": "{servers.response.{loop_index}.id}",
+    "ignoreCase": true
+   }
+  },
+  "position": {
+   "x": 2496,
+   "y": 1630
+  },
+  "width": 367,
+  "height": 93
+ },
+ {
+  "source": "condition_184_b508_6483",
+  "target": "conChild187_e7d4",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_184_b508_6483-conChild187_e7d4"
+ },
+ {
+  "source": "conChild187_e7d4",
+  "sourceHandle": "action",
+  "target": "action_99_29c7_9de2",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild187_e7d4action-action_99_29c7_9de2action"
+ },
+ {
+  "source": "loop_after125_fc40_a9f8",
+  "sourceHandle": "action",
+  "target": "action_133_2b33_7081",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-loop_after125_fc40_a9f8action-action_133_2b33_7081action"
+ },
+ {
+  "id": "action_161_2b76_a82f",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Manipulate some text",
+    "description": "Manipulate and run functions on provided text"
+   },
+   "data": {
+    "type": "string_manipulation",
+    "string": "{get-name.response.name}",
+    "variable": "newname",
+    "operation": {
+     "type": "replace",
+     "search": "🟨",
+     "replace": "🟪"
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 562,
+   "y": 3627
+  },
+  "width": 399,
+  "height": 111
+ },
+ {
+  "id": "action_1718522071827",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send an API Request",
+    "description": "Send a HTTP request to an external API"
+   },
+   "data": {
+    "type": "api_action",
+    "ephemeral": false,
+    "name": "get-name",
+    "request_options": {
+     "method": "GET",
+     "url": "https://discord.com/api/v10/channels/{valueAtPosition({BGVAR_threadloop}),[{loop_index}]}",
+     "params": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "headers": [
+      {
+       "key": "Authorization",
+       "value": "Bot {TOKEN_SECRET}"
+      }
+     ],
+     "body": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "options": {
+      "excludeEmptyFields": true,
+      "replaceParams": true,
+      "replaceURL": true,
+      "replaceHeaders": true,
+      "replaceBody": true
+     }
+    },
+    "validated": true,
+    "linked": true,
+    "command_label": "Get Thread Name"
+   }
+  },
+  "position": {
+   "x": 535,
+   "y": 3406
+  },
+  "width": 453,
+  "height": 111
+ },
+ {
+  "source": "conChild45_897e",
+  "sourceHandle": "action",
+  "target": "action_1718522071827",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild45_897eaction-action_1718522071827action"
+ },
+ {
+  "source": "conChild114_e85e",
+  "sourceHandle": "action",
+  "target": "action_23_fd13_c28e",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild114_e85eaction-action_23_fd13_c28eaction"
+ },
+ {
+  "source": "root",
+  "sourceHandle": "action",
+  "target": "action_1718363726729",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-rootaction-action_1718363726729action"
+ },
+ {
+  "source": "loop_actions123_00ef_0908",
+  "sourceHandle": "action",
+  "target": "condition_127_90a1_ee37",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-loop_actions123_00ef_0908action-condition_127_90a1_ee37action"
+ },
+ {
+  "source": "$else_127_3bba_ec85",
+  "sourceHandle": "action",
+  "target": "condition_184_b508_6483",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-$else_127_3bba_ec85action-condition_184_b508_6483action"
+ },
+ {
+  "source": "loop_actions15_faed_d0df",
+  "sourceHandle": "action",
+  "target": "condition_5_b7b5_60e1",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-loop_actions15_faed_d0dfaction-condition_5_b7b5_60e1action"
+ },
+ {
+  "source": "$else_5_d52e_9b78",
+  "sourceHandle": "action",
+  "target": "condition_108_339f_57c8",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-$else_5_d52e_9b78action-condition_108_339f_57c8action"
+ },
+ {
+  "source": "action_1718343137485",
+  "sourceHandle": "action",
+  "target": "condition_65_0636_1469",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1718343137485action-condition_65_0636_1469action"
+ },
+ {
+  "source": "action_133_2b33_7081",
+  "sourceHandle": "action",
+  "target": "action_3_dd9a_8906",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_133_2b33_7081action-action_3_dd9a_8906action"
+ },
+ {
+  "source": "action_3_dd9a_8906",
+  "sourceHandle": "action",
+  "target": "action_14_495f_1d95",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_3_dd9a_8906action-action_14_495f_1d95action"
+ },
+ {
+  "source": "loop_after17_3baa_89e3",
+  "sourceHandle": "action",
+  "target": "action_37_6c57_dd5c",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-loop_after17_3baa_89e3action-action_37_6c57_dd5caction"
+ },
+ {
+  "source": "$else_65_9fd5_dc8c",
+  "sourceHandle": "action",
+  "target": "condition_43_5537_6fa6",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-$else_65_9fd5_dc8caction-condition_43_5537_6fa6action"
+ },
+ {
+  "source": "action_1718522071827",
+  "sourceHandle": "action",
+  "target": "action_161_2b76_a82f",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1718522071827action-action_161_2b76_a82faction"
+ },
+ {
+  "source": "action_161_2b76_a82f",
+  "sourceHandle": "action",
+  "target": "action_83_9a43_ef2a",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_161_2b76_a82faction-action_83_9a43_ef2aaction"
+ },
+ {
+  "source": "loop_after40_cb28_b90b",
+  "sourceHandle": "action",
+  "target": "action_86_2dc8_030f",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-loop_after40_cb28_b90baction-action_86_2dc8_030faction"
+ },
+ {
+  "source": "action_86_2dc8_030f",
+  "sourceHandle": "action",
+  "target": "action_1718375637569",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_86_2dc8_030faction-action_1718375637569action"
+ },
+ {
+  "id": "conChild91_f47d",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "starts_with",
+    "comparison_value": "🟪",
+    "ignoreCase": true
+   }
+  },
+  "position": {
+   "x": 1881,
+   "y": 2512
+  },
+  "width": 444,
+  "height": 93
+ },
+ {
+  "source": "condition_108_339f_57c8",
+  "target": "conChild91_f47d",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_108_339f_57c8-conChild91_f47d"
+ },
+ {
+  "source": "conChild91_f47d",
+  "sourceHandle": "action",
+  "target": "action_23_fd13_c28e",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild91_f47daction-action_23_fd13_c28eaction"
+ }
+]

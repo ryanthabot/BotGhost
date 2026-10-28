@@ -1,0 +1,6 @@
+# Browser automation artifacts (console logs, page snapshots)
+.playwright-mcp/
+
+# Python
+__pycache__/
+*.pyc

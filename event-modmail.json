@@ -1,0 +1,6667 @@
+[
+ {
+  "id": "root",
+  "type": "root",
+  "data": {
+   "event": true,
+   "enabled": true,
+   "data": {
+    "name": "Modmail",
+    "type": "messageCreate",
+    "validated": true
+   }
+  },
+  "draggable": false,
+  "position": {
+   "x": 4096,
+   "y": 0
+  },
+  "width": 600,
+  "height": 200
+ },
+ {
+  "id": "error_handler",
+  "type": "error",
+  "position": {
+   "x": 3644,
+   "y": 0
+  },
+  "draggable": false,
+  "data": {
+   "node_options": {
+    "title": "Error Handler",
+    "description": "Handle errors that occur during the event execution"
+   },
+   "data": {}
+  },
+  "width": 332,
+  "height": 127
+ },
+ {
+  "id": "$else_3_2eb1_f704",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 1897,
+   "y": 531
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_3_380b_8ed7",
+  "target": "$else_3_2eb1_f704",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_3_380b_8ed7-$else_3_2eb1_f704"
+ },
+ {
+  "width": 348,
+  "height": 111,
+  "id": "condition_3_380b_8ed7",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{event_message_channel_type}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 4222,
+   "y": 310
+  }
+ },
+ {
+  "id": "conChild7_3391",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "DM",
+    "ignoreCase": false
+   }
+  },
+  "position": {
+   "x": 2237,
+   "y": 531
+  },
+  "width": 371,
+  "height": 93
+ },
+ {
+  "source": "condition_3_380b_8ed7",
+  "target": "conChild7_3391",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_3_380b_8ed7-conChild7_3391"
+ },
+ {
+  "width": 651,
+  "height": 111,
+  "id": "action_9_66e3_7af2",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "",
+     "embeds": [
+      {
+       "title": "Server Modmail",
+       "description": "Hello, and thank you for reaching out to us! We’re glad you got in touch. If you need any assistance, have questions, or would like support with anything, our staff team is here to help.\n\nTo get started, simply choose a reason below to open a support ticket. Once your ticket is created, a member of our team will review your request and respond as soon as possible. Please make sure to include as much detail as you can so we can assist you quickly and efficiently.\n\nWe appreciate your patience and look forward to helping you!",
+       "author": {
+        "name": "",
+        "url": "",
+        "icon_url": ""
+       },
+       "color": "#ef0707",
+       "footer": "",
+       "footerIcon": "",
+       "timestamp": "",
+       "image": {
+        "url": ""
+       },
+       "thumbnail": {
+        "url": ""
+       },
+       "fields": [],
+       "timestamp_variable": ""
+      }
+     ]
+    },
+    "messageType": "advanced",
+    "components": [],
+    "target": {
+     "trigger_channel": true
+    },
+    "validated": true,
+    "linked": true,
+    "editId": "1746926234585_39737",
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 2732,
+   "y": 1582
+  }
+ },
+ {
+  "width": 509,
+  "height": 111,
+  "id": "action_13_01c6_be45",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send a Form",
+    "description": "Send a form or modal and wait for a response"
+   },
+   "data": {
+    "type": "modal",
+    "modal_id": "modmail",
+    "modal_settings": {
+     "title": "Modmail",
+     "components": [
+      {
+       "label": "What Happened",
+       "variable": "more",
+       "maxLength": "",
+       "minLength": "10",
+       "placeholder": "Tell us more",
+       "required": true,
+       "inputStyle": "PARAGRAPH",
+       "defaultValue": ""
+      }
+     ]
+    },
+    "ephemeral": false,
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 1457,
+   "y": 2921
+  }
+ },
+ {
+  "width": 371,
+  "height": 111,
+  "id": "action_14_1ad0_6cdb",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Edit a Button or Select Menu",
+    "description": "Edit a button or select menu in a message"
+   },
+   "data": {
+    "type": "edit_component",
+    "edits": [
+     {
+      "editComponentId": "1774407537529_59195",
+      "component_id": "adv_select_menu248_6uqrqcpbs",
+      "select_menu": {
+       "placeholder": "Why are you making a ticket?",
+       "min_values": "1",
+       "max_values": "1",
+       "disabled": "true",
+       "basic_options": [
+        {
+         "label": "Reporting a Server Member",
+         "description": "Reporting a Server Member",
+         "emoji_id": "",
+         "value": ""
+        },
+        {
+         "label": "Reporting a bot/user",
+         "description": "Reporting a bot or user breaking our ToS",
+         "emoji_id": "",
+         "value": ""
+        },
+        {
+         "label": "Server Issue",
+         "description": "Problem with the server",
+         "emoji_id": "",
+         "value": ""
+        },
+        {
+         "label": "General Question",
+         "description": "Question About the server",
+         "emoji_id": "",
+         "value": ""
+        },
+        {
+         "label": "Other",
+         "description": "Other issue not listed here",
+         "emoji_id": "",
+         "value": ""
+        }
+       ],
+       "reset_options": false,
+       "multiselect": false,
+       "menu_type": "basic"
+      }
+     }
+    ],
+    "action_id": "action_9_66e3_7af2",
+    "target": {
+     "editId": "1746926234585_39737"
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 1526,
+   "y": 3156
+  }
+ },
+ {
+  "source": "action_13_01c6_be45",
+  "sourceHandle": "action",
+  "target": "action_14_1ad0_6cdb",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_13_01c6_be45action-action_14_1ad0_6cdbaction"
+ },
+ {
+  "width": 288,
+  "height": 125,
+  "id": "action_27_94eb_1d7d",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Set Variable",
+    "description": "Set the value of a custom variable"
+   },
+   "data": {
+    "type": "set_var",
+    "reference": "modmails",
+    "value": "{main_mes}",
+    "key": "",
+    "target": {
+     "self": true
+    },
+    "operation": "unshift",
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 4064,
+   "y": 3819
+  }
+ },
+ {
+  "width": 430,
+  "height": 111,
+  "id": "action_29_25c8_4ead",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "",
+     "embeds": [
+      {
+       "title": "Modmail Inbox",
+       "description": "<@{owner_id}> has opened the ticket. If you believe this ticket is abuse, spam, or other prohibited behavior, please give them a misuse strike.\n\n**🎟️Ticket Title:** {modmail.title}\n**➡️Description:** {modmail.more}",
+       "author": {
+        "name": "",
+        "url": "",
+        "icon_url": ""
+       },
+       "color": "#00a4ff",
+       "footer": "",
+       "footerIcon": "",
+       "timestamp": "",
+       "image": {
+        "url": ""
+       },
+       "thumbnail": {
+        "url": ""
+       },
+       "fields": [],
+       "timestamp_variable": ""
+      }
+     ]
+    },
+    "messageType": "basic",
+    "components": [],
+    "target": {
+     "id": "{main_mes}"
+    },
+    "validated": true,
+    "linked": true,
+    "editId": "1746927465683",
+    "useComponentsV2": true,
+    "componentsV2Data": {
+     "version": 2,
+     "components": [
+      {
+       "id": "comp_1771918900571_4zgkzpp71",
+       "type": "container",
+       "parent_id": null,
+       "data": {
+        "accent_color": null,
+        "spoiler": false
+       }
+      },
+      {
+       "id": "comp_1771918901688_blj8c1q6b",
+       "type": "text",
+       "parent_id": "comp_1771918900571_4zgkzpp71",
+       "data": {
+        "content": "<@{owner_id}> has opened the ticket. If you believe this ticket is abuse, spam, or other prohibited behavior, please give them a misuse strike.",
+        "allowed_mentions": []
+       }
+      },
+      {
+       "id": "comp_1771918914160_20woocrlh",
+       "type": "action_row",
+       "parent_id": "comp_1771918900571_4zgkzpp71",
+       "data": {
+        "components": []
+       }
+      },
+      {
+       "id": "comp_1771918915401_vx9i5hdi9",
+       "type": "select_menu",
+       "parent_id": "comp_1771918914160_20woocrlh",
+       "data": {
+        "node_options": {
+         "title": "Select Menu",
+         "description": "ComponentsV2 select_menu",
+         "v2ComponentId": "comp_1771918915401_vx9i5hdi9",
+         "v2ParentId": "comp_1771918914160_20woocrlh"
+        },
+        "data": {
+         "type": "adv_select_menu",
+         "menu_type": "basic",
+         "multiselect": false,
+         "minOptions": "1",
+         "maxOptions": "1",
+         "basic_options": [
+          {
+           "label": "Inactivity",
+           "description": "Post inactive for more than  2 hours, close 30mins after sending",
+           "emoji_id": "",
+           "value": ""
+          },
+          {
+           "label": "Handled",
+           "description": "Use this to send the handled message on a user report",
+           "emoji_id": "",
+           "value": ""
+          },
+          {
+           "label": "Contacting Managers",
+           "description": "Use this to contact the management team",
+           "emoji_id": "",
+           "value": ""
+          },
+          {
+           "label": "Contacting Admins",
+           "description": "Use this to contact the Admin team",
+           "emoji_id": "",
+           "value": ""
+          }
+         ],
+         "type_options": {},
+         "validated": true,
+         "customVariableName": "auto_option",
+         "v2ComponentId": "comp_1771918915401_vx9i5hdi9",
+         "placeholder": "📫Automatic responses",
+         "editComponentId": "1771919811614_71458"
+        }
+       }
+      },
+      {
+       "id": "comp_1771918917325_3gqazgztx",
+       "type": "action_row",
+       "parent_id": "comp_1771918900571_4zgkzpp71",
+       "data": {
+        "components": []
+       }
+      },
+      {
+       "id": "comp_1771918918692_74a7igwks",
+       "type": "select_menu",
+       "parent_id": "comp_1771918917325_3gqazgztx",
+       "data": {
+        "node_options": {
+         "title": "Select Menu",
+         "description": "ComponentsV2 select_menu",
+         "v2ComponentId": "comp_1771918918692_74a7igwks",
+         "v2ParentId": "comp_1771918917325_3gqazgztx"
+        },
+        "data": {
+         "type": "adv_select_menu",
+         "menu_type": "basic",
+         "multiselect": false,
+         "minOptions": "1",
+         "maxOptions": "1",
+         "basic_options": [
+          {
+           "label": "Close Ticket",
+           "description": "Close the ticket normally",
+           "emoji_id": "🚫",
+           "value": ""
+          },
+          {
+           "label": "Misuse",
+           "description": "Close & add misuse strike",
+           "emoji_id": "📛",
+           "value": ""
+          },
+          {
+           "label": "Blacklist",
+           "description": "Immediately blacklist the user (Talk to a manger+ first)",
+           "emoji_id": "🔨",
+           "value": ""
+          }
+         ],
+         "type_options": {},
+         "validated": true,
+         "customVariableName": "close_option",
+         "v2ComponentId": "comp_1771918918692_74a7igwks",
+         "placeholder": "🚫Close Options",
+         "editComponentId": "1771919812194_69519"
+        }
+       }
+      },
+      {
+       "id": "comp_1771924904858_y3l219ykw",
+       "type": "text",
+       "parent_id": "comp_1771918900571_4zgkzpp71",
+       "data": {
+        "content": "-# Use !d to deliver your message\n-# Use !tb to get a list of available commands",
+        "allowed_mentions": []
+       }
+      }
+     ],
+     "validation": {
+      "isValid": true,
+      "emptyContainers": [],
+      "sectionsWithoutAccessories": [],
+      "emptyActionRows": [],
+      "sectionsWithoutText": []
+     }
+    },
+    "command_label": "Control",
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 3993,
+   "y": 4524
+  }
+ },
+ {
+  "id": "action_39_3675_bdf6",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Pin a Message",
+    "description": "Pin a message or reply sent in this command"
+   },
+   "data": {
+    "type": "pin_message",
+    "id": "1746927465683",
+    "action_id": "action_29_25c8_4ead",
+    "validated": true,
+    "linked": true,
+    "success_handles": false,
+    "mode": "pin"
+   }
+  },
+  "position": {
+   "x": 2823,
+   "y": 4745
+  },
+  "width": 389,
+  "height": 111
+ },
+ {
+  "source": "action_29_25c8_4ead",
+  "sourceHandle": "action",
+  "target": "action_39_3675_bdf6",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_29_25c8_4eadaction-action_39_3675_bdf6action"
+ },
+ {
+  "id": "$else_42_e8b0_4d00",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 1292,
+   "y": 955
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_42_61c8_0250",
+  "target": "$else_42_e8b0_4d00",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_42_61c8_0250-$else_42_e8b0_4d00"
+ },
+ {
+  "id": "condition_42_61c8_0250",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{BGVAR_modmails}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 2289,
+   "y": 734
+  },
+  "width": 267,
+  "height": 111
+ },
+ {
+  "id": "conChild46_3bff",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "none",
+    "ignoreCase": false
+   }
+  },
+  "position": {
+   "x": 3278,
+   "y": 955
+  },
+  "width": 290,
+  "height": 93
+ },
+ {
+  "source": "condition_42_61c8_0250",
+  "target": "conChild46_3bff",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_42_61c8_0250-conChild46_3bff"
+ },
+ {
+  "width": 651,
+  "height": 111,
+  "id": "action_49_ac19_6713",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "",
+     "embeds": [
+      {
+       "title": "",
+       "description": "{event_message_content}",
+       "author": {
+        "name": "{event_user_name}",
+        "url": "",
+        "icon_url": "{event_user_avatar}"
+       },
+       "color": "#00ff1f",
+       "footer": "",
+       "footerIcon": "",
+       "timestamp": "",
+       "image": {
+        "url": ""
+       },
+       "thumbnail": {
+        "url": ""
+       },
+       "fields": [],
+       "timestamp_variable": ""
+      }
+     ]
+    },
+    "messageType": "basic",
+    "components": [],
+    "target": {
+     "id": "{BGVAR_modmails}"
+    },
+    "validated": true,
+    "linked": true,
+    "allowedMentions": {
+     "parse": []
+    },
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 2193,
+   "y": 2037
+  }
+ },
+ {
+  "width": 260,
+  "height": 111,
+  "id": "action_51_b9a5_12eb",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "React to a Message",
+    "description": "React to a message"
+   },
+   "data": {
+    "type": "react_message",
+    "reactions": [
+     "✅"
+    ],
+    "additionalReactions": "",
+    "target": {
+     "specific": true,
+     "channel_id": "{event_message_channel_id}",
+     "message_id": "{event_message_id}"
+    },
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 927,
+   "y": 2258
+  }
+ },
+ {
+  "width": 419,
+  "height": 125,
+  "id": "action_1746928398068",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Set Variable",
+    "description": "Set the value of a custom variable"
+   },
+   "data": {
+    "type": "set_var",
+    "reference": "opened_modmails",
+    "value": "{main_mes}",
+    "key": "",
+    "target": {
+     "self": true
+    },
+    "operation": "unshift",
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 3998,
+   "y": 4054
+  }
+ },
+ {
+  "source": "action_27_94eb_1d7d",
+  "sourceHandle": "action",
+  "target": "action_1746928398068",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_27_94eb_1d7daction-action_1746928398068action"
+ },
+ {
+  "id": "$else_55_17f9_693a",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 6432,
+   "y": 1803
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_55_13f2_6d95",
+  "target": "$else_55_17f9_693a",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_55_13f2_6d95-$else_55_17f9_693a"
+ },
+ {
+  "id": "condition_55_13f2_6d95",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{BGVAR_opened_modmails}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 6605,
+   "y": 1582
+  },
+  "width": 322,
+  "height": 111
+ },
+ {
+  "id": "conChild59_492c",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "array_contains",
+    "comparison_value": "{event_message_channel_id}",
+    "ignoreCase": false,
+    "validated": true
+   }
+  },
+  "position": {
+   "x": 6772,
+   "y": 1803
+  },
+  "width": 398,
+  "height": 93
+ },
+ {
+  "source": "condition_55_13f2_6d95",
+  "target": "conChild59_492c",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_55_13f2_6d95-conChild59_492c"
+ },
+ {
+  "width": 396,
+  "height": 125,
+  "id": "action_1746928519006",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Set Variable",
+    "description": "Set the value of a custom variable"
+   },
+   "data": {
+    "type": "set_var",
+    "reference": "opened_modmail_ids",
+    "value": "{owner_id}",
+    "key": "{main_mes}",
+    "target": {
+     "self": true
+    },
+    "operation": "unshift",
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 4010,
+   "y": 4289
+  }
+ },
+ {
+  "source": "action_1746928398068",
+  "sourceHandle": "action",
+  "target": "action_1746928519006",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1746928398068action-action_1746928519006action"
+ },
+ {
+  "width": 651,
+  "height": 111,
+  "id": "action_1746928860565",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "🔒Closed by {user}",
+     "embeds": []
+    },
+    "messageType": "basic",
+    "components": [],
+    "target": {
+     "trigger_channel": true
+    },
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 5037,
+   "y": 5624
+  }
+ },
+ {
+  "id": "action_68_8d74_2125",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Edit a Thread",
+    "description": "Edit a public or private thread in the server"
+   },
+   "data": {
+    "type": "thread_edit",
+    "name": "",
+    "autoArchiveDuration": "",
+    "rateLimitPerUser": 0,
+    "invitable": false,
+    "validated": true,
+    "locked": true,
+    "archived": true,
+    "success_handles": false,
+    "subType": "thread",
+    "target": {
+     "self": true
+    },
+    "variable": "edited_thread_80c4",
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 5175,
+   "y": 6066
+  },
+  "width": 375,
+  "height": 111
+ },
+ {
+  "width": 651,
+  "height": 111,
+  "id": "action_70_6d1a_d224",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "",
+     "embeds": [
+      {
+       "title": "🔒Modmail Ticket Closed",
+       "description": "Your ticket has been marked as resolved and closed; we hope we were able to resolve the problem you were experiencing in Unreal API. If you experience any problems in the future, please don't hesitate to reach out to us once again!",
+       "author": {
+        "name": "",
+        "url": "",
+        "icon_url": ""
+       },
+       "color": "#ef0707",
+       "footer": "",
+       "footerIcon": "",
+       "timestamp": "",
+       "image": {
+        "url": ""
+       },
+       "thumbnail": {
+        "url": ""
+       },
+       "fields": [],
+       "timestamp_variable": ""
+      }
+     ]
+    },
+    "messageType": "basic",
+    "components": [],
+    "target": {
+     "dm_user_id": "{owner_id}"
+    },
+    "validated": true,
+    "linked": true,
+    "useComponentsV2": true,
+    "componentsV2Data": {
+     "version": 2,
+     "components": [
+      {
+       "id": "comp_1771919563902_rtgi9rh9m",
+       "type": "container",
+       "parent_id": null,
+       "data": {
+        "accent_color": null,
+        "spoiler": false
+       }
+      },
+      {
+       "id": "comp_1771919564912_6r5nnwpot",
+       "type": "text",
+       "parent_id": "comp_1771919563902_rtgi9rh9m",
+       "data": {
+        "content": "# 🎟️Modmail Ticket Closed\nYour ticket has been marked as resolved and closed; we hope we were able to resolve the problem you were experiencing in {server}. If you experience any problems in the future, please don't hesitate to reach out to us once again!",
+        "allowed_mentions": []
+       }
+      },
+      {
+       "id": "comp_1771919643953_aqbnlprti",
+       "type": "separator",
+       "parent_id": "comp_1771919563902_rtgi9rh9m",
+       "data": {}
+      },
+      {
+       "id": "comp_1771919644846_bnqx62jdh",
+       "type": "text",
+       "parent_id": "comp_1771919563902_rtgi9rh9m",
+       "data": {
+        "content": "-# We hope you enjoy the rest of your day - **{server} team**",
+        "allowed_mentions": []
+       }
+      }
+     ],
+     "validation": {
+      "isValid": true,
+      "emptyContainers": [],
+      "sectionsWithoutAccessories": [],
+      "emptyActionRows": [],
+      "sectionsWithoutText": []
+     }
+    },
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 5037,
+   "y": 6301
+  }
+ },
+ {
+  "source": "action_68_8d74_2125",
+  "sourceHandle": "action",
+  "target": "action_70_6d1a_d224",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_68_8d74_2125action-action_70_6d1a_d224action"
+ },
+ {
+  "id": "action_72_48b7_4269",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Delete Variable",
+    "description": "Delete the value of a custom variable"
+   },
+   "data": {
+    "type": "delete_var",
+    "reference": "modmails",
+    "target": {
+     "user_id": "{owner_id}"
+    },
+    "key_target_all": false,
+    "key": "",
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 5225,
+   "y": 6522
+  },
+  "width": 276,
+  "height": 93
+ },
+ {
+  "width": 427,
+  "height": 93,
+  "id": "action_1746929075169",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Delete Variable",
+    "description": "Delete the value of a custom variable"
+   },
+   "data": {
+    "type": "delete_var",
+    "reference": "opened_modmail_ids",
+    "target": {
+     "self": true
+    },
+    "key_target_all": false,
+    "key": "{edited_thread_80c4.id}",
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 5149,
+   "y": 6743
+  }
+ },
+ {
+  "source": "action_72_48b7_4269",
+  "sourceHandle": "action",
+  "target": "action_1746929075169",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_72_48b7_4269action-action_1746929075169action"
+ },
+ {
+  "width": 385,
+  "height": 125,
+  "id": "action_1746929115385",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Set Variable",
+    "description": "Set the value of a custom variable"
+   },
+   "data": {
+    "type": "set_var",
+    "reference": "opened_modmails",
+    "value": "{main_mes}",
+    "key": "",
+    "target": {
+     "self": true
+    },
+    "operation": "remove_value",
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 5170,
+   "y": 6946
+  }
+ },
+ {
+  "source": "action_1746929075169",
+  "sourceHandle": "action",
+  "target": "action_1746929115385",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1746929075169action-action_1746929115385action"
+ },
+ {
+  "id": "action_1746929151316",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "🔒Reported Misuse by {user}",
+     "embeds": []
+    },
+    "messageType": "basic",
+    "components": [],
+    "target": {
+     "trigger_channel": true
+    },
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 5781,
+   "y": 5624
+  },
+  "width": 651,
+  "height": 111
+ },
+ {
+  "id": "action_1746929198791",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "🔒Blacklisted by {user}",
+     "embeds": []
+    },
+    "messageType": "basic",
+    "components": [],
+    "target": {
+     "trigger_channel": true
+    },
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 4363,
+   "y": 5845
+  },
+  "width": 651,
+  "height": 111
+ },
+ {
+  "id": "action_81_0bbe_1625",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Set a unique variable",
+    "description": "Set a unique variable for every execution of this command or event."
+   },
+   "data": {
+    "type": "set_unique_variable",
+    "reference": "reason",
+    "value": "Solved",
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 5094,
+   "y": 5403
+  },
+  "width": 538,
+  "height": 111
+ },
+ {
+  "source": "action_81_0bbe_1625",
+  "sourceHandle": "action",
+  "target": "action_1746928860565",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_81_0bbe_1625action-action_1746928860565action"
+ },
+ {
+  "id": "action_1746929251106",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Set a unique variable",
+    "description": "Set a unique variable for every execution of this command or event."
+   },
+   "data": {
+    "type": "set_unique_variable",
+    "reference": "reason",
+    "value": "Misuse",
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 5838,
+   "y": 5403
+  },
+  "width": 538,
+  "height": 111
+ },
+ {
+  "source": "action_1746929251106",
+  "sourceHandle": "action",
+  "target": "action_1746929151316",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1746929251106action-action_1746929151316action"
+ },
+ {
+  "id": "action_86_59f7_7e8e",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Run Equation on Variable",
+    "description": "Run an equation on a custom variable"
+   },
+   "data": {
+    "type": "math_var",
+    "reference": "modmail_misuse",
+    "key": "",
+    "round": true,
+    "equation": "var + 1",
+    "target": {
+     "user_id": "{owner_id}"
+    },
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 5952,
+   "y": 5845
+  },
+  "width": 309,
+  "height": 93
+ },
+ {
+  "source": "action_1746929151316",
+  "sourceHandle": "action",
+  "target": "action_86_59f7_7e8e",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1746929151316action-action_86_59f7_7e8eaction"
+ },
+ {
+  "id": "$else_88_edab_d734",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 5768,
+   "y": 6301
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_88_eb7f_5eac",
+  "target": "$else_88_edab_d734",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_88_eb7f_5eac-$else_88_edab_d734"
+ },
+ {
+  "id": "condition_88_eb7f_5eac",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{BGVAR_modmail_misuse[{owner_id}]}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 5911,
+   "y": 6066
+  },
+  "width": 391,
+  "height": 111
+ },
+ {
+  "source": "action_86_59f7_7e8e",
+  "sourceHandle": "action",
+  "target": "condition_88_eb7f_5eac",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_86_59f7_7e8eaction-condition_88_eb7f_5eacaction"
+ },
+ {
+  "id": "conChild92_91f6",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "3",
+    "ignoreCase": false
+   }
+  },
+  "position": {
+   "x": 6108,
+   "y": 6301
+  },
+  "width": 414,
+  "height": 93
+ },
+ {
+  "source": "condition_88_eb7f_5eac",
+  "target": "conChild92_91f6",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_88_eb7f_5eac-conChild92_91f6"
+ },
+ {
+  "width": 260,
+  "height": 93,
+  "id": "$else_97_0edf_017c",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 2928,
+   "y": 1379
+  }
+ },
+ {
+  "source": "condition_97_c618_ada3",
+  "target": "$else_97_0edf_017c",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_97_c618_ada3-$else_97_0edf_017c"
+ },
+ {
+  "id": "condition_97_c618_ada3",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{BGVAR_modmail_misuse[{event_user_id}]}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 3212,
+   "y": 1158
+  },
+  "width": 422,
+  "height": 111
+ },
+ {
+  "source": "conChild46_3bff",
+  "sourceHandle": "action",
+  "target": "condition_97_c618_ada3",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild46_3bffaction-condition_97_c618_ada3action"
+ },
+ {
+  "id": "conChild101_b34e",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "3",
+    "ignoreCase": false
+   }
+  },
+  "position": {
+   "x": 3566,
+   "y": 1379
+  },
+  "width": 445,
+  "height": 93
+ },
+ {
+  "source": "condition_97_c618_ada3",
+  "target": "conChild101_b34e",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_97_c618_ada3-conChild101_b34e"
+ },
+ {
+  "source": "$else_97_0edf_017c",
+  "sourceHandle": "action",
+  "target": "action_9_66e3_7af2",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-$else_97_0edf_017caction-action_9_66e3_7af2action"
+ },
+ {
+  "id": "action_104_91dc_f94e",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "",
+     "embeds": [
+      {
+       "title": "",
+       "description": "# BLACKLISTED\nYou may not create a modmail ticket as you have been blacklisted by server staff!",
+       "author": {
+        "name": "",
+        "url": "",
+        "icon_url": ""
+       },
+       "color": "#000000",
+       "footer": "",
+       "footerIcon": "",
+       "timestamp": "",
+       "image": {
+        "url": ""
+       },
+       "thumbnail": {
+        "url": ""
+       },
+       "fields": [],
+       "timestamp_variable": ""
+      }
+     ]
+    },
+    "messageType": "basic",
+    "components": [],
+    "target": {
+     "trigger_channel": true
+    },
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 3463,
+   "y": 1582
+  },
+  "width": 651,
+  "height": 111
+ },
+ {
+  "source": "conChild101_b34e",
+  "sourceHandle": "action",
+  "target": "action_104_91dc_f94e",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild101_b34eaction-action_104_91dc_f94eaction"
+ },
+ {
+  "width": 651,
+  "height": 111,
+  "id": "action_1746929804704",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "🔒 | <@{event_user_id}> has been blacklisted from __modmail__ **automatically**\n\nReason: **Surpassing 2 misuse strikes**",
+     "embeds": []
+    },
+    "messageType": "basic",
+    "components": [],
+    "target": {
+     "trigger_channel": true
+    },
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 5990,
+   "y": 6522
+  }
+ },
+ {
+  "id": "action_108_94a2_8bec",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Set Variable",
+    "description": "Set the value of a custom variable"
+   },
+   "data": {
+    "type": "set_var",
+    "reference": "modmail_misuse",
+    "value": "3",
+    "key": "",
+    "target": {
+     "user_id": "{owner_id}"
+    },
+    "operation": "unshift",
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 4532,
+   "y": 6066
+  },
+  "width": 312,
+  "height": 125
+ },
+ {
+  "source": "action_1746929198791",
+  "sourceHandle": "action",
+  "target": "action_108_94a2_8bec",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1746929198791action-action_108_94a2_8becaction"
+ },
+ {
+  "id": "conChild115_26e4",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "ends_with",
+    "comparison_value": "THREAD",
+    "ignoreCase": false
+   }
+  },
+  "position": {
+   "x": 6583,
+   "y": 531
+  },
+  "width": 366,
+  "height": 93
+ },
+ {
+  "source": "condition_3_380b_8ed7",
+  "target": "conChild115_26e4",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_3_380b_8ed7-conChild115_26e4"
+ },
+ {
+  "id": "$else_116_8cbb_4bcf",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 6183,
+   "y": 1379
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_116_c6b9_3053",
+  "target": "$else_116_8cbb_4bcf",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_116_c6b9_3053-$else_116_8cbb_4bcf"
+ },
+ {
+  "id": "condition_116_c6b9_3053",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{Channel[{event_message_channel_id}].parentId}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 6326,
+   "y": 1158
+  },
+  "width": 428,
+  "height": 111
+ },
+ {
+  "id": "conChild120_58aa",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "{BGVAR_modmail_channel_id}",
+    "ignoreCase": false,
+    "validated": true
+   }
+  },
+  "position": {
+   "x": 6523,
+   "y": 1379
+  },
+  "width": 486,
+  "height": 93
+ },
+ {
+  "source": "condition_116_c6b9_3053",
+  "target": "conChild120_58aa",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_116_c6b9_3053-conChild120_58aa"
+ },
+ {
+  "source": "conChild120_58aa",
+  "sourceHandle": "action",
+  "target": "condition_55_13f2_6d95",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild120_58aaaction-condition_55_13f2_6d95action"
+ },
+ {
+  "id": "action_124_f124_fc3d",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Set a unique variable",
+    "description": "Set a unique variable for every execution of this command or event."
+   },
+   "data": {
+    "type": "set_unique_variable",
+    "reference": "owner_id",
+    "value": "{user_id}",
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 1443,
+   "y": 3377
+  },
+  "width": 538,
+  "height": 111
+ },
+ {
+  "source": "action_14_1ad0_6cdb",
+  "sourceHandle": "action",
+  "target": "action_124_f124_fc3d",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_14_1ad0_6cdbaction-action_124_f124_fc3daction"
+ },
+ {
+  "width": 260,
+  "height": 124,
+  "id": "v2_select_menu_comp_1771918915401_vx9i5hdi9",
+  "type": "advMessageSelectMenu",
+  "data": {
+   "node_options": {
+    "title": "Select Menu",
+    "description": "ComponentsV2 select_menu",
+    "v2ComponentId": "comp_1771918915401_vx9i5hdi9",
+    "v2ParentId": "comp_1771918914160_20woocrlh"
+   },
+   "data": {
+    "type": "adv_select_menu",
+    "menu_type": "basic",
+    "multiselect": false,
+    "minOptions": "1",
+    "maxOptions": "1",
+    "basic_options": [
+     {
+      "label": "Inactivity",
+      "description": "Post inactive for more than  2 hours, close 30mins after sending",
+      "emoji_id": "",
+      "value": ""
+     },
+     {
+      "label": "Handled",
+      "description": "Use this to send the handled message on a user report",
+      "emoji_id": "",
+      "value": ""
+     }
+    ],
+    "type_options": {},
+    "validated": true,
+    "customVariableName": "auto_option",
+    "v2ComponentId": "comp_1771918915401_vx9i5hdi9",
+    "placeholder": "📫Automatic responses",
+    "editComponentId": "1771919811614_71458"
+   }
+  },
+  "position": {
+   "x": 3292,
+   "y": 4745
+  }
+ },
+ {
+  "id": "eaction_29_25c8_4ead-v2_select_menu_comp_1771918915401_vx9i5hdi9",
+  "source": "action_29_25c8_4ead",
+  "target": "v2_select_menu_comp_1771918915401_vx9i5hdi9",
+  "sourceHandle": "components_source",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed"
+ },
+ {
+  "width": 260,
+  "height": 124,
+  "id": "v2_select_menu_comp_1771918918692_74a7igwks",
+  "type": "advMessageSelectMenu",
+  "data": {
+   "node_options": {
+    "title": "Select Menu",
+    "description": "ComponentsV2 select_menu",
+    "v2ComponentId": "comp_1771918918692_74a7igwks",
+    "v2ParentId": "comp_1771918917325_3gqazgztx"
+   },
+   "data": {
+    "type": "adv_select_menu",
+    "menu_type": "basic",
+    "multiselect": false,
+    "minOptions": "1",
+    "maxOptions": "1",
+    "basic_options": [
+     {
+      "label": "Close Ticket",
+      "description": "Close the ticket normally",
+      "emoji_id": "🚫",
+      "value": ""
+     },
+     {
+      "label": "Misuse",
+      "description": "Close & add misuse strike",
+      "emoji_id": "📛",
+      "value": ""
+     },
+     {
+      "label": "Blacklist",
+      "description": "Immediately blacklist the user (Talk to a manger+ first)",
+      "emoji_id": "🔨",
+      "value": ""
+     }
+    ],
+    "type_options": {},
+    "validated": true,
+    "customVariableName": "close_option",
+    "v2ComponentId": "comp_1771918918692_74a7igwks",
+    "placeholder": "🚫Close Options",
+    "editComponentId": "1771919812194_69519"
+   }
+  },
+  "position": {
+   "x": 5268,
+   "y": 4745
+  }
+ },
+ {
+  "id": "eaction_29_25c8_4ead-v2_select_menu_comp_1771918918692_74a7igwks",
+  "source": "action_29_25c8_4ead",
+  "target": "v2_select_menu_comp_1771918918692_74a7igwks",
+  "sourceHandle": "components_source",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed"
+ },
+ {
+  "width": 260,
+  "height": 93,
+  "id": "$else_130_c852_78b3",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 4558,
+   "y": 5200
+  }
+ },
+ {
+  "source": "condition_130_0acb_b8b5",
+  "target": "$else_130_c852_78b3",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_130_0acb_b8b5-$else_130_c852_78b3"
+ },
+ {
+  "width": 260,
+  "height": 111,
+  "id": "condition_130_0acb_b8b5",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{close_option}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 5268,
+   "y": 4979
+  }
+ },
+ {
+  "source": "v2_select_menu_comp_1771918918692_74a7igwks",
+  "sourceHandle": "action",
+  "target": "condition_130_0acb_b8b5",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-v2_select_menu_comp_1771918918692_74a7igwksaction-condition_130_0acb_b8b5action"
+ },
+ {
+  "width": 260,
+  "height": 93,
+  "id": "conChild134_657f",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "Close Ticket",
+    "ignoreCase": false
+   }
+  },
+  "position": {
+   "x": 5233,
+   "y": 5200
+  }
+ },
+ {
+  "source": "condition_130_0acb_b8b5",
+  "target": "conChild134_657f",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_130_0acb_b8b5-conChild134_657f"
+ },
+ {
+  "source": "conChild134_657f",
+  "sourceHandle": "action",
+  "target": "action_81_0bbe_1625",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild134_657faction-action_81_0bbe_1625action"
+ },
+ {
+  "id": "conChild137_805c",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "Misuse",
+    "ignoreCase": false
+   }
+  },
+  "position": {
+   "x": 5977,
+   "y": 5200
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_130_0acb_b8b5",
+  "target": "conChild137_805c",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_130_0acb_b8b5-conChild137_805c"
+ },
+ {
+  "source": "conChild137_805c",
+  "sourceHandle": "action",
+  "target": "action_1746929251106",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild137_805caction-action_1746929251106action"
+ },
+ {
+  "width": 651,
+  "height": 111,
+  "id": "action_140_a493_14d5",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "",
+     "embeds": [
+      {
+       "title": "",
+       "description": "",
+       "author": {
+        "name": "",
+        "url": "",
+        "icon_url": ""
+       },
+       "color": "#ef0707",
+       "footer": "",
+       "footerIcon": "",
+       "timestamp": "",
+       "image": {
+        "url": ""
+       },
+       "thumbnail": {
+        "url": ""
+       },
+       "fields": [],
+       "timestamp_variable": ""
+      }
+     ]
+    },
+    "messageType": "basic",
+    "components": [],
+    "componentsV2Data": {
+     "version": 2,
+     "components": [
+      {
+       "id": "comp_1771919249984_5mnbx5ym9",
+       "type": "container",
+       "parent_id": null,
+       "data": {
+        "accent_color": null,
+        "spoiler": false
+       }
+      },
+      {
+       "id": "comp_1771919250747_fhk83ghun",
+       "type": "text",
+       "parent_id": "comp_1771919249984_5mnbx5ym9",
+       "data": {
+        "content": "## 🔨Are you sure?\nYou are about to blacklist this member from modmail, please speak to a manager about this first before you do this!",
+        "allowed_mentions": []
+       }
+      },
+      {
+       "id": "comp_1771919297522_8uijhx0cj",
+       "type": "action_row",
+       "parent_id": "comp_1771919249984_5mnbx5ym9",
+       "data": {
+        "components": []
+       }
+      },
+      {
+       "id": "comp_1771919298501_nngkseq02",
+       "type": "button",
+       "parent_id": "comp_1771919297522_8uijhx0cj",
+       "data": {}
+      }
+     ],
+     "validation": {
+      "isValid": true,
+      "emptyContainers": [],
+      "sectionsWithoutAccessories": [],
+      "emptyActionRows": [],
+      "sectionsWithoutText": []
+     }
+    },
+    "useComponentsV2": true,
+    "target": {
+     "trigger_channel": true
+    },
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 4363,
+   "y": 5403
+  }
+ },
+ {
+  "source": "$else_130_c852_78b3",
+  "sourceHandle": "action",
+  "target": "action_140_a493_14d5",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-$else_130_c852_78b3action-action_140_a493_14d5action"
+ },
+ {
+  "width": 220,
+  "height": 104,
+  "id": "v2_button_comp_1771919298501_nngkseq02",
+  "type": "advMessageButton",
+  "data": {
+   "node_options": {
+    "title": "Button",
+    "description": "ComponentsV2 button",
+    "v2ComponentId": "comp_1771919298501_nngkseq02",
+    "v2ParentId": "comp_1771919297522_8uijhx0cj"
+   },
+   "data": {
+    "label": "I'm Sure",
+    "style": "SUCCESS",
+    "v2ComponentId": "comp_1771919298501_nngkseq02",
+    "validated": true
+   }
+  },
+  "position": {
+   "x": 4578,
+   "y": 5624
+  }
+ },
+ {
+  "id": "eaction_140_a493_14d5-v2_button_comp_1771919298501_nngkseq02",
+  "source": "action_140_a493_14d5",
+  "target": "v2_button_comp_1771919298501_nngkseq02",
+  "sourceHandle": "components_source",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed"
+ },
+ {
+  "source": "v2_button_comp_1771919298501_nngkseq02",
+  "sourceHandle": "action",
+  "target": "action_1746929198791",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-v2_button_comp_1771919298501_nngkseq02action-action_1746929198791action"
+ },
+ {
+  "width": 371,
+  "height": 111,
+  "id": "action_142_2549_34cd",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Edit a Button or Select Menu",
+    "description": "Edit a button or select menu in a message"
+   },
+   "data": {
+    "type": "edit_component",
+    "edits": [
+     {
+      "editComponentId": "1771919811614_71458",
+      "component_id": "v2_select_menu_comp_1771918915401_vx9i5hdi9",
+      "select_menu": {
+       "placeholder": "📫Automatic responses",
+       "min_values": "1",
+       "max_values": "1",
+       "disabled": "true",
+       "basic_options": [
+        {
+         "label": "Inactivity",
+         "description": "Post inactive for more than  2 hours, close 30mins after sending",
+         "emoji_id": "",
+         "value": ""
+        },
+        {
+         "label": "Handled",
+         "description": "Use this to send the handled message on a user report",
+         "emoji_id": "",
+         "value": ""
+        },
+        {
+         "label": "Contacting Managers",
+         "description": "Use this to contact the management team",
+         "emoji_id": "",
+         "value": ""
+        },
+        {
+         "label": "Contacting Admins",
+         "description": "Use this to contact the Admin team",
+         "emoji_id": "",
+         "value": ""
+        }
+       ],
+       "reset_options": false,
+       "multiselect": false,
+       "menu_type": "basic"
+      }
+     },
+     {
+      "editComponentId": "1771919812194_69519",
+      "component_id": "v2_select_menu_comp_1771918918692_74a7igwks",
+      "select_menu": {
+       "placeholder": "🚫Close Options",
+       "min_values": "1",
+       "max_values": "1",
+       "disabled": "true",
+       "basic_options": [
+        {
+         "label": "Close Ticket",
+         "description": "Close the ticket normally",
+         "emoji_id": "🚫",
+         "value": ""
+        },
+        {
+         "label": "Misuse",
+         "description": "Close & add misuse strike",
+         "emoji_id": "📛",
+         "value": ""
+        },
+        {
+         "label": "Blacklist",
+         "description": "Immediately blacklist the user (Talk to a manger+ first)",
+         "emoji_id": "🔨",
+         "value": ""
+        }
+       ],
+       "reset_options": false,
+       "multiselect": false,
+       "menu_type": "basic"
+      }
+     }
+    ],
+    "action_id": "action_29_25c8_4ead",
+    "target": {
+     "editId": "1746927465683"
+    },
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 5177,
+   "y": 5845
+  }
+ },
+ {
+  "source": "action_70_6d1a_d224",
+  "sourceHandle": "action",
+  "target": "action_72_48b7_4269",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_70_6d1a_d224action-action_72_48b7_4269action"
+ },
+ {
+  "source": "action_108_94a2_8bec",
+  "sourceHandle": "action",
+  "target": "action_142_2549_34cd",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_108_94a2_8becaction-action_142_2549_34cdaction"
+ },
+ {
+  "source": "action_1746928860565",
+  "sourceHandle": "action",
+  "target": "action_142_2549_34cd",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1746928860565action-action_142_2549_34cdaction"
+ },
+ {
+  "source": "$else_88_edab_d734",
+  "sourceHandle": "action",
+  "target": "action_142_2549_34cd",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-$else_88_edab_d734action-action_142_2549_34cdaction"
+ },
+ {
+  "source": "action_1746929804704",
+  "sourceHandle": "action",
+  "target": "action_142_2549_34cd",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1746929804704action-action_142_2549_34cdaction"
+ },
+ {
+  "source": "conChild92_91f6",
+  "sourceHandle": "action",
+  "target": "action_1746929804704",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild92_91f6action-action_1746929804704action"
+ },
+ {
+  "id": "$else_143_2f45_c9b0",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 2756,
+   "y": 5200
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_143_788c_698e",
+  "target": "$else_143_2f45_c9b0",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_143_788c_698e-$else_143_2f45_c9b0"
+ },
+ {
+  "id": "condition_143_788c_698e",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{auto_option}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 3292,
+   "y": 4979
+  },
+  "width": 260,
+  "height": 111
+ },
+ {
+  "source": "v2_select_menu_comp_1771918915401_vx9i5hdi9",
+  "sourceHandle": "action",
+  "target": "condition_143_788c_698e",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-v2_select_menu_comp_1771918915401_vx9i5hdi9action-condition_143_788c_698eaction"
+ },
+ {
+  "id": "conChild147_a2f3",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "Inactivity",
+    "ignoreCase": false
+   }
+  },
+  "position": {
+   "x": 3096,
+   "y": 5200
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_143_788c_698e",
+  "target": "conChild147_a2f3",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_143_788c_698e-conChild147_a2f3"
+ },
+ {
+  "id": "conChild149_13b9",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "Handled",
+    "ignoreCase": false
+   }
+  },
+  "position": {
+   "x": 3827,
+   "y": 5200
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_143_788c_698e",
+  "target": "conChild149_13b9",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_143_788c_698e-conChild149_13b9"
+ },
+ {
+  "width": 651,
+  "height": 111,
+  "id": "action_155_ad8e_c546",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "",
+     "embeds": []
+    },
+    "messageType": "basic",
+    "components": [],
+    "componentsV2Data": {
+     "version": 2,
+     "components": [
+      {
+       "id": "comp_1771921343842_m9hq2s5gz",
+       "type": "container",
+       "parent_id": null,
+       "data": {
+        "accent_color": "#FF0000",
+        "spoiler": false
+       }
+      },
+      {
+       "id": "comp_1771921344802_1v1uo376y",
+       "type": "text",
+       "parent_id": "comp_1771921343842_m9hq2s5gz",
+       "data": {
+        "content": "# 🎟️Ticket Inactivity Notice\nWe’ve noticed that we haven’t received a response from you in a while regarding this ticket. To ensure we can continue assisting you and resolve your request as quickly as possible, please reply at your earliest convenience. If we do not hear back from you soon, this ticket may be closed due to inactivity. If you still need help, simply respond to this message and we’ll be happy to continue assisting you.",
+        "allowed_mentions": []
+       }
+      },
+      {
+       "id": "comp_1771921507284_vrbf78gxu",
+       "type": "separator",
+       "parent_id": "comp_1771921343842_m9hq2s5gz",
+       "data": {}
+      },
+      {
+       "id": "comp_1771921508099_vb1idhvzx",
+       "type": "text",
+       "parent_id": "comp_1771921343842_m9hq2s5gz",
+       "data": {
+        "content": "-# Remember to manually close the ticket in ~30 minutes\n-# Sent by <@{user_id}>",
+        "allowed_mentions": []
+       }
+      }
+     ],
+     "validation": {
+      "isValid": true,
+      "emptyContainers": [],
+      "sectionsWithoutAccessories": [],
+      "emptyActionRows": [],
+      "sectionsWithoutText": []
+     }
+    },
+    "useComponentsV2": true,
+    "target": {
+     "trigger_channel": true
+    },
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 2901,
+   "y": 5403
+  }
+ },
+ {
+  "source": "conChild147_a2f3",
+  "sourceHandle": "action",
+  "target": "action_155_ad8e_c546",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild147_a2f3action-action_155_ad8e_c546action"
+ },
+ {
+  "width": 651,
+  "height": 111,
+  "id": "action_1771921564039",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "",
+     "embeds": []
+    },
+    "messageType": "basic",
+    "components": [],
+    "componentsV2Data": {
+     "version": 2,
+     "components": [
+      {
+       "id": "comp_1771921564039_f4tx0ubfil",
+       "type": "container",
+       "parent_id": null,
+       "data": {
+        "accent_color": "#FF0000",
+        "spoiler": false
+       }
+      },
+      {
+       "id": "comp_1771921564039_4ut47ak48ko",
+       "type": "text",
+       "parent_id": "comp_1771921564039_f4tx0ubfil",
+       "data": {
+        "content": "# 🎟️Ticket Inactivity Notice\nWe’ve noticed that we haven’t received a response from you in a while regarding this ticket. To ensure we can continue assisting you and resolve your request as quickly as possible, please reply at your earliest convenience. If we do not hear back from you soon, this ticket may be closed due to inactivity. If you still need help, simply respond to this message and we’ll be happy to continue assisting you.",
+        "allowed_mentions": []
+       }
+      }
+     ],
+     "validation": {
+      "isValid": true,
+      "emptyContainers": [],
+      "sectionsWithoutAccessories": [],
+      "emptyActionRows": [],
+      "sectionsWithoutText": []
+     }
+    },
+    "useComponentsV2": true,
+    "target": {
+     "dm_user_id": "{owner_id}"
+    },
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 2901,
+   "y": 5624
+  }
+ },
+ {
+  "source": "action_155_ad8e_c546",
+  "sourceHandle": "action",
+  "target": "action_1771921564039",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_155_ad8e_c546action-action_1771921564039action"
+ },
+ {
+  "width": 651,
+  "height": 111,
+  "id": "action_159_c200_b6a3",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "",
+     "embeds": []
+    },
+    "messageType": "basic",
+    "components": [],
+    "componentsV2Data": {
+     "version": 2,
+     "components": [
+      {
+       "id": "comp_1771921626136_iuc62ya5d",
+       "type": "container",
+       "parent_id": null,
+       "data": {
+        "accent_color": "#4FC3F7",
+        "spoiler": false
+       }
+      },
+      {
+       "id": "comp_1771921627306_2jdbcsloc",
+       "type": "text",
+       "parent_id": "comp_1771921626136_iuc62ya5d",
+       "data": {
+        "content": "# 🔨Report Handled\nThank you for submitting your user report. Our moderation team will carefully review the information provided and take any appropriate action in accordance with our server rules. Please note that, for privacy and security reasons, we do not disclose the specific outcome or details of any disciplinary actions taken. We truly appreciate you taking the time to create this ticket and helping make {server} a better and safer place for everyone. If you have any additional concerns, feel free to let us know. We hope you have a wonderful day!",
+        "allowed_mentions": []
+       }
+      },
+      {
+       "id": "comp_1771921763356_euhhw1bac",
+       "type": "separator",
+       "parent_id": "comp_1771921626136_iuc62ya5d",
+       "data": {}
+      },
+      {
+       "id": "comp_1771921764465_1nn8qnj0q",
+       "type": "text",
+       "parent_id": "comp_1771921626136_iuc62ya5d",
+       "data": {
+        "content": "-# Remember to close the ticket\n-# Sent by <@{user_id}>",
+        "allowed_mentions": []
+       }
+      }
+     ],
+     "validation": {
+      "isValid": true,
+      "emptyContainers": [],
+      "sectionsWithoutAccessories": [],
+      "emptyActionRows": [],
+      "sectionsWithoutText": []
+     }
+    },
+    "useComponentsV2": true,
+    "target": {
+     "trigger_channel": true
+    },
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 3632,
+   "y": 5403
+  }
+ },
+ {
+  "source": "conChild149_13b9",
+  "sourceHandle": "action",
+  "target": "action_159_c200_b6a3",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild149_13b9action-action_159_c200_b6a3action"
+ },
+ {
+  "width": 651,
+  "height": 111,
+  "id": "action_1771921867836",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "",
+     "embeds": []
+    },
+    "messageType": "basic",
+    "components": [],
+    "componentsV2Data": {
+     "version": 2,
+     "components": [
+      {
+       "id": "comp_1771921867837_zw9s3ddaxfi",
+       "type": "container",
+       "parent_id": null,
+       "data": {
+        "accent_color": "#4FC3F7",
+        "spoiler": false
+       }
+      },
+      {
+       "id": "comp_1771921867837_e7si9rfoob9",
+       "type": "text",
+       "parent_id": "comp_1771921867837_zw9s3ddaxfi",
+       "data": {
+        "content": "# 🔨Report Handled\nThank you for submitting your user report. Our moderation team will carefully review the information provided and take any appropriate action in accordance with our server rules. Please note that, for privacy and security reasons, we do not disclose the specific outcome or details of any disciplinary actions taken. We truly appreciate you taking the time to create this ticket and helping make {server} a better and safer place for everyone. If you have any additional concerns, feel free to let us know. We hope you have a wonderful day!",
+        "allowed_mentions": []
+       }
+      }
+     ],
+     "validation": {
+      "isValid": true,
+      "emptyContainers": [],
+      "sectionsWithoutAccessories": [],
+      "emptyActionRows": [],
+      "sectionsWithoutText": []
+     }
+    },
+    "useComponentsV2": true,
+    "target": {
+     "dm_user_id": "{owner_id}"
+    },
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 3632,
+   "y": 5624
+  }
+ },
+ {
+  "source": "action_159_c200_b6a3",
+  "sourceHandle": "action",
+  "target": "action_1771921867836",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_159_c200_b6a3action-action_1771921867836action"
+ },
+ {
+  "width": 260,
+  "height": 93,
+  "id": "$else_190_2273_8c2b",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 561,
+   "y": 1379
+  }
+ },
+ {
+  "source": "condition_190_26df_562a",
+  "target": "$else_190_2273_8c2b",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_190_26df_562a-$else_190_2273_8c2b"
+ },
+ {
+  "width": 388,
+  "height": 111,
+  "id": "condition_190_26df_562a",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{event_message_attachments_count}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 1228,
+   "y": 1158
+  }
+ },
+ {
+  "width": 411,
+  "height": 93,
+  "id": "conChild193_1f4d",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "0",
+    "ignoreCase": false
+   }
+  },
+  "position": {
+   "x": 1948,
+   "y": 1379
+  }
+ },
+ {
+  "source": "condition_190_26df_562a",
+  "target": "conChild193_1f4d",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_190_26df_562a-conChild193_1f4d"
+ },
+ {
+  "source": "$else_42_e8b0_4d00",
+  "sourceHandle": "action",
+  "target": "condition_190_26df_562a",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-$else_42_e8b0_4d00action-condition_190_26df_562aaction"
+ },
+ {
+  "source": "action_49_ac19_6713",
+  "sourceHandle": "action",
+  "target": "action_51_b9a5_12eb",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_49_ac19_6713action-action_51_b9a5_12ebaction"
+ },
+ {
+  "width": 651,
+  "height": 111,
+  "id": "action_1771923497259",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "",
+     "embeds": [
+      {
+       "title": "",
+       "description": "{event_message_content}\n{event_message_attachments}",
+       "author": {
+        "name": "{event_user_name}",
+        "url": "",
+        "icon_url": "{event_user_avatar}"
+       },
+       "color": "#07ff00",
+       "footer": "",
+       "footerIcon": "",
+       "timestamp": "",
+       "image": {
+        "url": ""
+       },
+       "thumbnail": {
+        "url": ""
+       },
+       "fields": [],
+       "timestamp_variable": ""
+      }
+     ]
+    },
+    "messageType": "basic",
+    "components": [],
+    "target": {
+     "id": "{BGVAR_modmails}"
+    },
+    "validated": true,
+    "linked": true,
+    "allowedMentions": {
+     "parse": []
+    },
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 731,
+   "y": 2037
+  }
+ },
+ {
+  "width": 260,
+  "height": 93,
+  "id": "else_1771924168939_0961_021d_857a",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else",
+    "validated": true
+   }
+  },
+  "position": {
+   "x": 9214,
+   "y": 0
+  },
+  "oldId": "$else_170_44b9_a72f"
+ },
+ {
+  "width": 260,
+  "height": 93,
+  "id": "else_1771924214410_9855_718e",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 9634,
+   "y": 0
+  },
+  "oldId": "$else_170_44b9_a72f"
+ },
+ {
+  "width": 260,
+  "height": 93,
+  "id": "$else_199_d281_fae6",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 5084,
+   "y": 2258
+  }
+ },
+ {
+  "source": "condition_199_a7da_4a1e",
+  "target": "$else_199_d281_fae6",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_199_a7da_4a1e-$else_199_d281_fae6"
+ },
+ {
+  "width": 312,
+  "height": 111,
+  "id": "condition_199_a7da_4a1e",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{event_message_content}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 6815,
+   "y": 2037
+  }
+ },
+ {
+  "id": "conChild203_0786",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "starts_with",
+    "comparison_value": "!d",
+    "ignoreCase": false
+   }
+  },
+  "position": {
+   "x": 5424,
+   "y": 2258
+  },
+  "width": 338,
+  "height": 93
+ },
+ {
+  "source": "condition_199_a7da_4a1e",
+  "target": "conChild203_0786",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_199_a7da_4a1e-conChild203_0786"
+ },
+ {
+  "width": 399,
+  "height": 111,
+  "id": "action_1771924316578",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Manipulate some text",
+    "description": "Manipulate and run functions on provided text"
+   },
+   "data": {
+    "type": "string_manipulation",
+    "string": "{event_message_content}",
+    "variable": "send_to_user",
+    "operation": {
+     "type": "replace",
+     "search": "!d",
+     "replace": " "
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 5393,
+   "y": 2479
+  }
+ },
+ {
+  "source": "conChild203_0786",
+  "sourceHandle": "action",
+  "target": "action_1771924316578",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild203_0786action-action_1771924316578action"
+ },
+ {
+  "width": 265,
+  "height": 111,
+  "id": "action_1771924324159",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Delete a Message",
+    "description": "Delete a message or reply"
+   },
+   "data": {
+    "type": "delete_message",
+    "specific": true,
+    "channel_id": "{event_message_channel_id}",
+    "message_id": "{event_message_id}",
+    "id": "",
+    "action_id": "",
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 5460,
+   "y": 2700
+  }
+ },
+ {
+  "source": "action_1771924316578",
+  "sourceHandle": "action",
+  "target": "action_1771924324159",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1771924316578action-action_1771924324159action"
+ },
+ {
+  "width": 430,
+  "height": 111,
+  "id": "action_1771924330035",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "",
+     "embeds": []
+    },
+    "messageType": "basic",
+    "components": [],
+    "componentsV2Data": {
+     "version": 2,
+     "components": [
+      {
+       "id": "comp_1771924330035_u7zelj68cb",
+       "type": "container",
+       "parent_id": null,
+       "data": {
+        "accent_color": null,
+        "spoiler": false
+       }
+      },
+      {
+       "id": "comp_1771924330035_sykry6d2rff",
+       "type": "text",
+       "parent_id": "comp_1771924330035_u7zelj68cb",
+       "data": {
+        "content": "### Please look over the message for any spelling mistakes before sending\n{send_to_user}",
+        "allowed_mentions": []
+       }
+      },
+      {
+       "id": "comp_1771924330035_ltgzski117",
+       "type": "action_row",
+       "parent_id": "comp_1771924330035_u7zelj68cb",
+       "data": {
+        "components": []
+       }
+      },
+      {
+       "id": "comp_1771924330035_fxsuvb5on4n",
+       "type": "button",
+       "parent_id": "comp_1771924330035_ltgzski117",
+       "data": {
+        "node_options": {
+         "title": "Button",
+         "description": "ComponentsV2 button",
+         "v2ComponentId": "comp_1771922547743_gr1ypw01a",
+         "v2ParentId": "comp_1771922546895_p001dmxf0"
+        },
+        "data": {
+         "label": "Button",
+         "style": "PRIMARY",
+         "v2ComponentId": "comp_1771922547743_gr1ypw01a",
+         "validated": true
+        }
+       }
+      },
+      {
+       "id": "comp_1771924330035_t9fl1clhkoe",
+       "type": "button",
+       "parent_id": "comp_1771924330035_ltgzski117",
+       "data": {}
+      }
+     ],
+     "validation": {
+      "isValid": true,
+      "emptyContainers": [],
+      "sectionsWithoutAccessories": [],
+      "emptyActionRows": [],
+      "sectionsWithoutText": []
+     }
+    },
+    "useComponentsV2": true,
+    "target": {
+     "trigger_channel": true
+    },
+    "validated": true,
+    "linked": true,
+    "command_label": "Check for approval 2",
+    "editId": "1771922715800",
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 5378,
+   "y": 2921
+  }
+ },
+ {
+  "width": 220,
+  "height": 104,
+  "id": "v2_button_comp_1771924330035_fxsuvb5on4n",
+  "type": "advMessageButton",
+  "data": {
+   "node_options": {
+    "title": "Button",
+    "description": "ComponentsV2 button",
+    "v2ComponentId": "comp_1771924330035_fxsuvb5on4n",
+    "v2ParentId": "comp_1771924330035_ltgzski117"
+   },
+   "data": {
+    "label": "Cancel",
+    "style": "DANGER",
+    "v2ComponentId": "comp_1771924330035_fxsuvb5on4n",
+    "validated": true,
+    "emoji_id": ""
+   }
+  },
+  "position": {
+   "x": 5310,
+   "y": 3156
+  }
+ },
+ {
+  "id": "eaction_1771924330035-v2_button_comp_1771924330035_fxsuvb5on4n",
+  "source": "action_1771924330035",
+  "target": "v2_button_comp_1771924330035_fxsuvb5on4n",
+  "sourceHandle": "components_source",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed"
+ },
+ {
+  "width": 220,
+  "height": 104,
+  "id": "v2_button_comp_1771924330035_t9fl1clhkoe",
+  "type": "advMessageButton",
+  "data": {
+   "node_options": {
+    "title": "Button",
+    "description": "ComponentsV2 button",
+    "v2ComponentId": "comp_1771924330035_t9fl1clhkoe",
+    "v2ParentId": "comp_1771924330035_ltgzski117"
+   },
+   "data": {
+    "label": "Confirm & Send",
+    "style": "SUCCESS",
+    "v2ComponentId": "comp_1771924330035_t9fl1clhkoe",
+    "validated": true,
+    "emoji_id": ""
+   }
+  },
+  "position": {
+   "x": 5655,
+   "y": 3156
+  }
+ },
+ {
+  "id": "eaction_1771924330035-v2_button_comp_1771924330035_t9fl1clhkoe",
+  "source": "action_1771924330035",
+  "target": "v2_button_comp_1771924330035_t9fl1clhkoe",
+  "sourceHandle": "components_source",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed"
+ },
+ {
+  "source": "action_1771924324159",
+  "sourceHandle": "action",
+  "target": "action_1771924330035",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1771924324159action-action_1771924330035action"
+ },
+ {
+  "width": 265,
+  "height": 111,
+  "id": "action_1771924348687",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Delete a Message",
+    "description": "Delete a message or reply"
+   },
+   "data": {
+    "type": "delete_message",
+    "specific": false,
+    "channel_id": "",
+    "message_id": "",
+    "id": "1771922715800",
+    "action_id": "action_1771924330035",
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 5288,
+   "y": 3377
+  }
+ },
+ {
+  "source": "v2_button_comp_1771924330035_fxsuvb5on4n",
+  "sourceHandle": "action",
+  "target": "action_1771924348687",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-v2_button_comp_1771924330035_fxsuvb5on4naction-action_1771924348687action"
+ },
+ {
+  "width": 265,
+  "height": 111,
+  "id": "action_1771924357442",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Delete a Message",
+    "description": "Delete a message or reply"
+   },
+   "data": {
+    "type": "delete_message",
+    "specific": false,
+    "channel_id": "",
+    "message_id": "",
+    "id": "1771922715800",
+    "action_id": "action_1771924330035",
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 5633,
+   "y": 3377
+  }
+ },
+ {
+  "source": "v2_button_comp_1771924330035_t9fl1clhkoe",
+  "sourceHandle": "action",
+  "target": "action_1771924357442",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-v2_button_comp_1771924330035_t9fl1clhkoeaction-action_1771924357442action"
+ },
+ {
+  "width": 651,
+  "height": 111,
+  "id": "action_1771924368191",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "",
+     "embeds": [
+      {
+       "title": "",
+       "description": "{send_to_user}",
+       "author": {
+        "name": "{user_name}",
+        "url": "",
+        "icon_url": "{user_icon}"
+       },
+       "color": "#242faa",
+       "footer": "",
+       "footerIcon": "",
+       "timestamp": "",
+       "image": {
+        "url": ""
+       },
+       "thumbnail": {
+        "url": ""
+       },
+       "fields": [],
+       "timestamp_variable": ""
+      }
+     ]
+    },
+    "messageType": "basic",
+    "components": [],
+    "componentsV2Data": {
+     "version": 2,
+     "components": [],
+     "validation": {
+      "isValid": true,
+      "emptyContainers": [],
+      "sectionsWithoutAccessories": [],
+      "emptyActionRows": [],
+      "sectionsWithoutText": []
+     }
+    },
+    "useComponentsV2": false,
+    "target": {
+     "trigger_channel": true
+    },
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 5074,
+   "y": 3819
+  }
+ },
+ {
+  "width": 651,
+  "height": 111,
+  "id": "action_1771924378840",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "",
+     "embeds": [
+      {
+       "title": "",
+       "description": "{send_to_user}",
+       "author": {
+        "name": "{server} Staff Member",
+        "url": "",
+        "icon_url": ""
+       },
+       "color": "#242faa",
+       "footer": "",
+       "footerIcon": "",
+       "timestamp": "",
+       "image": {
+        "url": ""
+       },
+       "thumbnail": {
+        "url": ""
+       },
+       "fields": [],
+       "timestamp_variable": ""
+      }
+     ]
+    },
+    "messageType": "basic",
+    "components": [],
+    "componentsV2Data": {
+     "version": 2,
+     "components": [
+      {
+       "id": "comp_1771922988426_wdm9cfyap",
+       "type": "container",
+       "parent_id": null,
+       "data": {
+        "accent_color": null,
+        "spoiler": false
+       }
+      }
+     ],
+     "validation": {
+      "isValid": false,
+      "emptyContainers": [
+       {
+        "id": "comp_1771922988426_wdm9cfyap",
+        "type": "container",
+        "parentId": null,
+        "data": {
+         "accent_color": null,
+         "spoiler": false
+        },
+        "position": {
+         "x": 0,
+         "y": 0
+        }
+       }
+      ],
+      "sectionsWithoutAccessories": [],
+      "emptyActionRows": [],
+      "sectionsWithoutText": []
+     }
+    },
+    "useComponentsV2": false,
+    "target": {
+     "dm_user_id": "{BGVAR_opened_modmail_ids.{event_message_channel_id}}"
+    },
+    "validated": true,
+    "linked": true,
+    "success_handles": true
+   }
+  },
+  "position": {
+   "x": 5440,
+   "y": 3598
+  }
+ },
+ {
+  "source": "action_1771923497259",
+  "sourceHandle": "action",
+  "target": "action_51_b9a5_12eb",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1771923497259action-action_51_b9a5_12ebaction"
+ },
+ {
+  "width": 260,
+  "height": 124,
+  "id": "adv_select_menu248_6uqrqcpbs",
+  "type": "advMessageSelectMenu",
+  "data": {
+   "node_options": {},
+   "data": {
+    "type": "adv_select_menu",
+    "menu_type": "basic",
+    "multiselect": false,
+    "minOptions": "1",
+    "maxOptions": "1",
+    "basic_options": [
+     {
+      "label": "Reporting a Server Member",
+      "description": "Reporting a Server Member",
+      "emoji_id": "",
+      "value": ""
+     },
+     {
+      "label": "Server Issue",
+      "description": "Problem with the server",
+      "emoji_id": "",
+      "value": ""
+     },
+     {
+      "label": "General Question",
+      "description": "Question About the server",
+      "emoji_id": "",
+      "value": ""
+     },
+     {
+      "label": "Other",
+      "description": "Other issue not listed here",
+      "emoji_id": "",
+      "value": ""
+     }
+    ],
+    "type_options": {},
+    "validated": true,
+    "customVariableName": "",
+    "placeholder": "Why are you making a ticket?",
+    "editComponentId": "1774407537529_59195"
+   }
+  },
+  "position": {
+   "x": 2928,
+   "y": 1803
+  }
+ },
+ {
+  "source": "action_9_66e3_7af2",
+  "target": "adv_select_menu248_6uqrqcpbs",
+  "type": "step",
+  "animated": false,
+  "sourceHandle": "components_source",
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-action_9_66e3_7af2components_source-adv_select_menu248_6uqrqcpbs"
+ },
+ {
+  "width": 260,
+  "height": 93,
+  "id": "$else_250_8fbb_d6f7",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 1582,
+   "y": 2700
+  }
+ },
+ {
+  "source": "condition_250_45aa_a8cc",
+  "target": "$else_250_8fbb_d6f7",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_250_45aa_a8cc-$else_250_8fbb_d6f7"
+ },
+ {
+  "width": 260,
+  "height": 111,
+  "id": "condition_250_45aa_a8cc",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{selected_option}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 3195,
+   "y": 2479
+  }
+ },
+ {
+  "source": "$else_250_8fbb_d6f7",
+  "sourceHandle": "action",
+  "target": "action_13_01c6_be45",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-$else_250_8fbb_d6f7action-action_13_01c6_be45action"
+ },
+ {
+  "id": "conChild255_b6af",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "Reporting a Server Member",
+    "ignoreCase": false
+   }
+  },
+  "position": {
+   "x": 2283,
+   "y": 2700
+  },
+  "width": 320,
+  "height": 93
+ },
+ {
+  "source": "condition_250_45aa_a8cc",
+  "target": "conChild255_b6af",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_250_45aa_a8cc-conChild255_b6af"
+ },
+ {
+  "width": 280,
+  "height": 93,
+  "id": "conChild259_9ed4",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "General Question",
+    "ignoreCase": false
+   }
+  },
+  "position": {
+   "x": 4068,
+   "y": 2700
+  }
+ },
+ {
+  "source": "condition_250_45aa_a8cc",
+  "target": "conChild259_9ed4",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_250_45aa_a8cc-conChild259_9ed4"
+ },
+ {
+  "id": "conChild261_1dd0",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "Other",
+    "ignoreCase": false
+   }
+  },
+  "position": {
+   "x": 4799,
+   "y": 2700
+  },
+  "width": 280,
+  "height": 93
+ },
+ {
+  "source": "condition_250_45aa_a8cc",
+  "target": "conChild261_1dd0",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_250_45aa_a8cc-conChild261_1dd0"
+ },
+ {
+  "width": 509,
+  "height": 111,
+  "id": "action_1774407504649",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send a Form",
+    "description": "Send a form or modal and wait for a response"
+   },
+   "data": {
+    "type": "modal",
+    "modal_id": "other",
+    "modal_settings": {
+     "title": "Modmail",
+     "components": [
+      {
+       "label": "Why are you contacting staff?",
+       "variable": "title",
+       "maxLength": "",
+       "minLength": "",
+       "placeholder": "e.g Reporting a user",
+       "required": true,
+       "inputStyle": "SHORT",
+       "defaultValue": ""
+      },
+      {
+       "label": "What Happened",
+       "variable": "more",
+       "maxLength": "",
+       "minLength": "10",
+       "placeholder": "Tell us more",
+       "required": true,
+       "inputStyle": "PARAGRAPH",
+       "defaultValue": ""
+      }
+     ]
+    },
+    "ephemeral": false,
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 4684,
+   "y": 2921
+  }
+ },
+ {
+  "source": "conChild261_1dd0",
+  "sourceHandle": "action",
+  "target": "action_1774407504649",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild261_1dd0action-action_1774407504649action"
+ },
+ {
+  "width": 371,
+  "height": 111,
+  "id": "action_1774407704526",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Edit a Button or Select Menu",
+    "description": "Edit a button or select menu in a message"
+   },
+   "data": {
+    "type": "edit_component",
+    "edits": [
+     {
+      "editComponentId": "1774407537529_59195",
+      "component_id": "adv_select_menu248_6uqrqcpbs",
+      "select_menu": {
+       "placeholder": "Why are you making a ticket?",
+       "min_values": "1",
+       "max_values": "1",
+       "disabled": "true",
+       "basic_options": [
+        {
+         "label": "Reporting a Server Member",
+         "description": "Reporting a Server Member",
+         "emoji_id": "",
+         "value": ""
+        },
+        {
+         "label": "Reporting a bot/user",
+         "description": "Reporting a bot or user breaking our ToS",
+         "emoji_id": "",
+         "value": ""
+        },
+        {
+         "label": "Server Issue",
+         "description": "Problem with the server",
+         "emoji_id": "",
+         "value": ""
+        },
+        {
+         "label": "General Question",
+         "description": "Question About the server",
+         "emoji_id": "",
+         "value": ""
+        },
+        {
+         "label": "Other",
+         "description": "Other issue not listed here",
+         "emoji_id": "",
+         "value": ""
+        }
+       ],
+       "reset_options": false,
+       "multiselect": false,
+       "menu_type": "basic"
+      }
+     }
+    ],
+    "action_id": "action_9_66e3_7af2",
+    "target": {
+     "editId": "1746926234585_39737"
+    },
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 4753,
+   "y": 3156
+  }
+ },
+ {
+  "source": "action_1774407504649",
+  "sourceHandle": "action",
+  "target": "action_1774407704526",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1774407504649action-action_1774407704526action"
+ },
+ {
+  "id": "action_1774407721036",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Set a unique variable",
+    "description": "Set a unique variable for every execution of this command or event."
+   },
+   "data": {
+    "type": "set_unique_variable",
+    "reference": "owner_id",
+    "value": "{user_id}",
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 4670,
+   "y": 3377
+  },
+  "width": 538,
+  "height": 111
+ },
+ {
+  "source": "action_1774407704526",
+  "sourceHandle": "action",
+  "target": "action_1774407721036",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1774407704526action-action_1774407721036action"
+ },
+ {
+  "width": 651,
+  "height": 111,
+  "id": "action_266_7288_50fd",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "{modmail.more}",
+     "embeds": []
+    },
+    "messageType": "basic",
+    "components": [],
+    "componentsV2Data": null,
+    "useComponentsV2": false,
+    "target": {
+     "forum_post": true,
+     "forum_id": "{BGVAR_modmail_channel_id}",
+     "title": "Server Issue by {user_name}"
+    },
+    "validated": true,
+    "linked": true,
+    "variable": "main_mes",
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 1386,
+   "y": 3598
+  }
+ },
+ {
+  "width": 651,
+  "height": 111,
+  "id": "action_1774408981080",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "{other.title}\n--------\n{other.more}",
+     "embeds": []
+    },
+    "messageType": "basic",
+    "components": [],
+    "componentsV2Data": null,
+    "useComponentsV2": false,
+    "target": {
+     "forum_post": true,
+     "forum_id": "{BGVAR_modmail_channel_id}",
+     "title": "Other by {user_name}"
+    },
+    "validated": true,
+    "linked": true,
+    "variable": "main_mes",
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 4613,
+   "y": 3598
+  }
+ },
+ {
+  "width": 509,
+  "height": 111,
+  "id": "action_1774409871775",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send a Form",
+    "description": "Send a form or modal and wait for a response"
+   },
+   "data": {
+    "type": "modal",
+    "modal_id": "member",
+    "modal_settings": {
+     "title": "Modmail",
+     "components": [
+      {
+       "label": "What is the username of this user?",
+       "variable": "title",
+       "maxLength": "",
+       "minLength": "",
+       "placeholder": "Username NOT display name",
+       "required": true,
+       "inputStyle": "SHORT",
+       "defaultValue": ""
+      },
+      {
+       "label": "What Happened",
+       "variable": "more",
+       "maxLength": "",
+       "minLength": "10",
+       "placeholder": "Tell us more",
+       "required": true,
+       "inputStyle": "PARAGRAPH",
+       "defaultValue": ""
+      }
+     ]
+    },
+    "ephemeral": false,
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 2188,
+   "y": 2921
+  }
+ },
+ {
+  "source": "conChild255_b6af",
+  "sourceHandle": "action",
+  "target": "action_1774409871775",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild255_b6afaction-action_1774409871775action"
+ },
+ {
+  "width": 371,
+  "height": 111,
+  "id": "action_1774409940417",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Edit a Button or Select Menu",
+    "description": "Edit a button or select menu in a message"
+   },
+   "data": {
+    "type": "edit_component",
+    "edits": [
+     {
+      "editComponentId": "1774407537529_59195",
+      "component_id": "adv_select_menu248_6uqrqcpbs",
+      "select_menu": {
+       "placeholder": "Why are you making a ticket?",
+       "min_values": "1",
+       "max_values": "1",
+       "disabled": "true",
+       "basic_options": [
+        {
+         "label": "Reporting a Server Member",
+         "description": "Reporting a Server Member",
+         "emoji_id": "",
+         "value": ""
+        },
+        {
+         "label": "Reporting a bot/user",
+         "description": "Reporting a bot or user breaking our ToS",
+         "emoji_id": "",
+         "value": ""
+        },
+        {
+         "label": "Server Issue",
+         "description": "Problem with the server",
+         "emoji_id": "",
+         "value": ""
+        },
+        {
+         "label": "General Question",
+         "description": "Question About the server",
+         "emoji_id": "",
+         "value": ""
+        },
+        {
+         "label": "Other",
+         "description": "Other issue not listed here",
+         "emoji_id": "",
+         "value": ""
+        }
+       ],
+       "reset_options": false,
+       "multiselect": false,
+       "menu_type": "basic"
+      }
+     }
+    ],
+    "action_id": "action_9_66e3_7af2",
+    "target": {
+     "editId": "1746926234585_39737"
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 2257,
+   "y": 3156
+  }
+ },
+ {
+  "source": "action_1774409871775",
+  "sourceHandle": "action",
+  "target": "action_1774409940417",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1774409871775action-action_1774409940417action"
+ },
+ {
+  "width": 538,
+  "height": 111,
+  "id": "action_1774409946243",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Set a unique variable",
+    "description": "Set a unique variable for every execution of this command or event."
+   },
+   "data": {
+    "type": "set_unique_variable",
+    "reference": "owner_id",
+    "value": "{user_id}",
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 2174,
+   "y": 3377
+  }
+ },
+ {
+  "source": "action_1774409940417",
+  "sourceHandle": "action",
+  "target": "action_1774409946243",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1774409940417action-action_1774409946243action"
+ },
+ {
+  "width": 651,
+  "height": 111,
+  "id": "action_1774409953150",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "{member.more}",
+     "embeds": []
+    },
+    "messageType": "basic",
+    "components": [],
+    "componentsV2Data": null,
+    "useComponentsV2": false,
+    "target": {
+     "forum_post": true,
+     "forum_id": "{BGVAR_modmail_channel_id}",
+     "title": "Member Report by {user_name}"
+    },
+    "validated": true,
+    "linked": true,
+    "variable": "main_mes",
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 2117,
+   "y": 3598
+  }
+ },
+ {
+  "id": "action_1774410025666",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Set Variable",
+    "description": "Set the value of a custom variable"
+   },
+   "data": {
+    "type": "set_var",
+    "reference": "modmails",
+    "value": "{main_mes}",
+    "key": "",
+    "target": {
+     "self": true
+    },
+    "operation": "unshift",
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 2299,
+   "y": 3819
+  },
+  "width": 288,
+  "height": 125
+ },
+ {
+  "width": 419,
+  "height": 125,
+  "id": "action_1774410030371",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Set Variable",
+    "description": "Set the value of a custom variable"
+   },
+   "data": {
+    "type": "set_var",
+    "reference": "opened_modmails",
+    "value": "{main_mes}",
+    "key": "",
+    "target": {
+     "self": true
+    },
+    "operation": "unshift",
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 2233,
+   "y": 4054
+  }
+ },
+ {
+  "source": "action_1774410025666",
+  "sourceHandle": "action",
+  "target": "action_1774410030371",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1774410025666action-action_1774410030371action"
+ },
+ {
+  "id": "action_1774410034612",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Set Variable",
+    "description": "Set the value of a custom variable"
+   },
+   "data": {
+    "type": "set_var",
+    "reference": "opened_modmail_ids",
+    "value": "{owner_id}",
+    "key": "{main_mes}",
+    "target": {
+     "self": true
+    },
+    "operation": "unshift",
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 2245,
+   "y": 4289
+  },
+  "width": 396,
+  "height": 125
+ },
+ {
+  "source": "action_1774410030371",
+  "sourceHandle": "action",
+  "target": "action_1774410034612",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1774410030371action-action_1774410034612action"
+ },
+ {
+  "id": "action_1774410041247",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "",
+     "embeds": [
+      {
+       "title": "Modmail Inbox",
+       "description": "<@{owner_id}> has opened the ticket. If you believe this ticket is abuse, spam, or other prohibited behavior, please give them a misuse strike.\n\n**🎟️Ticket Title:** {modmail.title}\n**➡️Description:** {modmail.more}",
+       "author": {
+        "name": "",
+        "url": "",
+        "icon_url": ""
+       },
+       "color": "#00a4ff",
+       "footer": "",
+       "footerIcon": "",
+       "timestamp": "",
+       "image": {
+        "url": ""
+       },
+       "thumbnail": {
+        "url": ""
+       },
+       "fields": [],
+       "timestamp_variable": ""
+      }
+     ]
+    },
+    "messageType": "basic",
+    "components": [],
+    "target": {
+     "id": "{main_mes}"
+    },
+    "validated": true,
+    "linked": true,
+    "editId": "1746927465683",
+    "useComponentsV2": true,
+    "componentsV2Data": {
+     "version": 2,
+     "components": [
+      {
+       "id": "comp_1774410041248_dj0zj8oor1g",
+       "type": "container",
+       "parent_id": null,
+       "data": {
+        "accent_color": null,
+        "spoiler": false
+       }
+      },
+      {
+       "id": "comp_1774410041248_9ss1x92npy",
+       "type": "text",
+       "parent_id": "comp_1774410041248_dj0zj8oor1g",
+       "data": {
+        "content": "<@{owner_id}> has opened the ticket. If you believe this ticket is abuse, spam, or other prohibited behavior, please give them a misuse strike.\n\n👤Reported User: {member.title}",
+        "allowed_mentions": []
+       }
+      },
+      {
+       "id": "comp_1774410041248_wxr1fp7nluh",
+       "type": "action_row",
+       "parent_id": "comp_1774410041248_dj0zj8oor1g",
+       "data": {
+        "components": []
+       }
+      },
+      {
+       "id": "comp_1774410041248_a4o5kljpzdp",
+       "type": "select_menu",
+       "parent_id": "comp_1774410041248_wxr1fp7nluh",
+       "data": {
+        "node_options": {
+         "title": "Select Menu",
+         "description": "ComponentsV2 select_menu",
+         "v2ComponentId": "comp_1774410041248_a4o5kljpzdp",
+         "v2ParentId": "comp_1774410041248_wxr1fp7nluh"
+        },
+        "data": {
+         "type": "adv_select_menu",
+         "menu_type": "basic",
+         "multiselect": false,
+         "minOptions": "1",
+         "maxOptions": "1",
+         "basic_options": [
+          {
+           "label": "Inactivity",
+           "description": "Post inactive for more than  2 hours, close 30mins after sending",
+           "emoji_id": "",
+           "value": ""
+          },
+          {
+           "label": "Handled",
+           "description": "Use this to send the handled message on a user report",
+           "emoji_id": "",
+           "value": ""
+          },
+          {
+           "label": "Contacting Managers",
+           "description": "Use this to contact the management team",
+           "emoji_id": "",
+           "value": ""
+          },
+          {
+           "label": "Contacting Admins",
+           "description": "Use this to contact the Admin team",
+           "emoji_id": "",
+           "value": ""
+          }
+         ],
+         "type_options": {},
+         "validated": true,
+         "customVariableName": "auto_option",
+         "v2ComponentId": "comp_1774410041248_a4o5kljpzdp",
+         "placeholder": "📫Automatic responses",
+         "editComponentId": "1771919811614_71458"
+        }
+       }
+      },
+      {
+       "id": "comp_1774410041248_rp0iso2fb6",
+       "type": "action_row",
+       "parent_id": "comp_1774410041248_dj0zj8oor1g",
+       "data": {
+        "components": []
+       }
+      },
+      {
+       "id": "comp_1774410041248_4u6khpy1i1c",
+       "type": "select_menu",
+       "parent_id": "comp_1774410041248_rp0iso2fb6",
+       "data": {
+        "node_options": {
+         "title": "Select Menu",
+         "description": "ComponentsV2 select_menu",
+         "v2ComponentId": "comp_1774410041248_4u6khpy1i1c",
+         "v2ParentId": "comp_1774410041248_rp0iso2fb6"
+        },
+        "data": {
+         "type": "adv_select_menu",
+         "menu_type": "basic",
+         "multiselect": false,
+         "minOptions": "1",
+         "maxOptions": "1",
+         "basic_options": [
+          {
+           "label": "Close Ticket",
+           "description": "Close the ticket normally",
+           "emoji_id": "🚫",
+           "value": ""
+          },
+          {
+           "label": "Misuse",
+           "description": "Close & add misuse strike",
+           "emoji_id": "📛",
+           "value": ""
+          },
+          {
+           "label": "Blacklist",
+           "description": "Immediately blacklist the user (Talk to a manger+ first)",
+           "emoji_id": "🔨",
+           "value": ""
+          }
+         ],
+         "type_options": {},
+         "validated": true,
+         "customVariableName": "close_option",
+         "v2ComponentId": "comp_1774410041248_4u6khpy1i1c",
+         "placeholder": "🚫Close Options",
+         "editComponentId": "1771919812194_69519"
+        }
+       }
+      },
+      {
+       "id": "comp_1774410041248_uz2dto4ewik",
+       "type": "text",
+       "parent_id": "comp_1774410041248_dj0zj8oor1g",
+       "data": {
+        "content": "-# Use !d to deliver your message\n-# Use !tb to get a list of available commands",
+        "allowed_mentions": []
+       }
+      }
+     ],
+     "validation": {
+      "isValid": true,
+      "emptyContainers": [],
+      "sectionsWithoutAccessories": [],
+      "emptyActionRows": [],
+      "sectionsWithoutText": []
+     }
+    },
+    "command_label": "Control",
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 2228,
+   "y": 4524
+  },
+  "width": 430,
+  "height": 111
+ },
+ {
+  "width": 260,
+  "height": 124,
+  "id": "v2_select_menu_comp_1774410041248_a4o5kljpzdp",
+  "type": "advMessageSelectMenu",
+  "data": {
+   "node_options": {
+    "title": "Select Menu",
+    "description": "ComponentsV2 select_menu",
+    "v2ComponentId": "comp_1774410041248_a4o5kljpzdp",
+    "v2ParentId": "comp_1774410041248_wxr1fp7nluh"
+   },
+   "data": {
+    "type": "adv_select_menu",
+    "menu_type": "basic",
+    "multiselect": false,
+    "minOptions": "1",
+    "maxOptions": "1",
+    "basic_options": [
+     {
+      "label": "Inactivity",
+      "description": "Post inactive for more than  2 hours, close 30mins after sending",
+      "emoji_id": "",
+      "value": ""
+     },
+     {
+      "label": "Handled",
+      "description": "Use this to send the handled message on a user report",
+      "emoji_id": "",
+      "value": ""
+     }
+    ],
+    "type_options": {},
+    "validated": true,
+    "customVariableName": "auto_option",
+    "v2ComponentId": "comp_1774410041248_a4o5kljpzdp",
+    "placeholder": "📫Automatic responses",
+    "editComponentId": "1771919811614_71458"
+   }
+  },
+  "position": {
+   "x": 2143,
+   "y": 4745
+  }
+ },
+ {
+  "id": "eaction_1774410041247-v2_select_menu_comp_1774410041248_a4o5kljpzdp",
+  "source": "action_1774410041247",
+  "target": "v2_select_menu_comp_1774410041248_a4o5kljpzdp",
+  "sourceHandle": "components_source",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed"
+ },
+ {
+  "width": 260,
+  "height": 124,
+  "id": "v2_select_menu_comp_1774410041248_4u6khpy1i1c",
+  "type": "advMessageSelectMenu",
+  "data": {
+   "node_options": {
+    "title": "Select Menu",
+    "description": "ComponentsV2 select_menu",
+    "v2ComponentId": "comp_1774410041248_4u6khpy1i1c",
+    "v2ParentId": "comp_1774410041248_rp0iso2fb6"
+   },
+   "data": {
+    "type": "adv_select_menu",
+    "menu_type": "basic",
+    "multiselect": false,
+    "minOptions": "1",
+    "maxOptions": "1",
+    "basic_options": [
+     {
+      "label": "Close Ticket",
+      "description": "Close the ticket normally",
+      "emoji_id": "🚫",
+      "value": ""
+     },
+     {
+      "label": "Misuse",
+      "description": "Close & add misuse strike",
+      "emoji_id": "📛",
+      "value": ""
+     },
+     {
+      "label": "Blacklist",
+      "description": "Immediately blacklist the user (Talk to a manger+ first)",
+      "emoji_id": "🔨",
+      "value": ""
+     }
+    ],
+    "type_options": {},
+    "validated": true,
+    "customVariableName": "close_option",
+    "v2ComponentId": "comp_1774410041248_4u6khpy1i1c",
+    "placeholder": "🚫Close Options",
+    "editComponentId": "1771919812194_69519"
+   }
+  },
+  "position": {
+   "x": 2483,
+   "y": 4745
+  }
+ },
+ {
+  "id": "eaction_1774410041247-v2_select_menu_comp_1774410041248_4u6khpy1i1c",
+  "source": "action_1774410041247",
+  "target": "v2_select_menu_comp_1774410041248_4u6khpy1i1c",
+  "sourceHandle": "components_source",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed"
+ },
+ {
+  "source": "action_1774410034612",
+  "sourceHandle": "action",
+  "target": "action_1774410041247",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1774410034612action-action_1774410041247action"
+ },
+ {
+  "source": "v2_select_menu_comp_1774410041248_a4o5kljpzdp",
+  "sourceHandle": "action",
+  "target": "condition_143_788c_698e",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-v2_select_menu_comp_1774410041248_a4o5kljpzdpaction-condition_143_788c_698eaction"
+ },
+ {
+  "source": "v2_select_menu_comp_1774410041248_4u6khpy1i1c",
+  "sourceHandle": "action",
+  "target": "condition_130_0acb_b8b5",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-v2_select_menu_comp_1774410041248_4u6khpy1i1caction-condition_130_0acb_b8b5action"
+ },
+ {
+  "id": "action_1774410400463",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send a Form",
+    "description": "Send a form or modal and wait for a response"
+   },
+   "data": {
+    "type": "modal",
+    "modal_id": "general",
+    "modal_settings": {
+     "title": "Modmail",
+     "components": [
+      {
+       "label": "What's your question?",
+       "variable": "more",
+       "maxLength": "",
+       "minLength": "10",
+       "placeholder": "Tell us more",
+       "required": true,
+       "inputStyle": "PARAGRAPH",
+       "defaultValue": ""
+      }
+     ]
+    },
+    "ephemeral": false,
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 3953,
+   "y": 2921
+  },
+  "width": 509,
+  "height": 111
+ },
+ {
+  "source": "conChild259_9ed4",
+  "sourceHandle": "action",
+  "target": "action_1774410400463",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild259_9ed4action-action_1774410400463action"
+ },
+ {
+  "width": 371,
+  "height": 111,
+  "id": "action_1774410427627",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Edit a Button or Select Menu",
+    "description": "Edit a button or select menu in a message"
+   },
+   "data": {
+    "type": "edit_component",
+    "edits": [
+     {
+      "editComponentId": "1774407537529_59195",
+      "component_id": "adv_select_menu248_6uqrqcpbs",
+      "select_menu": {
+       "placeholder": "Why are you making a ticket?",
+       "min_values": "1",
+       "max_values": "1",
+       "disabled": "true",
+       "basic_options": [
+        {
+         "label": "Reporting a Server Member",
+         "description": "Reporting a Server Member",
+         "emoji_id": "",
+         "value": ""
+        },
+        {
+         "label": "Reporting a bot/user",
+         "description": "Reporting a bot or user breaking our ToS",
+         "emoji_id": "",
+         "value": ""
+        },
+        {
+         "label": "Server Issue",
+         "description": "Problem with the server",
+         "emoji_id": "",
+         "value": ""
+        },
+        {
+         "label": "General Question",
+         "description": "Question About the server",
+         "emoji_id": "",
+         "value": ""
+        },
+        {
+         "label": "Other",
+         "description": "Other issue not listed here",
+         "emoji_id": "",
+         "value": ""
+        }
+       ],
+       "reset_options": false,
+       "multiselect": false,
+       "menu_type": "basic"
+      }
+     }
+    ],
+    "action_id": "action_9_66e3_7af2",
+    "target": {
+     "editId": "1746926234585_39737"
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 4022,
+   "y": 3156
+  }
+ },
+ {
+  "source": "action_1774410400463",
+  "sourceHandle": "action",
+  "target": "action_1774410427627",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1774410400463action-action_1774410427627action"
+ },
+ {
+  "width": 651,
+  "height": 111,
+  "id": "action_1774410893540",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "{general.more}",
+     "embeds": []
+    },
+    "messageType": "basic",
+    "components": [],
+    "componentsV2Data": null,
+    "useComponentsV2": false,
+    "target": {
+     "forum_post": true,
+     "forum_id": "{BGVAR_modmail_channel_id}",
+     "title": "GQ by {user_name}"
+    },
+    "validated": true,
+    "linked": true,
+    "variable": "main_mes",
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 3882,
+   "y": 3598
+  }
+ },
+ {
+  "width": 260,
+  "height": 93,
+  "id": "$else_320_986f_1e22",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 2660,
+   "y": 2258
+  }
+ },
+ {
+  "source": "condition_320_e21e_ec15",
+  "target": "$else_320_986f_1e22",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_320_e21e_ec15-$else_320_986f_1e22"
+ },
+ {
+  "width": 267,
+  "height": 111,
+  "id": "condition_320_e21e_ec15",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{BGVAR_modmails}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 2924,
+   "y": 2037
+  }
+ },
+ {
+  "source": "adv_select_menu248_6uqrqcpbs",
+  "sourceHandle": "action",
+  "target": "condition_320_e21e_ec15",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-adv_select_menu248_6uqrqcpbsaction-condition_320_e21e_ec15action"
+ },
+ {
+  "id": "conChild324_d763",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "none",
+    "ignoreCase": false
+   }
+  },
+  "position": {
+   "x": 3180,
+   "y": 2258
+  },
+  "width": 290,
+  "height": 93
+ },
+ {
+  "source": "condition_320_e21e_ec15",
+  "target": "conChild324_d763",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_320_e21e_ec15-conChild324_d763"
+ },
+ {
+  "source": "conChild324_d763",
+  "sourceHandle": "action",
+  "target": "condition_250_45aa_a8cc",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild324_d763action-condition_250_45aa_a8ccaction"
+ },
+ {
+  "id": "action_327_1395_c875",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "<:cancel:1372427604522700871>You already have an open ticket!",
+     "embeds": []
+    },
+    "messageType": "basic",
+    "components": [],
+    "componentsV2Data": null,
+    "useComponentsV2": false,
+    "target": {
+     "trigger_channel": true
+    },
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 2464,
+   "y": 2479
+  },
+  "width": 651,
+  "height": 111
+ },
+ {
+  "source": "$else_320_986f_1e22",
+  "sourceHandle": "action",
+  "target": "action_327_1395_c875",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-$else_320_986f_1e22action-action_327_1395_c875action"
+ },
+ {
+  "width": 260,
+  "height": 93,
+  "id": "else_1771924168939_0961_021d_2bde",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 10054,
+   "y": 0
+  },
+  "oldId": "$else_170_44b9_a72f"
+ },
+ {
+  "width": 538,
+  "height": 111,
+  "id": "action_1774419722184",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Set a unique variable",
+    "description": "Set a unique variable for every execution of this command or event."
+   },
+   "data": {
+    "type": "set_unique_variable",
+    "reference": "owner_id",
+    "value": "{user_id}",
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 3939,
+   "y": 3377
+  }
+ },
+ {
+  "width": 338,
+  "height": 93,
+  "id": "conChild352_29bb",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "starts_with",
+    "comparison_value": "!ex",
+    "ignoreCase": false
+   }
+  },
+  "position": {
+   "x": 6477,
+   "y": 2258
+  }
+ },
+ {
+  "source": "condition_199_a7da_4a1e",
+  "target": "conChild352_29bb",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_199_a7da_4a1e-conChild352_29bb"
+ },
+ {
+  "width": 399,
+  "height": 111,
+  "id": "action_1782322893645_8a3a_5d50",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Manipulate some text",
+    "description": "Manipulate and run functions on provided text"
+   },
+   "data": {
+    "type": "string_manipulation",
+    "string": "{event_message_content}",
+    "variable": "send_to_user",
+    "operation": {
+     "type": "replace",
+     "search": "!ex",
+     "replace": " "
+    },
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 6447,
+   "y": 2479
+  },
+  "oldId": "action_1782322599952"
+ },
+ {
+  "width": 265,
+  "height": 111,
+  "id": "action_1782322893645_13e2_170b",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Delete a Message",
+    "description": "Delete a message or reply"
+   },
+   "data": {
+    "type": "delete_message",
+    "specific": true,
+    "channel_id": "{event_message_channel_id}",
+    "message_id": "{event_message_id}",
+    "id": "",
+    "action_id": "",
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 6514,
+   "y": 2700
+  },
+  "oldId": "action_1782322707540"
+ },
+ {
+  "width": 651,
+  "height": 111,
+  "id": "action_1782322893645_05d3_6e44",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "",
+     "embeds": [
+      {
+       "title": "",
+       "description": "{send_to_user}",
+       "author": {
+        "name": "{user_name} (exposed)",
+        "url": "",
+        "icon_url": "{user_icon}"
+       },
+       "color": "#2426aa",
+       "footer": {
+        "text": "This message was sent as an exposed message. The user can see who sent this message."
+       },
+       "footerIcon": "",
+       "timestamp": "",
+       "image": {
+        "url": ""
+       },
+       "thumbnail": {
+        "url": ""
+       },
+       "fields": [],
+       "timestamp_variable": ""
+      }
+     ]
+    },
+    "messageType": "basic",
+    "components": [],
+    "componentsV2Data": {
+     "version": 2,
+     "components": [],
+     "validation": {
+      "isValid": true,
+      "emptyContainers": [],
+      "sectionsWithoutAccessories": [],
+      "emptyActionRows": [],
+      "sectionsWithoutText": []
+     }
+    },
+    "useComponentsV2": false,
+    "target": {
+     "trigger_channel": true
+    },
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 5955,
+   "y": 3156
+  },
+  "oldId": "action_1782322728708"
+ },
+ {
+  "width": 651,
+  "height": 111,
+  "id": "action_1782322893645_78a5_f904",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "",
+     "embeds": [
+      {
+       "title": "",
+       "description": "{send_to_user}",
+       "author": {
+        "name": "{user_displayName[{event_user_id}]} - Staff Member",
+        "url": "",
+        "icon_url": "{event_user_avatar}"
+       },
+       "color": "#242faa",
+       "footer": "",
+       "footerIcon": "",
+       "timestamp": "",
+       "image": {
+        "url": ""
+       },
+       "thumbnail": {
+        "url": ""
+       },
+       "fields": [],
+       "timestamp_variable": ""
+      }
+     ]
+    },
+    "messageType": "basic",
+    "components": [],
+    "componentsV2Data": {
+     "version": 2,
+     "components": [
+      {
+       "id": "comp_1771922988426_wdm9cfyap",
+       "type": "container",
+       "parent_id": null,
+       "data": {
+        "accent_color": null,
+        "spoiler": false
+       }
+      }
+     ],
+     "validation": {
+      "isValid": false,
+      "emptyContainers": [
+       {
+        "id": "comp_1771922988426_wdm9cfyap",
+        "type": "container",
+        "parentId": null,
+        "data": {
+         "accent_color": null,
+         "spoiler": false
+        },
+        "position": {
+         "x": 0,
+         "y": 0
+        }
+       }
+      ],
+      "sectionsWithoutAccessories": [],
+      "emptyActionRows": [],
+      "sectionsWithoutText": []
+     }
+    },
+    "useComponentsV2": false,
+    "target": {
+     "dm_user_id": "{BGVAR_opened_modmail_ids.{event_message_channel_id}}"
+    },
+    "validated": true,
+    "linked": true,
+    "success_handles": true
+   }
+  },
+  "position": {
+   "x": 6321,
+   "y": 2921
+  },
+  "oldId": "action_1782322801688"
+ },
+ {
+  "source": "action_1782322893645_8a3a_5d50",
+  "sourceHandle": "action",
+  "target": "action_1782322893645_13e2_170b",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "edge_1782322893646_2307_896b"
+ },
+ {
+  "source": "conChild352_29bb",
+  "sourceHandle": "action",
+  "target": "action_1782322893645_8a3a_5d50",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild352_29bbaction-action_1782322893645_8a3a_5d50action"
+ },
+ {
+  "id": "$else_379_bf6b_4964",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 6410,
+   "y": 955
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_379_c76e_d143",
+  "target": "$else_379_bf6b_4964",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_379_c76e_d143-$else_379_bf6b_4964"
+ },
+ {
+  "id": "condition_379_c76e_d143",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Check a value, such as a variable or an option, and run different blocks depending on what it is."
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{BGVAR_modmail_channel_id}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 6598,
+   "y": 734
+  },
+  "width": 336,
+  "height": 111
+ },
+ {
+  "source": "conChild115_26e4",
+  "sourceHandle": "action",
+  "target": "condition_379_c76e_d143",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild115_26e4action-condition_379_c76e_d143action"
+ },
+ {
+  "id": "conChild383_8680",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "",
+    "ignoreCase": false
+   }
+  },
+  "position": {
+   "x": 6812,
+   "y": 955
+  },
+  "width": 358,
+  "height": 93
+ },
+ {
+  "source": "condition_379_c76e_d143",
+  "target": "conChild383_8680",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_379_c76e_d143-conChild383_8680"
+ },
+ {
+  "source": "$else_379_bf6b_4964",
+  "sourceHandle": "action",
+  "target": "condition_116_c6b9_3053",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-$else_379_bf6b_4964action-condition_116_c6b9_3053action"
+ },
+ {
+  "id": "action_386_975e_d63f",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send an error log message",
+    "description": "Trigger an error message"
+   },
+   "data": {
+    "type": "send_error_message",
+    "module": "channel_id empty!",
+    "action": "Please fill out the Modmail channel ID field in settings",
+    "reason": "Error Unknown Channel",
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 6834,
+   "y": 1158
+  },
+  "width": 315,
+  "height": 111
+ },
+ {
+  "source": "conChild383_8680",
+  "sourceHandle": "action",
+  "target": "action_386_975e_d63f",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild383_8680action-action_386_975e_d63faction"
+ },
+ {
+  "source": "conChild59_492c",
+  "sourceHandle": "action",
+  "target": "condition_199_a7da_4a1e",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild59_492caction-condition_199_a7da_4a1eaction"
+ },
+ {
+  "source": "action_1774410427627",
+  "sourceHandle": "action",
+  "target": "action_1774419722184",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1774410427627action-action_1774419722184action"
+ },
+ {
+  "source": "action_266_7288_50fd",
+  "sourceHandle": "action",
+  "target": "action_27_94eb_1d7d",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_266_7288_50fdaction-action_27_94eb_1d7daction"
+ },
+ {
+  "source": "action_1774410893540",
+  "sourceHandle": "action",
+  "target": "action_27_94eb_1d7d",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1774410893540action-action_27_94eb_1d7daction"
+ },
+ {
+  "source": "action_1774408981080",
+  "sourceHandle": "action",
+  "target": "action_27_94eb_1d7d",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1774408981080action-action_27_94eb_1d7daction"
+ },
+ {
+  "source": "action_124_f124_fc3d",
+  "sourceHandle": "action",
+  "target": "action_266_7288_50fd",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_124_f124_fc3daction-action_266_7288_50fdaction"
+ },
+ {
+  "source": "action_1774409946243",
+  "sourceHandle": "action",
+  "target": "action_1774409953150",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1774409946243action-action_1774409953150action"
+ },
+ {
+  "source": "action_1774409953150",
+  "sourceHandle": "action",
+  "target": "action_1774410025666",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1774409953150action-action_1774410025666action"
+ },
+ {
+  "source": "action_142_2549_34cd",
+  "sourceHandle": "action",
+  "target": "action_68_8d74_2125",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_142_2549_34cdaction-action_68_8d74_2125action"
+ },
+ {
+  "id": "conChild290_ed77",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "starts_with",
+    "comparison_value": "!ping",
+    "ignoreCase": false
+   }
+  },
+  "position": {
+   "x": 7934,
+   "y": 2258
+  },
+  "width": 338,
+  "height": 93
+ },
+ {
+  "source": "condition_199_a7da_4a1e",
+  "target": "conChild290_ed77",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_199_a7da_4a1e-conChild290_ed77"
+ },
+ {
+  "id": "$else_292_3433_d910",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 7613,
+   "y": 2700
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_292_a9ad_9e53",
+  "target": "$else_292_3433_d910",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_292_a9ad_9e53-$else_292_3433_d910"
+ },
+ {
+  "id": "condition_292_a9ad_9e53",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Check a value, such as a variable or an option, and run different blocks depending on what it is."
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{BGVAR_modmail_pingalerts.{event_message_channel_id}}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 7884,
+   "y": 2479
+  },
+  "width": 439,
+  "height": 111
+ },
+ {
+  "source": "action_1774419722184",
+  "sourceHandle": "action",
+  "target": "action_1774410893540",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1774419722184action-action_1774410893540action"
+ },
+ {
+  "source": "action_1774407721036",
+  "sourceHandle": "action",
+  "target": "action_1774408981080",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1774407721036action-action_1774408981080action"
+ },
+ {
+  "source": "action_1746928519006",
+  "sourceHandle": "action",
+  "target": "action_29_25c8_4ead",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1746928519006action-action_29_25c8_4eadaction"
+ },
+ {
+  "id": "conChild292_3f92",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "contains",
+    "comparison_value": "<@{event_user_id}>",
+    "ignoreCase": false,
+    "validated": true
+   }
+  },
+  "position": {
+   "x": 8198,
+   "y": 2700
+  },
+  "width": 532,
+  "height": 93
+ },
+ {
+  "source": "condition_292_a9ad_9e53",
+  "target": "conChild292_3f92",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_292_a9ad_9e53-conChild292_3f92"
+ },
+ {
+  "id": "action_294_5568_50a2",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Set Variable",
+    "description": "Set the value of a custom variable"
+   },
+   "data": {
+    "type": "set_var",
+    "reference": "modmail_pingalerts",
+    "value": "{BGVAR_modmail_pingalerts.{event_message_channel_id}}<@{user_id}>",
+    "key": "{event_message_channel_id}",
+    "target": {
+     "self": true
+    },
+    "operation": "unshift",
+    "validated": true,
+    "guild_id": "",
+    "success_handles": false,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 7427,
+   "y": 2921
+  },
+  "width": 632,
+  "height": 125
+ },
+ {
+  "source": "$else_292_3433_d910",
+  "sourceHandle": "action",
+  "target": "action_294_5568_50a2",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-$else_292_3433_d910action-action_294_5568_50a2action"
+ },
+ {
+  "id": "action_296_b00d_7b7b",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "success_handles": false,
+    "message": {
+     "content": "You're already added to the ping alerts for this modmail.",
+     "embeds": []
+    },
+    "messageType": "basic",
+    "components": [],
+    "componentsV2Data": null,
+    "useComponentsV2": false,
+    "target": {
+     "trigger_channel": true
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 8139,
+   "y": 2921
+  },
+  "width": 651,
+  "height": 111
+ },
+ {
+  "source": "conChild292_3f92",
+  "sourceHandle": "action",
+  "target": "action_296_b00d_7b7b",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild292_3f92action-action_296_b00d_7b7baction"
+ },
+ {
+  "id": "action_1791746004212",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "success_handles": false,
+    "message": {
+     "content": "Added <@{event_user_id}> to the ping alerts for this post.",
+     "embeds": []
+    },
+    "messageType": "basic",
+    "components": [],
+    "componentsV2Data": null,
+    "useComponentsV2": false,
+    "target": {
+     "trigger_channel": true
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 7417,
+   "y": 3156
+  },
+  "width": 651,
+  "height": 111
+ },
+ {
+  "source": "action_294_5568_50a2",
+  "sourceHandle": "action",
+  "target": "action_1791746004212",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_294_5568_50a2action-action_1791746004212action"
+ },
+ {
+  "id": "conChild300_8d6f",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "contains",
+    "comparison_value": "!tb",
+    "ignoreCase": false
+   }
+  },
+  "position": {
+   "x": 8567,
+   "y": 2258
+  },
+  "width": 322,
+  "height": 93
+ },
+ {
+  "source": "condition_199_a7da_4a1e",
+  "target": "conChild300_8d6f",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_199_a7da_4a1e-conChild300_8d6f"
+ },
+ {
+  "id": "action_302_84c7_5174",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "success_handles": false,
+    "message": {
+     "content": "",
+     "embeds": []
+    },
+    "messageType": "basic",
+    "components": [],
+    "componentsV2Data": {
+     "version": 2,
+     "components": [
+      {
+       "id": "comp_1791746079204_oms8ulc59",
+       "type": "container",
+       "parent_id": null,
+       "data": {
+        "accent_color": "#6366f1",
+        "spoiler": false
+       }
+      },
+      {
+       "id": "comp_1791746081743_wyz876c0n",
+       "type": "text",
+       "parent_id": "comp_1791746079204_oms8ulc59",
+       "data": {
+        "content": "# Modmail Toolbox",
+        "allowed_mentions": []
+       }
+      },
+      {
+       "id": "comp_1791746095171_to4isbs1p",
+       "type": "text",
+       "parent_id": "comp_1791746079204_oms8ulc59",
+       "data": {
+        "content": "-# Commands to use in modmail",
+        "allowed_mentions": []
+       }
+      },
+      {
+       "id": "comp_1791746162500_ayfqwv2v6",
+       "type": "separator",
+       "parent_id": "comp_1791746079204_oms8ulc59",
+       "data": {}
+      },
+      {
+       "id": "comp_1791746166373_xqnq1rwlc",
+       "type": "text",
+       "parent_id": "comp_1791746079204_oms8ulc59",
+       "data": {
+        "content": "**!d <message>** - Sends a message to the user hiding the staff members name.",
+        "allowed_mentions": []
+       }
+      },
+      {
+       "id": "comp_1791746228858_exp1yn89r",
+       "type": "separator",
+       "parent_id": "comp_1791746079204_oms8ulc59",
+       "data": {
+        "divider": "false"
+       }
+      },
+      {
+       "id": "comp_1791746233761_901attsxp",
+       "type": "text",
+       "parent_id": "comp_1791746079204_oms8ulc59",
+       "data": {
+        "content": "**!ex <message>** - Sends a message to the user exposing the staff members name",
+        "allowed_mentions": []
+       }
+      },
+      {
+       "id": "comp_1791746276159_6hf2ujdrw",
+       "type": "separator",
+       "parent_id": "comp_1791746079204_oms8ulc59",
+       "data": {
+        "divider": "false"
+       }
+      },
+      {
+       "id": "comp_1791746280419_pjr1omaid",
+       "type": "text",
+       "parent_id": "comp_1791746079204_oms8ulc59",
+       "data": {
+        "content": "**!ping** - Get pinged when the user sends a message in this ticket.",
+        "allowed_mentions": []
+       }
+      },
+      {
+       "id": "comp_1791746314471_x4b8zijls",
+       "type": "separator",
+       "parent_id": "comp_1791746079204_oms8ulc59",
+       "data": {
+        "divider": "false"
+       }
+      },
+      {
+       "id": "comp_1791746318488_hgkohq1lc",
+       "type": "text",
+       "parent_id": "comp_1791746079204_oms8ulc59",
+       "data": {
+        "content": "**!tb** - Send a list of available commands to use in this post.",
+        "allowed_mentions": []
+       }
+      },
+      {
+       "id": "comp_1791746392319_ci3f54kz6",
+       "type": "separator",
+       "parent_id": "comp_1791746079204_oms8ulc59",
+       "data": {
+        "spacing": "LARGE",
+        "divider": "false"
+       }
+      },
+      {
+       "id": "comp_1791746397343_v4svs2s6w",
+       "type": "text",
+       "parent_id": "comp_1791746079204_oms8ulc59",
+       "data": {
+        "content": "-# Requested by: <@{event_user_id}>",
+        "allowed_mentions": []
+       }
+      }
+     ],
+     "validation": {
+      "isValid": true,
+      "emptyContainers": [],
+      "sectionsWithoutAccessories": [],
+      "emptyActionRows": [],
+      "sectionsWithoutText": []
+     }
+    },
+    "useComponentsV2": true,
+    "target": {
+     "trigger_channel": true
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 8403,
+   "y": 2479
+  },
+  "width": 651,
+  "height": 111
+ },
+ {
+  "source": "conChild300_8d6f",
+  "sourceHandle": "action",
+  "target": "action_302_84c7_5174",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild300_8d6faction-action_302_84c7_5174action"
+ },
+ {
+  "id": "action_292_8d02_246a",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Delete Variable",
+    "description": "Delete the value of a custom variable"
+   },
+   "data": {
+    "type": "delete_var",
+    "reference": "modmail_pingalerts",
+    "target": {
+     "self": true
+    },
+    "key_target_all": false,
+    "key": "{edited_thread_80c4.id}",
+    "validated": true,
+    "guild_id": "",
+    "success_handles": false,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 5153,
+   "y": 7181
+  },
+  "width": 419,
+  "height": 93
+ },
+ {
+  "source": "action_1746929115385",
+  "sourceHandle": "action",
+  "target": "action_292_8d02_246a",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1746929115385action-action_292_8d02_246aaction"
+ },
+ {
+  "id": "$else_292_d381_2c63",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 196,
+   "y": 1803
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_292_5aa0_8395",
+  "target": "$else_292_d381_2c63",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_292_5aa0_8395-$else_292_d381_2c63"
+ },
+ {
+  "id": "condition_292_5aa0_8395",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Check a value, such as a variable or an option, and run different blocks depending on what it is."
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{BGVAR_modmail_pingalerts.{BGVAR_modmails}}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 467,
+   "y": 1582
+  },
+  "width": 448,
+  "height": 111
+ },
+ {
+  "source": "$else_190_2273_8c2b",
+  "sourceHandle": "action",
+  "target": "condition_292_5aa0_8395",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-$else_190_2273_8c2baction-condition_292_5aa0_8395action"
+ },
+ {
+  "id": "conChild296_577b",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "",
+    "ignoreCase": false
+   }
+  },
+  "position": {
+   "x": 816,
+   "y": 1803
+  },
+  "width": 482,
+  "height": 93
+ },
+ {
+  "source": "condition_292_5aa0_8395",
+  "target": "conChild296_577b",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_292_5aa0_8395-conChild296_577b"
+ },
+ {
+  "source": "conChild296_577b",
+  "sourceHandle": "action",
+  "target": "action_1771923497259",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild296_577baction-action_1771923497259action"
+ },
+ {
+  "width": 260,
+  "height": 93,
+  "id": "else_1791747131002_68f7_74ef",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 1658,
+   "y": 1803
+  },
+  "oldId": "$else_292_d381_2c63"
+ },
+ {
+  "width": 448,
+  "height": 111,
+  "id": "condition_1791747131002_ab90_5c6d",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Check a value, such as a variable or an option, and run different blocks depending on what it is."
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{BGVAR_modmail_pingalerts.{BGVAR_modmails}}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 1929,
+   "y": 1582
+  },
+  "oldId": "condition_292_5aa0_8395"
+ },
+ {
+  "width": 482,
+  "height": 93,
+  "id": "conChild_1791747131002_a276_f60a",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "equal_to",
+    "comparison_value": "",
+    "ignoreCase": false,
+    "validated": true
+   }
+  },
+  "position": {
+   "x": 2278,
+   "y": 1803
+  },
+  "oldId": "conChild296_577b"
+ },
+ {
+  "source": "condition_1791747131002_ab90_5c6d",
+  "target": "else_1791747131002_68f7_74ef",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "edge_1791747131004_f4cb_5bbe"
+ },
+ {
+  "source": "condition_1791747131002_ab90_5c6d",
+  "target": "conChild_1791747131002_a276_f60a",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "edge_1791747131004_b5cf_eb22"
+ },
+ {
+  "source": "conChild_1791747131002_a276_f60a",
+  "sourceHandle": "action",
+  "target": "action_49_ac19_6713",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild_1791747131002_a276_f60aaction-action_49_ac19_6713action"
+ },
+ {
+  "id": "action_1791747141072",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "Ping Alerts: {BGVAR_modmail_pingalerts.{BGVAR_modmails}}",
+     "embeds": [
+      {
+       "title": "",
+       "description": "{event_message_content}",
+       "author": {
+        "name": "{event_user_name}",
+        "url": "",
+        "icon_url": "{event_user_avatar}"
+       },
+       "color": "#00ff1f",
+       "footer": "",
+       "footerIcon": "",
+       "timestamp": "",
+       "image": {
+        "url": ""
+       },
+       "thumbnail": {
+        "url": ""
+       },
+       "fields": [],
+       "timestamp_variable": ""
+      }
+     ]
+    },
+    "messageType": "basic",
+    "components": [],
+    "target": {
+     "id": "{BGVAR_modmails}"
+    },
+    "validated": true,
+    "linked": true,
+    "allowedMentions": {
+     "parse": [
+      "users"
+     ]
+    },
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 1462,
+   "y": 2037
+  },
+  "width": 651,
+  "height": 111
+ },
+ {
+  "source": "else_1791747131002_68f7_74ef",
+  "sourceHandle": "action",
+  "target": "action_1791747141072",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-else_1791747131002_68f7_74efaction-action_1791747141072action"
+ },
+ {
+  "id": "action_1791747191464",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "Ping Alerts: {BGVAR_modmail_pingalerts.{BGVAR_modmails}}",
+     "embeds": [
+      {
+       "title": "",
+       "description": "{event_message_content}\n{event_message_attachments}",
+       "author": {
+        "name": "{event_user_name}",
+        "url": "",
+        "icon_url": "{event_user_avatar}"
+       },
+       "color": "#07ff00",
+       "footer": "",
+       "footerIcon": "",
+       "timestamp": "",
+       "image": {
+        "url": ""
+       },
+       "thumbnail": {
+        "url": ""
+       },
+       "fields": [],
+       "timestamp_variable": ""
+      }
+     ]
+    },
+    "messageType": "basic",
+    "components": [],
+    "target": {
+     "id": "{BGVAR_modmails}"
+    },
+    "validated": true,
+    "linked": true,
+    "allowedMentions": {
+     "parse": [
+      "users"
+     ]
+    },
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 0,
+   "y": 2037
+  },
+  "width": 651,
+  "height": 111
+ },
+ {
+  "source": "$else_292_d381_2c63",
+  "sourceHandle": "action",
+  "target": "action_1791747191464",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-$else_292_d381_2c63action-action_1791747191464action"
+ },
+ {
+  "source": "action_1791747141072",
+  "sourceHandle": "action",
+  "target": "action_51_b9a5_12eb",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1791747141072action-action_51_b9a5_12ebaction"
+ },
+ {
+  "source": "action_1791747191464",
+  "sourceHandle": "action",
+  "target": "action_51_b9a5_12eb",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1791747191464action-action_51_b9a5_12ebaction"
+ },
+ {
+  "source": "conChild7_3391",
+  "sourceHandle": "action",
+  "target": "condition_42_61c8_0250",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild7_3391action-condition_42_61c8_0250action"
+ },
+ {
+  "source": "conChild193_1f4d",
+  "sourceHandle": "action",
+  "target": "condition_1791747131002_ab90_5c6d",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild193_1f4daction-condition_1791747131002_ab90_5c6daction"
+ },
+ {
+  "source": "conChild290_ed77",
+  "sourceHandle": "action",
+  "target": "condition_292_a9ad_9e53",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild290_ed77action-condition_292_a9ad_9e53action"
+ },
+ {
+  "source": "root",
+  "sourceHandle": "action",
+  "target": "condition_3_380b_8ed7",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-rootaction-condition_3_380b_8ed7action"
+ },
+ {
+  "source": "action_1782322893645_13e2_170b",
+  "sourceHandle": "action",
+  "target": "action_1782322893645_78a5_f904",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1782322893645_13e2_170baction-action_1782322893645_78a5_f904action"
+ },
+ {
+  "source": "action_1782322893645_78a5_f904",
+  "sourceHandle": "success_actions",
+  "target": "action_1782322893645_05d3_6e44",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1782322893645_78a5_f904success_actions-action_1782322893645_05d3_6e44action"
+ },
+ {
+  "id": "action_1791752835310",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "",
+     "embeds": [
+      {
+       "title": "ERROR",
+       "description": "The message has failed to be sent to the user.\n\n{error_reason}",
+       "author": {
+        "name": "",
+        "url": "",
+        "icon_url": ""
+       },
+       "color": "#f22109",
+       "footer": {
+        "text": "",
+        "icon_url": ""
+       },
+       "footerIcon": "",
+       "timestamp": "",
+       "image": {
+        "url": ""
+       },
+       "thumbnail": {
+        "url": ""
+       },
+       "fields": [],
+       "timestamp_variable": ""
+      }
+     ]
+    },
+    "messageType": "basic",
+    "components": [],
+    "componentsV2Data": {
+     "version": 2,
+     "components": [],
+     "validation": {
+      "isValid": true,
+      "emptyContainers": [],
+      "sectionsWithoutAccessories": [],
+      "emptyActionRows": [],
+      "sectionsWithoutText": []
+     }
+    },
+    "useComponentsV2": false,
+    "target": {
+     "trigger_channel": true
+    },
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 6686,
+   "y": 3156
+  },
+  "width": 651,
+  "height": 111
+ },
+ {
+  "source": "action_1782322893645_78a5_f904",
+  "sourceHandle": "error_actions",
+  "target": "action_1791752835310",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1782322893645_78a5_f904error_actions-action_1791752835310action"
+ },
+ {
+  "source": "action_1771924357442",
+  "sourceHandle": "action",
+  "target": "action_1771924378840",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1771924357442action-action_1771924378840action"
+ },
+ {
+  "source": "action_1771924378840",
+  "sourceHandle": "success_actions",
+  "target": "action_1771924368191",
+  "targetHandle": "action",
+  "snapTo": "bottom",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1771924378840success_actions-action_1771924368191action"
+ },
+ {
+  "id": "action_1791752949579",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send or Edit a Message",
+    "description": "Send or edit a message with optional buttons and select menus."
+   },
+   "data": {
+    "type": "advanced_message",
+    "message": {
+     "content": "",
+     "embeds": [
+      {
+       "title": "ERROR",
+       "description": "The message has failed to be sent to the user.\n\n{error_reason}",
+       "author": {
+        "name": "",
+        "url": "",
+        "icon_url": ""
+       },
+       "color": "#f22109",
+       "footer": {
+        "text": "",
+        "icon_url": ""
+       },
+       "footerIcon": "",
+       "timestamp": "",
+       "image": {
+        "url": ""
+       },
+       "thumbnail": {
+        "url": ""
+       },
+       "fields": [],
+       "timestamp_variable": ""
+      }
+     ]
+    },
+    "messageType": "basic",
+    "components": [],
+    "componentsV2Data": {
+     "version": 2,
+     "components": [],
+     "validation": {
+      "isValid": true,
+      "emptyContainers": [],
+      "sectionsWithoutAccessories": [],
+      "emptyActionRows": [],
+      "sectionsWithoutText": []
+     }
+    },
+    "useComponentsV2": false,
+    "target": {
+     "trigger_channel": true
+    },
+    "validated": true,
+    "linked": true,
+    "success_handles": false
+   }
+  },
+  "position": {
+   "x": 5805,
+   "y": 3819
+  },
+  "width": 651,
+  "height": 111
+ },
+ {
+  "source": "action_1771924378840",
+  "sourceHandle": "error_actions",
+  "target": "action_1791752949579",
+  "targetHandle": "action",
+  "snapTo": "top",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1771924378840error_actions-action_1791752949579action"
+ }
+]

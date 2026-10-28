@@ -1,0 +1,672 @@
+[
+    {
+        "id": "option_1_ga01_priz",
+        "type": "option",
+        "data": {
+            "node_options": {
+                "title": "String",
+                "description": "The prize being given away",
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "user",
+                    "icon": [
+                        448,
+                        512,
+                        [],
+                        "f007",
+                        "M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"
+                    ]
+                },
+                "isActionBlock": false
+            },
+            "data": {
+                "type": "string",
+                "name": "prize",
+                "description": "What are you giving away? (e.g. Nitro, Steam Key, Role)",
+                "required": true,
+                "validated": true,
+                "autocomplete_choices": []
+            }
+        },
+        "position": {
+            "x": 650,
+            "y": 0
+        },
+        "width": 303,
+        "height": 92,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "option_1_ga01_priz",
+        "target": "root",
+        "type": "step",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "id": "reactflow__edge-option_1_ga01_priz-root"
+    },
+    {
+        "id": "option_2_ga02_dura",
+        "type": "option",
+        "data": {
+            "node_options": {
+                "title": "String",
+                "description": "Duration of the giveaway",
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "user",
+                    "icon": [
+                        448,
+                        512,
+                        [],
+                        "f007",
+                        "M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"
+                    ]
+                },
+                "isActionBlock": false
+            },
+            "data": {
+                "type": "string",
+                "name": "duration",
+                "description": "How long the giveaway lasts (e.g. 10m, 1h, 6h, 1d, 7d)",
+                "required": true,
+                "validated": true,
+                "autocomplete_choices": []
+            }
+        },
+        "position": {
+            "x": 1000,
+            "y": 0
+        },
+        "width": 303,
+        "height": 92,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "option_2_ga02_dura",
+        "target": "root",
+        "type": "step",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "id": "reactflow__edge-option_2_ga02_dura-root"
+    },
+    {
+        "id": "option_3_ga03_wins",
+        "type": "option",
+        "data": {
+            "node_options": {
+                "title": "String",
+                "description": "Number of giveaway winners",
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "user",
+                    "icon": [
+                        448,
+                        512,
+                        [],
+                        "f007",
+                        "M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"
+                    ]
+                },
+                "isActionBlock": false
+            },
+            "data": {
+                "type": "string",
+                "name": "winners",
+                "description": "How many winners to select (1-20)",
+                "required": true,
+                "validated": true,
+                "autocomplete_choices": []
+            }
+        },
+        "position": {
+            "x": 1350,
+            "y": 0
+        },
+        "width": 303,
+        "height": 92,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "option_3_ga03_wins",
+        "target": "root",
+        "type": "step",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "id": "reactflow__edge-option_3_ga03_wins-root"
+    },
+    {
+        "id": "option_4_ga04_desc",
+        "type": "option",
+        "data": {
+            "node_options": {
+                "title": "String",
+                "description": "Extra description for the giveaway",
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "user",
+                    "icon": [
+                        448,
+                        512,
+                        [],
+                        "f007",
+                        "M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"
+                    ]
+                },
+                "isActionBlock": false
+            },
+            "data": {
+                "type": "string",
+                "name": "description",
+                "description": "Additional details or rules for the giveaway (optional)",
+                "required": false,
+                "validated": true,
+                "autocomplete_choices": []
+            }
+        },
+        "position": {
+            "x": 1700,
+            "y": 0
+        },
+        "width": 303,
+        "height": 92,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "option_4_ga04_desc",
+        "target": "root",
+        "type": "step",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "id": "reactflow__edge-option_4_ga04_desc-root"
+    },
+    {
+        "id": "option_5_ga05_role",
+        "type": "option",
+        "data": {
+            "node_options": {
+                "title": "String",
+                "description": "Role required to enter the giveaway",
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "user",
+                    "icon": [
+                        448,
+                        512,
+                        [],
+                        "f007",
+                        "M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"
+                    ]
+                },
+                "isActionBlock": false
+            },
+            "data": {
+                "type": "string",
+                "name": "required_role",
+                "description": "Role members must have to enter (optional, mention or name)",
+                "required": false,
+                "validated": true,
+                "autocomplete_choices": []
+            }
+        },
+        "position": {
+            "x": 2050,
+            "y": 0
+        },
+        "width": 303,
+        "height": 92,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "option_5_ga05_role",
+        "target": "root",
+        "type": "step",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "id": "reactflow__edge-option_5_ga05_role-root"
+    },
+    {
+        "id": "root",
+        "type": "root",
+        "data": {
+            "title": "giveaway",
+            "description": "Start a giveaway with a prize, duration, and winner count",
+            "data": {
+                "ephemeral": false,
+                "permissions": {
+                    "allowed_roles": [
+                        {
+                            "name": "@everyone",
+                            "id": "everyone"
+                        }
+                    ],
+                    "banned_roles": [],
+                    "banned_channels": [],
+                    "banned_users": [],
+                    "required_permissions": [
+                        "MANAGE_GUILD"
+                    ]
+                },
+                "cooldown": {
+                    "type": "user",
+                    "interval": "30",
+                    "interval_type": "seconds"
+                },
+                "handleErrors": true,
+                "errors": [],
+                "addedModule": true,
+                "validated": true
+            }
+        },
+        "draggable": false,
+        "position": {
+            "x": 1200,
+            "y": 200
+        },
+        "width": 600,
+        "height": 200,
+        "targetPosition": "top",
+        "sourcePosition": "bottom",
+        "selected": false
+    },
+    {
+        "id": "error_handler",
+        "type": "error",
+        "position": {
+            "x": 500,
+            "y": 236
+        },
+        "draggable": false,
+        "data": {
+            "node_options": {
+                "title": "Error Handler",
+                "description": "Handle errors that occur during the command execution",
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "exclamation-triangle",
+                    "icon": [
+                        576,
+                        512,
+                        [],
+                        "f071",
+                        "M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+                    ]
+                }
+            },
+            "data": {}
+        },
+        "width": 459,
+        "height": 92,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "id": "action_6_ga06_eerr",
+        "type": "action",
+        "position": {
+            "x": 565,
+            "y": 436
+        },
+        "draggable": true,
+        "data": {
+            "node_options": {
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "code-branch",
+                    "icon": [
+                        384,
+                        512,
+                        [],
+                        "f126",
+                        "M384 144c0-44.2-35.8-80-80-80s-80 35.8-80 80c0 36.4 24.3 67.1 57.5 76.8-.6 16.1-4.2 28.5-11 36.9-15.4 19.2-49.3 22.4-85.2 25.7-28.2 2.6-57.4 5.4-81.3 16.9v-144c32.5-10.2 56-40.5 56-76.3 0-44.2-35.8-80-80-80S0 35.8 0 80c0 35.8 23.5 66.1 56 76.3v199.3C23.5 365.9 0 396.2 0 432c0 44.2 35.8 80 80 80s80-35.8 80-80c0-34-21.2-63.1-51.2-74.6 3.1-5.2 7.8-9.8 14.9-13.4 16.2-8.2 40.4-10.4 66.1-12.8 42.2-3.9 90-8.4 118.2-43.4 14-17.4 21.1-39.8 21.6-67.9 31.6-10.8 54.4-40.7 54.4-75.9zM80 64c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16zm0 384c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16zm224-320c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16z"
+                    ]
+                },
+                "title": "Embed Reply",
+                "value": "embed",
+                "label": "Bot replies with an embed response",
+                "requriements": [
+                    [
+                        "Interaction"
+                    ],
+                    [
+                        "Channel"
+                    ]
+                ],
+                "description": "Bot replies with an embed response"
+            },
+            "data": {
+                "nodeID": "action_6_ga06_eerr",
+                "embed": {
+                    "color": "#FF0000",
+                    "title": ":x: {error_message}",
+                    "description": "{error_reason}\n{error_helper_text}",
+                    "footer": "{error_block}"
+                },
+                "emojis": [],
+                "target": {
+                    "reply": true
+                },
+                "type": "embed",
+                "validated": true,
+                "linked": true
+            }
+        },
+        "width": 329,
+        "height": 92,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "error_handler",
+        "target": "action_6_ga06_eerr",
+        "type": "custom",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "id": "reactflow__edge-error_handler-action_6_ga06_eerr"
+    },
+    {
+        "id": "action_7_ga07_anno",
+        "type": "action",
+        "data": {
+            "node_options": {
+                "title": "Send or Edit a Message",
+                "description": "Send or edit a message with optional buttons and select menus.",
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "reply",
+                    "icon": [
+                        512,
+                        512,
+                        [],
+                        "f3e5",
+                        "M8.309 189.836L184.313 37.851C199.719 24.546 224 35.347 224 56.015v80.053c160.629 1.839 288 34.032 288 186.258 0 61.441-39.581 122.309-83.333 154.132-13.653 9.931-33.111-2.533-28.077-18.631 45.344-145.012-21.507-183.51-176.59-185.742V360c0 20.7-24.3 31.453-39.687 18.164l-176.004-152c-11.071-9.562-11.086-26.753 0-36.328z"
+                    ]
+                }
+            },
+            "data": {
+                "type": "advanced_message",
+                "message": {
+                    "content": "",
+                    "embeds": [
+                        {
+                            "title": ":tada: GIVEAWAY :tada:",
+                            "description": "**:gift: {prize}**\n\n{description}\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n**How to Enter:**\n> Press the **:tada: Enter Giveaway** button below!\n> Make sure you meet the role requirements if any are set.\n\n**Rules:**\n> • You must remain in the server until the giveaway ends\n> • Winners are selected completely at random\n> • The host reserves the right to reroll winners if needed\n> • One entry per person — duplicate entries will not count\n> • Prize will be distributed by the giveaway host",
+                            "author": {
+                                "name": "Hosted by {interaction_user_name}",
+                                "url": "",
+                                "icon_url": "{interaction_user_avatar}"
+                            },
+                            "color": "#F1C40F",
+                            "footer": ":tada: Giveaway • Click the button to enter! • Ends in {duration}",
+                            "footerIcon": "",
+                            "timestamp": "",
+                            "image": {
+                                "url": ""
+                            },
+                            "thumbnail": {
+                                "url": "{interaction_user_avatar}"
+                            },
+                            "fields": [
+                                {
+                                    "name": ":trophy: Prize",
+                                    "value": "{prize}",
+                                    "inline": true
+                                },
+                                {
+                                    "name": ":hourglass: Duration",
+                                    "value": "{duration}",
+                                    "inline": true
+                                },
+                                {
+                                    "name": ":crown: Winners",
+                                    "value": "{winners}",
+                                    "inline": true
+                                },
+                                {
+                                    "name": ":lock: Required Role",
+                                    "value": "{required_role}",
+                                    "inline": true
+                                },
+                                {
+                                    "name": ":tickets: Entries",
+                                    "value": "0",
+                                    "inline": true
+                                },
+                                {
+                                    "name": ":green_circle: Status",
+                                    "value": "Active",
+                                    "inline": true
+                                }
+                            ],
+                            "timestamp_variable": ""
+                        }
+                    ]
+                },
+                "messageType": "advanced",
+                "components": [],
+                "componentsV2Data": null,
+                "useComponentsV2": false,
+                "target": {
+                    "reply": true
+                },
+                "validated": true,
+                "linked": true,
+                "editId": "1700000000000_giveaway"
+            }
+        },
+        "position": {
+            "x": 1100,
+            "y": 436
+        },
+        "width": 516,
+        "height": 92,
+        "selected": false,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "root",
+        "sourceHandle": "action",
+        "target": "action_7_ga07_anno",
+        "targetHandle": "action",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "type": "custom",
+        "id": "reactflow__edge-rootaction-action_7_ga07_annoaction"
+    },
+    {
+        "id": "adv_button_8_ga08_entr",
+        "type": "advMessageButton",
+        "data": {
+            "node_options": {},
+            "data": {
+                "type": "button",
+                "label": "🎉 Enter Giveaway",
+                "style": "SUCCESS",
+                "emoji_id": "",
+                "orderComponent": false,
+                "weight": "",
+                "row": "",
+                "validated": true
+            }
+        },
+        "draggable": true,
+        "position": {
+            "x": 950,
+            "y": 620
+        },
+        "width": 125,
+        "height": 79,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "action_7_ga07_anno",
+        "target": "adv_button_8_ga08_entr",
+        "type": "step",
+        "sourceHandle": "components_source",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "id": "reactflow__edge-action_7_ga07_annocomponents_source-adv_button_8_ga08_entr"
+    },
+    {
+        "id": "adv_button_9_ga09_info",
+        "type": "advMessageButton",
+        "data": {
+            "node_options": {},
+            "data": {
+                "type": "button",
+                "label": "📋 Giveaway Info",
+                "style": "SECONDARY",
+                "emoji_id": "",
+                "orderComponent": false,
+                "weight": "",
+                "row": "",
+                "validated": true
+            }
+        },
+        "draggable": true,
+        "position": {
+            "x": 1125,
+            "y": 620
+        },
+        "width": 125,
+        "height": 79,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "action_7_ga07_anno",
+        "target": "adv_button_9_ga09_info",
+        "type": "step",
+        "sourceHandle": "components_source",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "id": "reactflow__edge-action_7_ga07_annocomponents_source-adv_button_9_ga09_info"
+    },
+    {
+        "id": "adv_select_menu_10_ga10_notf",
+        "type": "advMessageSelectMenu",
+        "data": {
+            "node_options": {},
+            "data": {
+                "type": "adv_select_menu",
+                "menu_type": "basic",
+                "multiselect": false,
+                "minOptions": "1",
+                "maxOptions": "1",
+                "basic_options": [
+                    {
+                        "label": "🔔 DM me if I win",
+                        "description": "Receive a direct message notification when you win",
+                        "emoji_id": "",
+                        "value": "dm_notify"
+                    },
+                    {
+                        "label": "📢 Ping me in channel",
+                        "description": "Get mentioned in the channel when winners are announced",
+                        "emoji_id": "",
+                        "value": "channel_notify"
+                    },
+                    {
+                        "label": "🔕 No notification preference",
+                        "description": "No special notification, I will check back manually",
+                        "emoji_id": "",
+                        "value": "no_notify"
+                    }
+                ],
+                "type_options": {},
+                "validated": true,
+                "customVariableName": "notification_preference"
+            }
+        },
+        "draggable": true,
+        "position": {
+            "x": 1300,
+            "y": 620
+        },
+        "width": 178,
+        "height": 79,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "action_7_ga07_anno",
+        "target": "adv_select_menu_10_ga10_notf",
+        "type": "step",
+        "sourceHandle": "components_source",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "id": "reactflow__edge-action_7_ga07_annocomponents_source-adv_select_menu_10_ga10_notf"
+    },
+    {
+        "id": "action_11_ga11_conf",
+        "type": "action",
+        "position": {
+            "x": 1550,
+            "y": 620
+        },
+        "draggable": true,
+        "data": {
+            "node_options": {
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "code-branch",
+                    "icon": [
+                        384,
+                        512,
+                        [],
+                        "f126",
+                        "M384 144c0-44.2-35.8-80-80-80s-80 35.8-80 80c0 36.4 24.3 67.1 57.5 76.8-.6 16.1-4.2 28.5-11 36.9-15.4 19.2-49.3 22.4-85.2 25.7-28.2 2.6-57.4 5.4-81.3 16.9v-144c32.5-10.2 56-40.5 56-76.3 0-44.2-35.8-80-80-80S0 35.8 0 80c0 35.8 23.5 66.1 56 76.3v199.3C23.5 365.9 0 396.2 0 432c0 44.2 35.8 80 80 80s80-35.8 80-80c0-34-21.2-63.1-51.2-74.6 3.1-5.2 7.8-9.8 14.9-13.4 16.2-8.2 40.4-10.4 66.1-12.8 42.2-3.9 90-8.4 118.2-43.4 14-17.4 21.1-39.8 21.6-67.9 31.6-10.8 54.4-40.7 54.4-75.9zM80 64c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16zm0 384c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16zm224-320c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16z"
+                    ]
+                },
+                "title": "Embed Reply",
+                "value": "embed",
+                "label": "Bot replies with an embed response",
+                "requriements": [
+                    [
+                        "Interaction"
+                    ],
+                    [
+                        "Channel"
+                    ]
+                ],
+                "description": "Bot replies with an embed response"
+            },
+            "data": {
+                "nodeID": "action_11_ga11_conf",
+                "embed": {
+                    "color": "#2ECC71",
+                    "title": ":white_check_mark: Giveaway Created Successfully!",
+                    "description": "Your giveaway is now **live** in this channel!\n\n**:clipboard: Giveaway Summary:**\n> :trophy: **Prize:** {prize}\n> :hourglass: **Duration:** {duration}\n> :crown: **Winners:** {winners}\n> :lock: **Required Role:** {required_role}\n> :page_facing_up: **Description:** {description}\n\n*The giveaway announcement has been posted above. Participants can enter by clicking the :tada: Enter Giveaway button.*\n\n**:bulb: Management Tips:**\n> Use `/giveaway-end` to end the giveaway early\n> Use `/giveaway-reroll` to pick new winners\n> Use `/giveaway-cancel` to cancel the giveaway",
+                    "footer": "Giveaway System • Good luck to all participants!"
+                },
+                "emojis": [],
+                "target": {
+                    "reply": true
+                },
+                "type": "embed",
+                "validated": true,
+                "linked": true
+            }
+        },
+        "width": 329,
+        "height": 92,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "action_7_ga07_anno",
+        "sourceHandle": "action",
+        "target": "action_11_ga11_conf",
+        "targetHandle": "action",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "type": "custom",
+        "id": "reactflow__edge-action_7_ga07_annoaction-action_11_ga11_confaction"
+    }
+]

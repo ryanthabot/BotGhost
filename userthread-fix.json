@@ -1,0 +1,66 @@
+{
+ "purpose": "Restore author's user-thread flow on support-test-final5.json. Add nothing; remove edges below.",
+ "edges_to_add": [],
+ "edges_to_remove_primary": [
+  {
+   "source": "action_1717246724797_6aa1_ccb4",
+   "sourceHandle": "action",
+   "target": "action_1717246724797_1196_0b48",
+   "targetHandle": "action",
+   "animated": false,
+   "arrowHeadType": "arrowclosed",
+   "type": "custom",
+   "id": "reactflow__edge-action_1717246724797_6aa1_ccb4action-action_1717246724797_1196_0b48action"
+  }
+ ],
+ "edges_to_remove_path_duplicates": [
+  {
+   "source": "condition_1717246724797_72fa_4f58",
+   "sourceHandle": "action",
+   "target": "else_1717246724797_167f_eb04",
+   "targetHandle": "action",
+   "animated": false,
+   "arrowHeadType": "arrowclosed",
+   "type": "custom",
+   "id": "reactflow__edge-condition_1717246724797_72fa_4f58action-else_1717246724797_167f_eb04action"
+  },
+  {
+   "source": "condition_1717246724797_72fa_4f58",
+   "sourceHandle": "action",
+   "target": "conChild_1717246724797_75c6_33da",
+   "targetHandle": "action",
+   "animated": false,
+   "arrowHeadType": "arrowclosed",
+   "type": "custom",
+   "id": "reactflow__edge-condition_1717246724797_72fa_4f58action-conChild_1717246724797_75c6_33daaction"
+  }
+ ],
+ "edges_to_remove_secondary_same_defect_class_optional": [
+  {
+   "source": "action_1717246724798_aefa_fd2b",
+   "sourceHandle": "action",
+   "target": "action_1034_dcc3_d23a",
+   "targetHandle": "action",
+   "animated": false,
+   "arrowHeadType": "arrowclosed",
+   "type": "custom",
+   "id": "reactflow__edge-action_1717246724798_aefa_fd2baction-action_1034_dcc3_d23aaction"
+  },
+  {
+   "source": "action_1718680343469",
+   "sourceHandle": "action",
+   "target": "action_1034_dcc3_d23a",
+   "targetHandle": "action",
+   "animated": false,
+   "arrowHeadType": "arrowclosed",
+   "type": "custom",
+   "id": "reactflow__edge-action_1718680343469action-action_1034_dcc3_d23aaction"
+  }
+ ],
+ "notes": {
+  "primary": "psr_user.1 (action_1717246724797_6aa1_ccb4) had exactly ONE child in the author's tree (psr_staff.1 via edge_1717246724798_ca7f_a828, still present). The added edge to legacy staff panel action_1717246724797_1196_0b48 fans the ticket-creation chain into a mid-chain button_response; runtime stalls there: staff thread is created+tagged (pstaff_channel applied_tags) but psr_staff.1, loop 6ea3, loop_after puserpin and wh2 relay never run. Removing it restores the original linear chain; panel 0b48 returns to setup-only posting (original parent loop_actions843_fb1a_22aa).",
+  "duplicates": "condition_1717246724797_72fa_4f58 still carries duplicate custom re-adds of its two original step edges (equal_to=201 success branch conChild_1717246724797_75c6_33da and else_1717246724797_167f_eb04) - double-scheduling risk on the exact path; remove the custom copies, keep the step originals.",
+  "secondary": "Same defect class (action node given a second child that is a shared legacy panel mid-chain) in the Close/Forward processing flows: targeted_response action_1717246724798_aefa_fd2b and action_1718680343469 -> panel action_1034_dcc3_d23a. Not on the creation path but can stall those flows identically; removal restores author shape.",
+  "user_member_add": "The ORIGINAL never adds the requesting user to the private thread - no thread-members API exists anywhere in either tree. puser_channel body = type 12, invitable=false, name={BGVAR_support.category_support_forum_private_user_tag_pending}{psr.title-ish name var}. The user is only pinged via wh2 content <@{pbutton_pusher}> and the DM (action_900_6540_ae0e). If membership is wanted, add a NEW api node PUT /channels/{user_channel}/thread-members/{pbutton_pusher} between wh2 (action_1717567866954) and action_842_8903_2a67 - new functionality, not author's."
+ }
+}

@@ -1,0 +1,1217 @@
+[
+ {
+  "id": "root",
+  "type": "root",
+  "data": {
+   "event": true,
+   "enabled": true,
+   "data": {
+    "name": "Support Webhook",
+    "type": "messageCreate",
+    "validated": true
+   }
+  },
+  "draggable": false,
+  "position": {
+   "x": 1003,
+   "y": 0
+  },
+  "width": 600,
+  "height": 133
+ },
+ {
+  "id": "error_handler",
+  "type": "error",
+  "position": {
+   "x": 551,
+   "y": 0
+  },
+  "draggable": false,
+  "data": {
+   "node_options": {
+    "title": "Error Handler",
+    "description": "Handle errors that occur during the event execution"
+   },
+   "data": {}
+  },
+  "width": 332,
+  "height": 127
+ },
+ {
+  "id": "$else_10_f27f_1f3e",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 246,
+   "y": 888
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_10_3ce6_872d",
+  "target": "$else_10_f27f_1f3e",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_10_3ce6_872d-$else_10_f27f_1f3e"
+ },
+ {
+  "id": "condition_10_3ce6_872d",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{BGVAR_psr_staff}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 653,
+   "y": 667
+  },
+  "width": 261,
+  "height": 111
+ },
+ {
+  "id": "conChild17_bfc8",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "not",
+    "comparison_value": "0",
+    "ignoreCase": true
+   }
+  },
+  "position": {
+   "x": 1036,
+   "y": 888
+  },
+  "width": 310,
+  "height": 93
+ },
+ {
+  "source": "condition_10_3ce6_872d",
+  "target": "conChild17_bfc8",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_10_3ce6_872d-conChild17_bfc8"
+ },
+ {
+  "id": "action_1717550162362",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send an API Request",
+    "description": "Send a HTTP request to an external API"
+   },
+   "data": {
+    "type": "api_action",
+    "ephemeral": false,
+    "name": "wh2",
+    "request_options": {
+     "method": "POST",
+     "url": "{BGVAR_support.wh_private_user}?thread_id={BGVAR_psr_staff}",
+     "params": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "headers": [
+      {
+       "key": "Authorization",
+       "value": "Bot {TOKEN_SECRET}"
+      }
+     ],
+     "body": [
+      {
+       "key": "username",
+       "value": "Support Staff"
+      },
+      {
+       "key": "avatar_url",
+       "value": "https://cdn.discordapp.com/attachments/1206768333861421076/1247729319447363687/dis.png?ex=666115fb&is=665fc47b&hm=f7602c03c5aad9aa775373c3a77f3f2b144bd0443b36e5f7e863c02409977092&"
+      },
+      {
+       "key": "content",
+       "value": "{msg}"
+      }
+     ],
+     "options": {
+      "excludeEmptyFields": true,
+      "replaceParams": true,
+      "replaceURL": true,
+      "replaceHeaders": true,
+      "replaceBody": true
+     }
+    },
+    "validated": true,
+    "linked": true,
+    "command_label": "send webhook msg"
+   }
+  },
+  "position": {
+   "x": 956,
+   "y": 1330
+  },
+  "width": 469,
+  "height": 111
+ },
+ {
+  "id": "action_1717921657578_88e5_135d",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send an API Request",
+    "description": "Send a HTTP request to an external API"
+   },
+   "data": {
+    "type": "api_action",
+    "ephemeral": false,
+    "name": "wh3",
+    "request_options": {
+     "method": "POST",
+     "url": "{BGVAR_support.wh_private_staff}?thread_id={BGVAR_psr_user}",
+     "params": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "headers": [
+      {
+       "key": "Authorization",
+       "value": "Bot {TOKEN_SECRET}"
+      }
+     ],
+     "body": [
+      {
+       "key": "username",
+       "value": "{user_name} - {user_id}"
+      },
+      {
+       "key": "avatar_url",
+       "value": "{user_icon}"
+      },
+      {
+       "key": "content",
+       "value": "{msg}"
+      }
+     ],
+     "options": {
+      "excludeEmptyFields": true,
+      "replaceParams": true,
+      "replaceURL": true,
+      "replaceHeaders": true,
+      "replaceBody": true
+     }
+    },
+    "validated": true,
+    "linked": true,
+    "command_label": "send webhook msg"
+   }
+  },
+  "position": {
+   "x": 49,
+   "y": 2196
+  },
+  "width": 469,
+  "height": 111,
+  "oldId": "action_1717550162362"
+ },
+ {
+  "id": "$else_20_bbf3_f488",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 65,
+   "y": 1330
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_20_f15e_c3a7",
+  "target": "$else_20_bbf3_f488",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_20_f15e_c3a7-$else_20_bbf3_f488"
+ },
+ {
+  "id": "condition_20_f15e_c3a7",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{BGVAR_psr_user}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 246,
+   "y": 1109
+  },
+  "width": 260,
+  "height": 111
+ },
+ {
+  "source": "$else_10_f27f_1f3e",
+  "sourceHandle": "action",
+  "target": "condition_20_f15e_c3a7",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-$else_10_f27f_1f3eaction-condition_20_f15e_c3a7action"
+ },
+ {
+  "id": "conChild24_6791",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "not",
+    "comparison_value": "0"
+   }
+  },
+  "position": {
+   "x": 405,
+   "y": 1330
+  },
+  "width": 307,
+  "height": 93
+ },
+ {
+  "source": "condition_20_f15e_c3a7",
+  "target": "conChild24_6791",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_20_f15e_c3a7-conChild24_6791"
+ },
+ {
+  "id": "action_1717921878478",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Set a unique variable",
+    "description": "Set a unique variable for every execution of this command or event."
+   },
+   "data": {
+    "type": "set_unique_variable",
+    "reference": "msg",
+    "value": "{event_message_content}\\n\\n{event_message_attachments}",
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 922,
+   "y": 1109
+  },
+  "width": 538,
+  "height": 111
+ },
+ {
+  "id": "action_1717922073837",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Set a unique variable",
+    "description": "Set a unique variable for every execution of this command or event."
+   },
+   "data": {
+    "type": "set_unique_variable",
+    "reference": "msg",
+    "value": "{event_message_content}\\n\\n{event_message_attachments}",
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 289,
+   "y": 1551
+  },
+  "width": 538,
+  "height": 111
+ },
+ {
+  "id": "action_31_72dc_864f",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send an API Request",
+    "description": "Send a HTTP request to an external API"
+   },
+   "data": {
+    "type": "api_action",
+    "ephemeral": false,
+    "name": "pts",
+    "request_options": {
+     "method": "POST",
+     "url": "https://api.projectexcalibur.dev/transcripts",
+     "params": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "headers": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "body": [
+      {
+       "key": "channel",
+       "value": "{\"name\": \"{BGVAR_api_transcript_channel.name}\", \"id\": \"{BGVAR_api_transcript_channel.user}\"}"
+      },
+      {
+       "key": "message",
+       "value": "{\"text\": \"{msg}\"}"
+      },
+      {
+       "key": "author",
+       "value": "{\"name\": \"Support Staff\", \"id\": \"{user_id}\", \"avatar\": \"https://cdn.discordapp.com/attachments/1206768333861421076/1247729319447363687/dis.png?ex=66665bfb&is=66650a7b&hm=5fce1aee4dcc2a472c0d0c128c0d8a66f0eccf8131834f6bec75b0ff8e9c7b84&\", \"role\": \"Staff\"}"
+      }
+     ],
+     "options": {
+      "excludeEmptyFields": true,
+      "replaceParams": true,
+      "replaceURL": true,
+      "replaceHeaders": true,
+      "replaceBody": true
+     }
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 907,
+   "y": 1551
+  },
+  "width": 567,
+  "height": 111
+ },
+ {
+  "id": "action_1717924077706",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send an API Request",
+    "description": "Send a HTTP request to an external API"
+   },
+   "data": {
+    "type": "api_action",
+    "ephemeral": false,
+    "name": "pts2",
+    "request_options": {
+     "method": "POST",
+     "url": "https://api.projectexcalibur.dev/transcripts",
+     "params": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "headers": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "body": [
+      {
+       "key": "channel",
+       "value": "{\"name\": \"{BGVAR_api_transcript_channel.name}\", \"id\": \"{BGVAR_api_transcript_channel.user}\"}"
+      },
+      {
+       "key": "message",
+       "value": "{\"text\": \"{msg}\"}"
+      },
+      {
+       "key": "author",
+       "value": "{\"name\": \"{user_displayName}\", \"id\": \"{user_id}\", \"avatar\": \"{user_icon}\", \"role\": \"User\"}"
+      }
+     ],
+     "options": {
+      "excludeEmptyFields": true,
+      "replaceParams": true,
+      "replaceURL": true,
+      "replaceHeaders": true,
+      "replaceBody": true
+     }
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 0,
+   "y": 2417
+  },
+  "width": 567,
+  "height": 111
+ },
+ {
+  "id": "action_1717928099720",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send an API Request",
+    "description": "Send a HTTP request to an external API"
+   },
+   "data": {
+    "type": "api_action",
+    "ephemeral": false,
+    "name": "ts",
+    "request_options": {
+     "method": "POST",
+     "url": "https://api.projectexcalibur.dev/transcripts",
+     "params": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "headers": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "body": [
+      {
+       "key": "channel",
+       "value": "{\"name\": \"{BGVAR_api_transcript_channel.name}\", \"id\": \"{BGVAR_api_transcript_channel.staff}\"}"
+      },
+      {
+       "key": "message",
+       "value": "{\"text\": \"{msg}\"}"
+      },
+      {
+       "key": "author",
+       "value": "{\"name\": \"{user_displayName}\", \"id\": \"{user_id}\", \"avatar\": \"{user_icon}\", \"role\": \"Staff\"}"
+      }
+     ],
+     "options": {
+      "excludeEmptyFields": true,
+      "replaceParams": true,
+      "replaceURL": true,
+      "replaceHeaders": true,
+      "replaceBody": true
+     }
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 907,
+   "y": 1772
+  },
+  "width": 567,
+  "height": 111
+ },
+ {
+  "id": "action_1717928104600",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send an API Request",
+    "description": "Send a HTTP request to an external API"
+   },
+   "data": {
+    "type": "api_action",
+    "ephemeral": false,
+    "name": "ts2",
+    "request_options": {
+     "method": "POST",
+     "url": "https://api.projectexcalibur.dev/transcripts",
+     "params": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "headers": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "body": [
+      {
+       "key": "channel",
+       "value": "{\"name\": \"{BGVAR_api_transcript_channel.name}\", \"id\": \"{BGVAR_api_transcript_channel.staff}\"}"
+      },
+      {
+       "key": "message",
+       "value": "{\"text\": \"{msg}\"}"
+      },
+      {
+       "key": "author",
+       "value": "{\"name\": \"{user_displayName}\", \"id\": \"{user_id}\", \"avatar\": \"{user_icon}\", \"role\": \"User\"}"
+      }
+     ],
+     "options": {
+      "excludeEmptyFields": true,
+      "replaceParams": true,
+      "replaceURL": true,
+      "replaceHeaders": true,
+      "replaceBody": true
+     }
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 0,
+   "y": 2638
+  },
+  "width": 567,
+  "height": 111
+ },
+ {
+  "source": "conChild17_bfc8",
+  "sourceHandle": "action",
+  "target": "action_1717921878478",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild17_bfc8action-action_1717921878478action"
+ },
+ {
+  "source": "action_31_72dc_864f",
+  "sourceHandle": "action",
+  "target": "action_1717928099720",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_31_72dc_864faction-action_1717928099720action"
+ },
+ {
+  "source": "action_1717924077706",
+  "sourceHandle": "action",
+  "target": "action_1717928104600",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1717924077706action-action_1717928104600action"
+ },
+ {
+  "id": "$else_35_d9e0_1317",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 653,
+   "y": 464
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_35_44c6_d5cd",
+  "target": "$else_35_d9e0_1317",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_35_44c6_d5cd-$else_35_d9e0_1317"
+ },
+ {
+  "id": "condition_35_44c6_d5cd",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{BGVAR_psr_admin}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 1168,
+   "y": 243
+  },
+  "width": 271,
+  "height": 111
+ },
+ {
+  "source": "$else_35_d9e0_1317",
+  "sourceHandle": "action",
+  "target": "condition_10_3ce6_872d",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-$else_35_d9e0_1317action-condition_10_3ce6_872daction"
+ },
+ {
+  "source": "root",
+  "sourceHandle": "action",
+  "target": "condition_35_44c6_d5cd",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-rootaction-condition_35_44c6_d5cdaction"
+ },
+ {
+  "id": "conChild39_5c47",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "not",
+    "comparison_value": "0",
+    "ignoreCase": true
+   }
+  },
+  "position": {
+   "x": 1664,
+   "y": 464
+  },
+  "width": 319,
+  "height": 93
+ },
+ {
+  "source": "condition_35_44c6_d5cd",
+  "target": "conChild39_5c47",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_35_44c6_d5cd-conChild39_5c47"
+ },
+ {
+  "source": "action_1717921878478",
+  "sourceHandle": "action",
+  "target": "action_1717550162362",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1717921878478action-action_1717550162362action"
+ },
+ {
+  "source": "action_1717921657578_88e5_135d",
+  "sourceHandle": "action",
+  "target": "action_1717924077706",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1717921657578_88e5_135daction-action_1717924077706action"
+ },
+ {
+  "source": "action_1717550162362",
+  "sourceHandle": "action",
+  "target": "action_31_72dc_864f",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1717550162362action-action_31_72dc_864faction"
+ },
+ {
+  "id": "action_1718695770419",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send an API Request",
+    "description": "Send a HTTP request to an external API"
+   },
+   "data": {
+    "type": "api_action",
+    "ephemeral": false,
+    "name": "wh6",
+    "request_options": {
+     "method": "POST",
+     "url": "{BGVAR_support.wh_private_user}?thread_id={BGVAR_psr_admin}",
+     "params": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "headers": [
+      {
+       "key": "Authorization",
+       "value": "Bot {TOKEN_SECRET}"
+      }
+     ],
+     "body": [
+      {
+       "key": "username",
+       "value": "Support Admin"
+      },
+      {
+       "key": "avatar_url",
+       "value": "https://cdn.discordapp.com/attachments/1206768333861421076/1247729319447363687/dis.png?ex=666115fb&is=665fc47b&hm=f7602c03c5aad9aa775373c3a77f3f2b144bd0443b36e5f7e863c02409977092&"
+      },
+      {
+       "key": "content",
+       "value": "{msg}"
+      }
+     ],
+     "options": {
+      "excludeEmptyFields": true,
+      "replaceParams": true,
+      "replaceURL": true,
+      "replaceHeaders": true,
+      "replaceBody": true
+     }
+    },
+    "validated": true,
+    "linked": true,
+    "command_label": "send webhook msg"
+   }
+  },
+  "position": {
+   "x": 1589,
+   "y": 888
+  },
+  "width": 469,
+  "height": 111
+ },
+ {
+  "id": "action_1718695771702",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Set a unique variable",
+    "description": "Set a unique variable for every execution of this command or event."
+   },
+   "data": {
+    "type": "set_unique_variable",
+    "reference": "msg",
+    "value": "{event_message_content}\\n\\n{event_message_attachments}",
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 1554,
+   "y": 667
+  },
+  "width": 538,
+  "height": 111
+ },
+ {
+  "source": "conChild39_5c47",
+  "sourceHandle": "action",
+  "target": "action_1718695771702",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild39_5c47action-action_1718695771702action"
+ },
+ {
+  "source": "action_1718695771702",
+  "sourceHandle": "action",
+  "target": "action_1718695770419",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1718695771702action-action_1718695770419action"
+ },
+ {
+  "id": "action_1718696026908",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send an API Request",
+    "description": "Send a HTTP request to an external API"
+   },
+   "data": {
+    "type": "api_action",
+    "ephemeral": false,
+    "name": "wh9",
+    "request_options": {
+     "method": "POST",
+     "url": "{BGVAR_support.wh_private_admin}?thread_id={BGVAR_psr_user}",
+     "params": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "headers": [
+      {
+       "key": "Authorization",
+       "value": "Bot {TOKEN_SECRET}"
+      }
+     ],
+     "body": [
+      {
+       "key": "username",
+       "value": "{user_name} - {user_id}"
+      },
+      {
+       "key": "avatar_url",
+       "value": "{user_icon}"
+      },
+      {
+       "key": "content",
+       "value": "{msg}"
+      }
+     ],
+     "options": {
+      "excludeEmptyFields": true,
+      "replaceParams": true,
+      "replaceURL": true,
+      "replaceHeaders": true,
+      "replaceBody": true
+     }
+    },
+    "validated": true,
+    "linked": true,
+    "command_label": "send webhook msg"
+   }
+  },
+  "position": {
+   "x": 598,
+   "y": 2196
+  },
+  "width": 469,
+  "height": 111
+ },
+ {
+  "source": "conChild24_6791",
+  "sourceHandle": "action",
+  "target": "action_1717922073837",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild24_6791action-action_1717922073837action"
+ },
+ {
+  "id": "$else_41_a232_2de6",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "else"
+   }
+  },
+  "position": {
+   "x": 154,
+   "y": 1993
+  },
+  "width": 260,
+  "height": 93
+ },
+ {
+  "source": "condition_41_fa03_698f",
+  "target": "$else_41_a232_2de6",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_41_fa03_698f-$else_41_a232_2de6"
+ },
+ {
+  "id": "condition_41_fa03_698f",
+  "type": "condition",
+  "data": {
+   "node_options": {
+    "title": "Comparison Condition",
+    "description": "Run actions based on the difference between two values. "
+   },
+   "data": {
+    "type": "condition",
+    "condition_type": "comparison",
+    "base_value": "{BGVAR_psr_admin[{BGVAR_psr_user}]}",
+    "multiple": false,
+    "target": {
+     "self": true
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 361,
+   "y": 1772
+  },
+  "width": 395,
+  "height": 111
+ },
+ {
+  "source": "$else_41_a232_2de6",
+  "sourceHandle": "action",
+  "target": "action_1717921657578_88e5_135d",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-$else_41_a232_2de6action-action_1717921657578_88e5_135daction"
+ },
+ {
+  "id": "conChild46_10e3",
+  "type": "conditionChild",
+  "data": {
+   "node_options": {
+    "type": "comparison"
+   },
+   "data": {
+    "type": "not",
+    "comparison_value": "0",
+    "ignoreCase": true
+   }
+  },
+  "position": {
+   "x": 611,
+   "y": 1993
+  },
+  "width": 443,
+  "height": 93
+ },
+ {
+  "source": "condition_41_fa03_698f",
+  "target": "conChild46_10e3",
+  "type": "step",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "id": "reactflow__edge-condition_41_fa03_698f-conChild46_10e3"
+ },
+ {
+  "source": "conChild46_10e3",
+  "sourceHandle": "action",
+  "target": "action_1718696026908",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-conChild46_10e3action-action_1718696026908action"
+ },
+ {
+  "source": "action_1717922073837",
+  "sourceHandle": "action",
+  "target": "condition_41_fa03_698f",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1717922073837action-condition_41_fa03_698faction"
+ },
+ {
+  "source": "action_1718696026908",
+  "sourceHandle": "action",
+  "target": "action_1717924077706",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1718696026908action-action_1717924077706action"
+ },
+ {
+  "id": "action_1718943187314",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send an API Request",
+    "description": "Send a HTTP request to an external API"
+   },
+   "data": {
+    "type": "api_action",
+    "ephemeral": false,
+    "name": "ptsa",
+    "request_options": {
+     "method": "POST",
+     "url": "https://api.projectexcalibur.dev/transcripts",
+     "params": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "headers": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "body": [
+      {
+       "key": "channel",
+       "value": "{\"name\": \"{BGVAR_api_transcript_channel.name}\", \"id\": \"{BGVAR_api_transcript_channel.user}\"}"
+      },
+      {
+       "key": "message",
+       "value": "{\"text\": \"{msg}\"}"
+      },
+      {
+       "key": "author",
+       "value": "{\"name\": \"Support Admin\", \"id\": \"{user_id}\", \"avatar\": \"https://cdn.discordapp.com/attachments/1206768333861421076/1247729319447363687/dis.png?ex=66665bfb&is=66650a7b&hm=5fce1aee4dcc2a472c0d0c128c0d8a66f0eccf8131834f6bec75b0ff8e9c7b84&\", \"role\": \"Staff\"}"
+      }
+     ],
+     "options": {
+      "excludeEmptyFields": true,
+      "replaceParams": true,
+      "replaceURL": true,
+      "replaceHeaders": true,
+      "replaceBody": true
+     }
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 1540,
+   "y": 1109
+  },
+  "width": 567,
+  "height": 111
+ },
+ {
+  "id": "action_1718943188731",
+  "type": "action",
+  "data": {
+   "node_options": {
+    "title": "Send an API Request",
+    "description": "Send a HTTP request to an external API"
+   },
+   "data": {
+    "type": "api_action",
+    "ephemeral": false,
+    "name": "tsa",
+    "request_options": {
+     "method": "POST",
+     "url": "https://api.projectexcalibur.dev/transcripts",
+     "params": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "headers": [
+      {
+       "key": "",
+       "value": ""
+      }
+     ],
+     "body": [
+      {
+       "key": "channel",
+       "value": "{\"name\": \"{BGVAR_api_transcript_channel.name}\", \"id\": \"{BGVAR_api_transcript_channel.staff}\"}"
+      },
+      {
+       "key": "message",
+       "value": "{\"text\": \"{msg}\"}"
+      },
+      {
+       "key": "author",
+       "value": "{\"name\": \"{user_displayName}\", \"id\": \"{user_id}\", \"avatar\": \"{user_icon}\", \"role\": \"Staff\"}"
+      }
+     ],
+     "options": {
+      "excludeEmptyFields": true,
+      "replaceParams": true,
+      "replaceURL": true,
+      "replaceHeaders": true,
+      "replaceBody": true
+     }
+    },
+    "validated": true,
+    "linked": true
+   }
+  },
+  "position": {
+   "x": 1540,
+   "y": 1330
+  },
+  "width": 567,
+  "height": 111
+ },
+ {
+  "source": "action_1718695770419",
+  "sourceHandle": "action",
+  "target": "action_1718943187314",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1718695770419action-action_1718943187314action"
+ },
+ {
+  "source": "action_1718943187314",
+  "sourceHandle": "action",
+  "target": "action_1718943188731",
+  "targetHandle": "action",
+  "animated": false,
+  "arrowHeadType": "arrowclosed",
+  "type": "custom",
+  "id": "reactflow__edge-action_1718943187314action-action_1718943188731action"
+ }
+]

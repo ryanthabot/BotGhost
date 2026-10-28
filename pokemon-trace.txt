@@ -1,0 +1,1050 @@
+● root ROOT
+  ● c1843_a254_9119 COND compare: {event_message_content} [self]
+    ● $else_1843_a258_7b99 BRANCH else
+    ● cc1846_32c2 BRANCH contains {BGVAR_pokemon_battle_prefix}
+      ● c2042_0fed_0496 COND compare: 1 [self]
+        ● $else_2042_29b2_8756 BRANCH else
+        ● cc2046_df7f BRANCH equal_to 1
+          ● a1792359726985_26b6_5d8a_c8f3 SET pokebulbasaurlowhealth = 1 [self] op=unshift
+            ● a1792359726985_71c4_d969_c8f3 SET pokebulbasaurlowhealth = 2 [self] op=unshift
+              ● a1792359726985_7e44_735a_c8f3 SET pokebulbasaurlowhealth = 3 [self] op=unshift
+                ● a1792359726985_2283_ec58_c8f3 SET pokebulbasaurlowhealth = 4 [self] op=unshift
+                  ● a1792359726985_8e2b_d908_c8f3 SET pokebulbasaurlowhealth = 5 [self] op=unshift
+                    ● a1792359726985_a0b0_6add_c8f3 SET pokebulbasaurlowhealth = 6 [self] op=unshift
+                      ● a1792359726985_c755_4321_c8f3 SET pokebulbasaurlowhealth = 7 [self] op=unshift
+                        ● a1792359726985_bfad_6d93_c8f3 SET pokebulbasaurlowhealth = 8 [self] op=unshift
+                          ● a1792359726985_26f1_8db0_c8f3 SET pokebulbasaurlowhealth = 9 [self] op=unshift
+                            ● a1792359726985_6177_91db_c8f3 SET pokebulbasaurlowhealth = 10 [self] op=unshift
+                              ● a1792359726985_306f_0de6_c8f3 SET pokebulbasaurlowhealth = 11 [self] op=unshift
+                                ● a1792359726985_e154_5ccf_c8f3 SET pokebulbasaurdecenthp = 12 [self] op=unshift
+                                  ● a1792359726985_8b02_fd84_c8f3 SET pokebulbasaurdecenthp = 13 [self] op=unshift
+                                    ● a1792359726985_63e2_b687_c8f3 SET pokebulbasaurdecenthp = 14 [self] op=unshift
+                                      ● a1792359726985_11b8_80cd_c8f3 SET pokebulbasaurdecenthp = 15 [self] op=unshift
+                                        ● a1792359726985_e20a_0f84_c8f3 SET pokebulbasaurdecenthp = 16 [self] op=unshift
+                                          ● a1792359726985_3048_a617_c8f3 SET pokebulbasaurdecenthp = 17 [self] op=unshift
+                                            ● a1792359726985_5845_0304_c8f3 SET pokebulbasaurdecenthp = 18 [self] op=unshift
+                                              ● a1792359726985_04f7_1e74_c8f3 SET pokebulbasaurdecenthp = 19 [self] op=unshift
+                                                ● a1792359726985_c2da_9986_c8f3 SET pokebulbasaurdecenthp = 20 [self] op=unshift
+                                                  ● a1792359726986_3097_17f8_c8f3 SET pokebulbasaurdecenthp = 21 [self] op=unshift
+                                                    ● a1792359726986_ec29_672b_c8f3 SET pokebulbasaurdecenthp = 22 [self] op=unshift
+                                                      ● a1792359726986_d561_1249_c8f3 SET pokebulbasaurdecenthp = 23 [self] op=unshift
+                                                        ● a1792359726986_1b05_c6c1_c8f3 SET pokebulbasaurdecenthp = 24 [self] op=unshift
+                                                          ● a1792359726986_abb2_747c_c8f3 SET pokebulbasaurdecenthp = 25 [self] op=unshift
+                                                            ● a1792359726986_efbd_b947_c8f3 SET pokebulbasaurfull = 26 [self] op=unshift
+                                                              ● a1792359726986_4265_892e_c8f3 SET pokebulbasaurfull = 27 [self] op=unshift
+                                                                ● a1792359726986_be5c_573c_c8f3 SET pokebulbasaurfull = 28 [self] op=unshift
+                                                                  ● a1792359726986_c0ce_ad49_c8f3 SET pokebulbasaurfull = 29 [self] op=unshift
+                                                                    ● a1792359726986_affd_c924_c8f3 SET pokebulbasaurfull = 30 [self] op=unshift
+                                                                      ● a1792359726986_5e52_f20e_c8f3 SET pokebulbasaurfull = 31 [self] op=unshift
+                                                                        ● a1792359726986_306a_4257_c8f3 SET pokebulbasaurfull = 32 [self] op=unshift
+                                                                          ● a1792359726986_9697_3345_c8f3 SET pokebulbasaurfull = 33 [self] op=unshift
+                                                                            ● a1792359726986_62b4_f55b_c8f3 SET pokebulbasaurfull = 34 [self] op=unshift
+                                                                              ● a1792359726986_098b_9b0f_c8f3 SET pokebulbasaurfull = 35 [self] op=unshift
+                                                                                ● a1792359726986_e7b1_a98c_c8f3 SET pokebulbasaurfull = 36 [self] op=unshift
+                                                                                  ● a1792359750450_f7c5_d721_d935 SET pokecharmanderfullhp = 20 [self] op=remove_all
+                                                                                    ● a1792359750450_d0d3_e19e_d935 SET pokecharmanderdecenthp = 20 [self] op=remove_all
+                                                                                      ● a1792359750450_884f_f965_d935 SET pokecharmanderdecenthp = 20 [self] op=remove_all
+                                                                                        ● a1792359750450_9af2_b741_d935 SET pokecharmanderdecenthp = 20 [self] op=unshift
+                                                                                          ● a1792359750450_12b2_7283_d935 SET pokecharmanderdecenthp = 21 [self] op=unshift
+                                                                                            ● a1792359750450_41c8_9692_d935 SET pokecharmanderdecenthp = 22 [self] op=unshift
+                                                                                              ● a1792359750450_4f08_9e41_d935 SET pokecharmanderdecenthp = 23 [self] op=unshift
+                                                                                                ● a1792359750450_3f86_70f5_d935 SET pokecharmanderdecenthp = 24 [self] op=unshift
+                                                                                                  ● a1792359750450_b0a5_6160_d935 SET pokecharmanderdecenthp = 25 [self] op=unshift
+                                                                                                    ● a1792359750450_1eae_16a4_d935 SET pokecharmanderdecenthp = 26 [self] op=unshift
+                                                                                                      ● a1792359750450_668e_5b75_d935 SET pokecharmanderdecenthp = 27 [self] op=unshift
+                                                                                                        ● a1792359750451_eef5_69d0_d935 SET pokecharmanderdecenthp = 28 [self] op=unshift
+                                                                                                          ● a1792359750451_3e93_6700_d935 SET pokecharmanderdecenthp = 29 [self] op=unshift
+                                                                                                            ● a1792359750451_e4e6_8273_d935 SET pokecharmanderfullhp = 30 [self] op=unshift
+                                                                                                              ● a1792359750451_6a5f_1534_d935 SET pokecharmanderfullhp = 31 [self] op=unshift
+                                                                                                                ● a1792359750451_7a6c_67b6_d935 SET pokecharmanderfullhp = 32 [self] op=unshift
+                                                                                                                  ● a1792359750451_2e34_2790_d935 SET pokecharmanderfullhp = 33 [self] op=unshift
+                                                                                                                    ● a1792359750451_f053_97e6_d935 SET pokecharmanderfullhp = 34 [self] op=unshift
+                                                                                                                      ● a1792359750451_c6e5_1782_d935 SET pokecharmanderfullhp = 35 [self] op=unshift
+                                                                                                                        ● a1792359750451_35cd_546d_d935 SET pokecharmanderfullhp = 36 [self] op=unshift
+                                                                                                                          ● a1792359750451_0b21_1cd2_d935 SET pokecharmanderfullhp = 37 [self] op=unshift
+                                                                                                                            ● a1792359750451_daee_0ead_d935 SET pokecharmanderfullhp = 39 [self] op=unshift
+                                                                                                                              ● a1792359750451_8a4f_10d9_d935 SET pokecharmanderfullhp = 38 [self] op=unshift
+                                                                                                                                ● a1792359750451_8907_3ef5_d935 SET pokecharmanderfullhp = 40 [self] op=unshift
+                                                                                                                                  ● a1792359750450_41f9_5e8d_d935 SET pokecharmanderdecenthp = 19 [self] op=unshift
+                                                                                                                                    ● a1792359750450_80e9_41ed_d935 SET pokecharmanderdecenthp = 18 [self] op=unshift
+                                                                                                                                      ● a1792359750450_face_1ad4_d935 SET pokecharmanderdecenthp = 17 [self] op=unshift
+                                                                                                                                        ● a1792359750450_a7a4_e230_d935 SET pokecharmanderdecenthp = 16 [self] op=unshift
+                                                                                                                                          ● a1792359750450_59a3_908a_d935 SET pokecharmanderdecenthp = 15 [self] op=unshift
+                                                                                                                                            ● a1792359750450_57f0_2aec_d935 SET pokecharmanderlowhp = 14 [self] op=unshift
+                                                                                                                                              ● a1792359750450_928b_9e05_d935 SET pokecharmanderlowhp = 13 [self] op=unshift
+                                                                                                                                                ● a1792359750450_12bd_ed31_d935 SET pokecharmanderlowhp = 12 [self] op=unshift
+                                                                                                                                                  ● a1792359750450_4e83_6f92_d935 SET pokecharmanderlowhp = 11 [self] op=unshift
+                                                                                                                                                    ● a1792359750450_e956_ee7f_d935 SET pokecharmanderlowhp = 10 [self] op=unshift
+                                                                                                                                                      ● a1792359750450_93ae_b983_d935 SET pokecharmanderlowhp = 9 [self] op=unshift
+                                                                                                                                                        ● a1792359750450_80a1_3c2c_d935 SET pokecharmanderlowhp = 8 [self] op=unshift
+                                                                                                                                                          ● a1792359750450_810c_7a01_d935 SET pokecharmanderlowhp = 7 [self] op=unshift
+                                                                                                                                                            ● a1792359750450_b292_c759_d935 SET pokecharmanderlowhp = 6 [self] op=unshift
+                                                                                                                                                              ● a1792359750450_3e44_2e64_d935 SET pokecharmanderlowhp = 5 [self] op=unshift
+                                                                                                                                                                ● a1792359750450_bd1a_7bd8_d935 SET pokecharmanderlowhp = 4 [self] op=unshift
+                                                                                                                                                                  ● a1792359750450_94e9_96b9_d935 SET pokecharmanderlowhp = 3 [self] op=unshift
+                                                                                                                                                                    ● a1792359750450_7c3a_1603_d935 SET pokecharmanderlowhp = 2 [self] op=unshift
+                                                                                                                                                                      ● a1792359750450_a4dc_d750_d935 SET pokecharmanderlowhp = 1 [self] op=unshift
+                                                                                                                                                                        ● a1792359750450_6cd6_b4ba_d935 SET pokecharmanderlowhp = 0 [self] op=unshift
+        ● cc2048_8cbd BRANCH equal_to 1
+          ● a2051_dc93_27a0 WAIT 1s
+            ● c1848_a1db_8613 COND compare: {event_message_content} [self]
+              ● $else_1848_2051_a03b BRANCH else
+              ● cc1852_4ac0 BRANCH contains Bulbasaur
+                ● a52_9526_0e92 MSG "PIKACHU VS BULBASAUR" EDIT:1746323706229 (2 embeds, 10 fields)
+                  ● btn57_2b83jnt1p BUTTON "Start Battle" [SUCCESS] press=user
+                    ● a151_22a8_b7ff SET pokeplayerhp = 30 [self] op=unshift
+                      ● a1746369809258 SET pokeplayerspeed = 14 [self] op=unshift
+                        ● a1746369868816 SET pokeopponenthp = 36 [self] op=unshift
+                          ● a1746369921240 SET pokeopponentspeed = 16 [self] op=unshift
+                            ● a200_769a_d620 SET pokeopponentsname = Bulbasaur [self] op=unshift
+                              ● a1746651160074 SET pokeplayersname = Pikachu [self] op=unshift
+                                ● a142_a415_4891 DELETE_MSG (of a52_9526_0e92)
+                                  ● a1746369377351 SET next_round = 1 [self] op=unshift
+                                    ● a1746371652258 SET pokeroundnumber = 0 [self] op=unshift
+                                      ● a1746371897508 SET pokeplayermoveused = *None* [self] op=unshift
+                                        ● a1746375919857 SET pokeopponentmoveused = *None* [self] op=unshift
+                                          ● a1746375933562 SET pokeopponentchargingmove = -1 [self] op=unshift
+                                            ● a1746381168089 SET pokeplayerchargedattackleft = 2 [self] op=unshift
+                                              ● a1746381354314 SET pokeopponentchargingmove = -1 [self] op=unshift
+                                                ● a1746381370257 SET pokeplayerchargingmove = -1 [self] op=unshift
+                                                  ● a1746390210784 SET pokeplayeragilityleft = 4 [self] op=unshift
+                                                    ● a1746459255596 SET pokeplayerhealmovesleft = 3 [self] op=unshift
+                                                      ● a825_9f34_e49d SET pokeplayerdebuftext = None [self] op=unshift
+                                                        ● a1746461034964 SET pokeopponentdebuftext = None [self] op=unshift
+                                                          ● a1746464280352 SET pokeplayerchargingmove = -1 [self] op=unshift
+                                                            ● a1746473829748 SET pokeopponenthealingmovesleft = 5 [self] op=unshift
+                                                              ● a1746483946302 SET pokemove5disadsvantage = 0 [self] op=unshift
+                                                                ● a83_f440_2c19 LOOP x300 timeout=2000ms
+                                                                  ● loop_after86_397f_162c LOOP_BODY
+                                                                    ● c589_78ef_bf3f COND compare: {BGVAR_poketestifdrawisneeded} [self]
+                                                                      ● $else_589_e3d3_46c4 BRANCH else
+                                                                      ● cc593_ddb6 BRANCH equal_to 1
+                                                                        ● a399_4abf_280c MSG "**Draw! It was a long battle and both of you were warn out s…" (0 embeds, 0 fields)
+                                                                          ● a392_0fee_4952 DELETE_MSG (of a1746363247039)
+                                                                            ● a1746460574414 DEL pokeplayerhp [self]
+                                                                              ● a1746460576236 DEL pokeplayerspeed [self]
+                                                                                ● a1746460577922 DEL pokeopponenthp [self]
+                                                                                  ● a1746460579664 DEL pokeopponentspeed [self]
+                                                                                    ● a1746460581970 SET next_round = 0 [self] op=unshift
+                                                                                      ● a1746460584155 SET pokeplayerchargingmove = -1 [self] op=unshift
+                                                                                        ● a1746460586547 SET pokeopponentchargingmove = -1 [self] op=unshift
+                                                                                          ● a1746460588980 SET pokeplayerchargedattackleft = 2 [self] op=unshift
+                                                                                            ● a1746460591462 SET pokeplayeragilityleft = 4 [self] op=unshift
+                                                                                              ● a1746461248215 SET pokeplayerdebuftext = None [self] op=unshift
+                                                                                                ● a1746461165820 SET pokeopponentdebuftext = None [self] op=unshift
+                                                                                                  ● a1746464269345 SET pokeplayerchargingmove = -1 [self] op=unshift
+                                                                                                    ● a1746552687773 SET pokeplayerhealturn = 0 [self] op=unshift
+                                                                      ● cc595_4ee6 BRANCH equal_to 0
+                                                                        ● a1746398833699 SET poketestifdrawisneeded = 1 [self] op=unshift
+                                                                  ● loop_act84_3e36_04cd LOOP_BODY
+                                                                    ● c148_de69_1e1c COND compare: {BGVAR_next_round} [self]
+                                                                      ● $else_148_ebbc_dbb2 BRANCH else
+                                                                        ● a210_8225_cbd2 MATH pokeroundnumber: var + 1 [self] round
+                                                                          ● a1746371304617 SET next_round = 0 [self] op=unshift
+                                                                            ● c159_b50c_0bb0 COND compare: {BGVAR_pokeopponenthp} [self]
+                                                                              ● $else_159_ac51_1bab BRANCH else
+                                                                                ● c219_60aa_381b COND compare: {BGVAR_pokeplayerhp} [self]
+                                                                                  ● $else_219_1e67_d10d BRANCH else
+                                                                                    ● a1746363247039 MSG "__**ROUND #{BGVAR_pokeroundnumber}**__ ***(YOU) {BGVAR_pokep…" EDIT:1746364853014 (3 embeds, 5 fields)
+                                                                                      ● btn121_dzd9shvrk BUTTON "Move 1" [DANGER] press=user
+                                                                                        ● c428_07ce_e569 COND compare: {BGVAR_pokeplayerchargingmove} [self]
+                                                                                          ● $else_428_ef47_7591 BRANCH else
+                                                                                          ● cc432_22e9 BRANCH equal_to -1
+                                                                                            ● c757_5c17_81d5 COND compare: {BGVAR_pokeplayerhealturn} [self]
+                                                                                              ● $else_757_f78f_fad5 BRANCH else
+                                                                                                ● a1746454219030 SET pokeplayerdebuftext = None [self] op=unshift
+                                                                                                  ● a1746372091021 SET pokeplayermoveused = {BGVAR_pokeplayersname} used Thunder Shock and 5 d… [self] op=unshift
+                                                                                                    ● a145_0731_1cf4 MATH pokeopponenthp: var - 5 [self]
+                                                                                                      ● c608_6a75_185b COND compare: {BGVAR_pokeplayerbleed} [self]
+                                                                                                        ● $else_608_3d8f_f7bf BRANCH else
+                                                                                                          ● a1746454968335 SET pokeopponentdebuftext = None [self] op=unshift
+                                                                                                            ● c935_cc5b_1de9 COND chance
+                                                                                                              ● $else_935_ef55_40ef BRANCH else
+                                                                                                              ● cc941_jjhr2ezop CHANCE 80%
+                                                                                                                ● c303_5c9a_f86f COND compare: {BGVAR_pokeopponentchargingmove} [self]
+                                                                                                                  ● $else_303_a29d_4ba6 BRANCH else
+                                                                                                                  ● cc306_fb86 BRANCH equal_to -1
+                                                                                                                    ● c840_3fe9_a7c0 COND compare: {BGVAR_pokeopponenthp} [self]
+                                                                                                                      ● $else_840_c032_636a BRANCH else
+                                                                                                                        ● c837_5879_1c73 COND compare: {BGVAR_pokebulbasaurfull} [self]
+                                                                                                                          ● $else_837_12cb_cb2f BRANCH else
+                                                                                                                            ● c840_189d_e5d6 COND compare: {BGVAR_pokebulbasaurdecenthp} [self]
+                                                                                                                              ● $else_840_66cf_7af2 BRANCH else
+                                                                                                                                ● c264_a74d_2b24 COND compare: {BGVAR_pokebulbasaurlowhealth} [self]
+                                                                                                                                  ● $else_264_4a95_05b4 BRANCH else
+                                                                                                                                    ● c1315_9211_89f9 COND compare: {BGVAR_pokeopponenthp} [self]
+                                                                                                                                      ● $else_1315_a9e6_b8d8 BRANCH else
+                                                                                                                                      ● cc1319_07a4 BRANCH less_than_equal_to -1
+                                                                                                                                        ● c853_38b1_3632 COND compare: {BGVAR_pokeopponenthp} [self]
+                                                                                                                                          ● $else_853_35d4_6876 BRANCH else
+                                                                                                                                            ● c896_4793_a942 COND compare: {BGVAR_pokeopponenthealingmovesleft} [self]
+                                                                                                                                              ● $else_896_aa02_5fb4 BRANCH else
+                                                                                                                                                ● c917_7b79_2c76 COND chance
+                                                                                                                                                  ● $else_917_089a_f2ba BRANCH else
+                                                                                                                                                  ● cc921_jpee9vimo CHANCE 85%
+                                                                                                                                                    ● a1746472726457 SET pokeopponentmoveused = {BGVAR_pokeopponentsname} used Vine Whip and 7 dam… [self] op=unshift
+                                                                                                                                                      ● a1746472728929 MATH pokeplayerhp: var - 7 [self] round
+                                                                                                                                                        ● a1746472731232 DELETE_MSG (of a1746363247039)
+                                                                                                                                                          ● a1746573545469 MATH next_round: var + 1 [self] round
+                                                                                                                                                  ● cc924_x7cji0b1t CHANCE 15%
+                                                                                                                                                    ● a1746472833695 SET pokeopponentmoveused = {BGVAR_pokeopponentsname} used Leech Seed and 2 da… [self] op=unshift
+                                                                                                                                                      ● a1746472839615 MATH pokeplayerhp: var - 2 [self] round
+                                                                                                                                                        ● a1746472848965 SET pokeplayerbleed = 2 [self] op=unshift
+                                                                                                                                                          ● a1746472856004 DELETE_MSG (of a1746363247039)
+                                                                                                                                                            ● a1746573539768 MATH next_round: var + 1 [self] round
+                                                                                                                                              ● cc898_c590 BRANCH greater_than 0
+                                                                                                                                                ● c275_ef9d_f899 COND chance
+                                                                                                                                                  ● $else_275_d60a_e9f8 BRANCH else
+                                                                                                                                                  ● cc279_647lm06lm CHANCE 90%
+                                                                                                                                                    ● a1746374269312 SET pokeopponentmoveused = Bulbasaur used Growth and gained 7 hp [self] op=unshift
+                                                                                                                                                      ● a1746374531113 MATH pokeopponenthp: var + 7 [self] round
+                                                                                                                                                        ● a1746400850565 DELETE_MSG (of a1746363247039)
+                                                                                                                                                          ● a1746573517066 MATH next_round: var + 1 [self] round
+                                                                                                                                                  ● cc287_qfpp3t4uk CHANCE 10%
+                                                                                                                                                    ● a1746374537687 SET pokeopponentmoveused = {BGVAR_pokeopponentsname} used Vine Whip and 7 dam… [self] op=unshift
+                                                                                                                                                      ● a1746374539655 MATH pokeplayerhp: var - 7 [self] round
+                                                                                                                                                        ● a1746400833042 DELETE_MSG (of a1746363247039)
+                                                                                                                                                          ● a1746573505894 MATH next_round: var + 1 [self] round
+                                                                                                                                          ● cc856_eff8 BRANCH less_than_equal_to 7
+                                                                                                                                            ● c890_77d6_dd3c COND compare: {BGVAR_pokeopponenthealingmovesleft} [self]
+                                                                                                                                              ● $else_890_e4ba_8b84 BRANCH else
+                                                                                                                                                ● a1746472522649 SET pokeopponentmoveused = {BGVAR_pokeopponentsname} used Vine Whip and 7 dam… [self] op=unshift
+                                                                                                                                                  ● a1746472527162 MATH pokeplayerhp: var - 7 [self] round
+                                                                                                                                                    ● a1746472534133 DELETE_MSG (of a1746363247039)
+                                                                                                                                                      ● a1746573495174 MATH next_round: var + 1 [self] round
+                                                                                                                                              ● cc893_af1f BRANCH greater_than 0
+                                                                                                                                                ● c255_6d17_055c COND chance
+                                                                                                                                                  ● $else_255_24b9_ea6f BRANCH else
+                                                                                                                                                  ● cc259_3r0r2etuz CHANCE 90%
+                                                                                                                                                    ● a1746374233825 SET pokeopponentmoveused = {BGVAR_pokeopponentsname} used Vine Whip and 7 dam… [self] op=unshift
+                                                                                                                                                      ● a284_7101_3c97 MATH pokeplayerhp: var - 7 [self] round
+                                                                                                                                                        ● a1746400877601 DELETE_MSG (of a1746363247039)
+                                                                                                                                                          ● a1746573485049 MATH next_round: var + 1 [self] round
+                                                                                                                                                  ● cc261_kwjes8hiz CHANCE 10%
+                                                                                                                                                    ● a1746373900956 SET pokeopponentmoveused = Bulbasaur used Growth and gained 7 hp [self] op=unshift
+                                                                                                                                                      ● a1746374469879 MATH pokeopponenthp: var + 7 [self] round
+                                                                                                                                                        ● a1746400862351 DELETE_MSG (of a1746363247039)
+                                                                                                                                                          ● a1746573473419 MATH next_round: var + 1 [self] round
+                                                                                                                                  ● cc271_e080 BRANCH array_contains {BGVAR_pokeopponenthp}
+                                                                                                                                    ↪ c853_38b1_3632 (→ see above) COND compare: {BGVAR_pokeopponenthp} [self]
+                                                                                                                              ● cc844_ad89 BRANCH array_contains {BGVAR_pokeopponenthp}
+                                                                                                                                ● c848_b4a5_c123 COND compare: {BGVAR_pokeopponenthealingmovesleft} [self]
+                                                                                                                                  ● $else_848_8c77_c03c BRANCH else
+                                                                                                                                    ● c854_1330_d8cc COND chance
+                                                                                                                                      ● $else_854_6065_273c BRANCH else
+                                                                                                                                      ● cc858_8hwrnjif1 CHANCE 25%
+                                                                                                                                        ● a1746471495422 SET pokeopponentmoveused = {BGVAR_pokeopponentsname} used Leech Seed and 2 da… [self] op=unshift
+                                                                                                                                          ● a1746471500395 MATH pokeplayerhp: var - 2 [self] round
+                                                                                                                                            ● a1746471505899 SET pokeplayerbleed = 2 [self] op=unshift
+                                                                                                                                              ● a1746471515166 DELETE_MSG (of a1746363247039)
+                                                                                                                                                ● a1746573464215 MATH next_round: var + 1 [self] round
+                                                                                                                                      ● cc877_i7cg472am CHANCE 65%
+                                                                                                                                        ● a1746471557545 SET pokeopponentmoveused = Bulbasaur used Vine Whip and 7 damage was dealt to… [self] op=unshift
+                                                                                                                                          ● a1746471561144 MATH pokeplayerhp: var - 7 [self] round
+                                                                                                                                            ● a1746471565511 DELETE_MSG (of a1746363247039)
+                                                                                                                                              ● a1746573452415 MATH next_round: var + 1 [self] round
+                                                                                                                                      ● cc879_ck57ytvj6 CHANCE 10%
+                                                                                                                                        ● a1746471642598 SET pokeopponentchargingmove = 1 [self] op=unshift
+                                                                                                                                          ● a1746471644859 SET pokeopponentmoveused = Bulbasaur used SolarBeam and 26 damage will be dea… [self] op=unshift
+                                                                                                                                            ● a1746471647523 DELETE_MSG (of a1746363247039)
+                                                                                                                                              ● a1746573443152 MATH next_round: var + 1 [self] round
+                                                                                                                                  ● cc851_4823 BRANCH greater_than 0
+                                                                                                                                    ● c249_91a8_9d99 COND chance
+                                                                                                                                      ● $else_249_0098_7ef9 BRANCH else
+                                                                                                                                      ● cc331_t66isfx8g CHANCE 10%
+                                                                                                                                        ● a1746375462456 SET pokeopponentchargingmove = 1 [self] op=unshift
+                                                                                                                                          ● a1746375465005 SET pokeopponentmoveused = Bulbasaur used SolarBeam and 26 damage will be dea… [self] op=unshift
+                                                                                                                                            ● a1746400996518 DELETE_MSG (of a1746363247039)
+                                                                                                                                              ● a1746573433157 MATH next_round: var + 1 [self] round
+                                                                                                                                      ● cc337_1bxwwgp7g CHANCE 20%
+                                                                                                                                        ● a846_daeb_08c1 MATH pokeopponenthealingmovesleft: var - 1 [self] round
+                                                                                                                                          ● a1746375521149 SET pokeopponentmoveused = Bulbasaur used Growth and gained 7 hp [self] op=unshift
+                                                                                                                                            ● a1746375525886 MATH pokeopponenthp: var + 7 [self] round
+                                                                                                                                              ● a1746400982134 DELETE_MSG (of a1746363247039)
+                                                                                                                                                ● a1746573424444 MATH next_round: var + 1 [self] round
+                                                                                                                                      ● cc346_bw9ww4pof CHANCE 55%
+                                                                                                                                        ● a1746375504424 SET pokeopponentmoveused = Bulbasaur used Vine Whip and 7 damage was dealt to… [self] op=unshift
+                                                                                                                                          ● a1746375497170 MATH pokeplayerhp: var - 7 [self] round
+                                                                                                                                            ● a1746400968706 DELETE_MSG (of a1746363247039)
+                                                                                                                                              ● a1746573412011 MATH next_round: var + 1 [self] round
+                                                                                                                                      ● cc600_kqommgho3 CHANCE 15%
+                                                                                                                                        ● a1746399524010 SET pokeopponentmoveused = {BGVAR_pokeopponentsname} used Leech Seed and 2 da… [self] op=unshift
+                                                                                                                                          ● a1746399646391 MATH pokeplayerhp: var - 2 [self] round
+                                                                                                                                            ● a1746399677760 SET pokeplayerbleed = 2 [self] op=unshift
+                                                                                                                                              ● a1746400954567 DELETE_MSG (of a1746363247039)
+                                                                                                                                                ● a1746573402394 MATH next_round: var + 1 [self] round
+                                                                                                                          ● cc840_4dd5 BRANCH array_contains {BGVAR_pokeopponenthp}
+                                                                                                                            ● c624_6473_7edb COND compare: {BGVAR_pokeplayerbleed} [self]
+                                                                                                                              ● $else_624_7fff_9657 BRANCH else
+                                                                                                                                ● c295_5162_d8c7 COND chance
+                                                                                                                                  ● $else_295_425e_afed BRANCH else
+                                                                                                                                  ● cc298_dy1l7ooos CHANCE 60%
+                                                                                                                                    ● a321_4dc2_a087 MATH pokeplayerhp: var - 7 [self] round
+                                                                                                                                      ● a1746375199795 SET pokeopponentmoveused = Bulbasaur used Vine Whip and 7 damage was dealt to… [self] op=unshift
+                                                                                                                                        ● a1746400939197 DELETE_MSG (of a1746363247039)
+                                                                                                                                          ● a1746573392583 MATH next_round: var + 1 [self] round
+                                                                                                                                  ● cc300_ucebne6wj CHANCE 15%
+                                                                                                                                    ● a1746374590645 SET pokeopponentchargingmove = 1 [self] op=unshift
+                                                                                                                                      ● a1746375140839 SET pokeopponentmoveused = Bulbasaur used SolarBeam and 26 damage will be dea… [self] op=unshift
+                                                                                                                                        ● a1746400927339 DELETE_MSG (of a1746363247039)
+                                                                                                                                          ● a1746573380886 MATH next_round: var + 1 [self] round
+                                                                                                                                  ● cc643_hyn3v1zm0 CHANCE 25%
+                                                                                                                                    ● a1746400052340 SET pokeopponentmoveused = {BGVAR_pokeopponentsname} used Leech Seed and 2 da… [self] op=unshift
+                                                                                                                                      ● a1746400054524 MATH pokeplayerhp: var - 2 [self] round
+                                                                                                                                        ● a1746400056674 SET pokeplayerbleed = 2 [self] op=unshift
+                                                                                                                                          ● a1746400907589 DELETE_MSG (of a1746363247039)
+                                                                                                                                            ● a1746573337652 MATH next_round: var + 1 [self] round
+                                                                                                                              ● cc627_4b56 BRANCH greater_than 0
+                                                                                                                                ● c633_4d55_20c5 COND chance
+                                                                                                                                  ● $else_633_edbf_419d BRANCH else
+                                                                                                                                  ● cc637_loiuzhx0x CHANCE 60%
+                                                                                                                                    ● a1746400213546 SET pokeopponentchargingmove = 1 [self] op=unshift
+                                                                                                                                      ● a1746400216000 SET pokeopponentmoveused = Bulbasaur used SolarBeam and 26 damage will be dea… [self] op=unshift
+                                                                                                                                        ● a1746400892847 DELETE_MSG (of a1746363247039)
+                                                                                                                                          ● a1746573357277 MATH next_round: var + 1 [self] round
+                                                                                                                                  ● cc679_y39l15sb8 CHANCE 40%
+                                                                                                                                    ● a1746403675841 SET pokeopponentmoveused = Bulbasaur used Vine Whip and 7 damage was dealt to… [self] op=unshift
+                                                                                                                                      ● a1746403680335 MATH pokeplayerhp: var - 7 [self] round
+                                                                                                                                        ● a1746403685760 DELETE_MSG (of a1746363247039)
+                                                                                                                                          ● a1746573370778 MATH next_round: var + 1 [self] round
+                                                                                                                      ● cc845_2858 BRANCH greater_than 36
+                                                                                                                        ↪ c624_6473_7edb (→ see above) COND compare: {BGVAR_pokeplayerbleed} [self]
+                                                                                                                  ● cc312_3850 BRANCH equal_to 0
+                                                                                                                    ● c1228_200d_dcce COND chance
+                                                                                                                      ● $else_1228_61ee_807c BRANCH else
+                                                                                                                      ● cc1231_8v6wq8sa9 CHANCE 20%
+                                                                                                                        ● a1746575994057 SET pokeopponentmoveused = Bulbasaur used SolarBeam and 20 damage was dealt t… [self] op=unshift
+                                                                                                                          ● a1746576062660 MATH pokeplayerhp: var - 20 [self] round
+                                                                                                                            ● a849_a697_69d3 SET pokeopponentchargingmove = -1 [self] op=unshift
+                                                                                                                              ● a1746400814081 DELETE_MSG (of a1746363247039)
+                                                                                                                                ● a1746573328727 MATH next_round: var + 1 [self] round
+                                                                                                                      ● cc1233_armcuo42a CHANCE 80%
+                                                                                                                        ● a1746375393991 SET pokeopponentmoveused = Bulbasaur used SolarBeam and 26 damage was dealt t… [self] op=unshift
+                                                                                                                          ● a1746374955447 MATH pokeplayerhp: var - 26 [self] round
+                                                                                                                            ↪ a849_a697_69d3 (→ see above) SET pokeopponentchargingmove = -1 [self] op=unshift
+                                                                                                                  ● cc319_6d81 BRANCH greater_than_equal_to 1
+                                                                                                                    ● a1746375353252 SET pokeopponentmoveused = Bulbasaur used SolarBeam and there is a 80% chance… [self] op=unshift
+                                                                                                                      ● a310_2088_09b8 MATH pokeopponentchargingmove: var - 1 [self] round
+                                                                                                                        ● a1746383838400 DELETE_MSG (of a1746363247039)
+                                                                                                                          ● a1746573308536 MATH next_round: var + 1 [self] round
+                                                                                                              ● cc944_t80hnxc5c CHANCE 20%
+                                                                                                                ● a1746474966020 SET pokeopponentmoveused = Bulbasaur fumbled and wasn't able to play this tur… [self] op=unshift
+                                                                                                                  ● a1746474972315 DELETE_MSG (of a1746363247039)
+                                                                                                                    ● a1746573614911 MATH next_round: var + 1 [self] round
+                                                                                                        ● cc611_ef86 BRANCH greater_than 0
+                                                                                                          ● a614_9572_7d99 MATH pokeplayerbleed: var - 1 [self] round
+                                                                                                            ● a1746399993518 MATH pokeplayerhp: var - 2 [self] round
+                                                                                                              ● a1746651779892 SET pokeopponentdebuftext = {BGVAR_pokeopponentsname} had used Leech Seed and … [self] op=unshift
+                                                                                                                ↪ c935_cc5b_1de9 (→ see above) COND chance
+                                                                                              ● cc760_b01f BRANCH greater_than 0
+                                                                                                ● a1746450199882 MATH pokeplayerhp: var + 8 [self] round
+                                                                                                  ● a1746450196271 MATH pokeplayerhealturn: var - 1 [self] round
+                                                                                                    ● a1746454221496 SET pokeplayerdebuftext = Pikachu had used Spark and gained 8 HP [self] op=unshift
+                                                                                                      ↪ a1746372091021 (→ see above) SET pokeplayermoveused = {BGVAR_pokeplayersname} used Thunder Shock and 5 d… [self] op=unshift
+                                                                                      ● btn123_rmta5lkwq BUTTON "Move 2" [DANGER] press=user
+                                                                                        ● c558_1a66_2704 COND compare: {BGVAR_pokeplayerchargingmove} [self]
+                                                                                          ● $else_558_82e3_0a56 BRANCH else
+                                                                                            ● c476_657a_a405 COND compare: {BGVAR_pokeplayerchargedattackleft} [self]
+                                                                                              ● $else_476_2855_59da BRANCH else
+                                                                                                ● c731_72c3_e769 COND compare: {BGVAR_pokeplayerhealturn} [self]
+                                                                                                  ● $else_731_a3af_2f78 BRANCH else
+                                                                                                    ● a1746454071722 SET pokeplayerdebuftext = None [self] op=unshift
+                                                                                                      ● c403_2d56_3a72 COND compare: {BGVAR_pokeplayerchargingmove} [self]
+                                                                                                        ● $else_403_b3d7_ecbf BRANCH else
+                                                                                                        ● cc407_63a2 BRANCH equal_to 1
+                                                                                                          ● a1746380809483 SET pokeplayermoveused = {BGVAR_pokeplayersname} used Thunderbolt and there… [self] op=unshift
+                                                                                                            ● a1746381059494 MATH pokeplayerchargingmove: var - 1 [self] round
+                                                                                                              ↪ c608_6a75_185b (→ see above) COND compare: {BGVAR_pokeplayerbleed} [self]
+                                                                                                        ● cc409_1b1a BRANCH equal_to 0
+                                                                                                          ● a454_d28e_7c9d MATH pokeplayerchargingmove: var - 1 [self] round
+                                                                                                            ● c414_bacd_eebe COND chance
+                                                                                                              ● $else_414_4ecb_352e BRANCH else
+                                                                                                              ● cc418_prop2gtdl CHANCE 10%
+                                                                                                                ● a1746380178889 SET pokeplayerchargedattack = 6 [self] op=unshift
+                                                                                                                  ● a473_71a4_c938 MATH pokeopponenthp: var - {BGVAR_pokeplayerchargedattack} [self]
+                                                                                                                    ● a1746382181141 SET pokeplayermoveused = {BGVAR_pokeplayersname} used Thunderbolt and {BGVA… [self] op=unshift
+                                                                                                                      ↪ c608_6a75_185b (→ see above) COND compare: {BGVAR_pokeplayerbleed} [self]
+                                                                                                              ● cc420_thq603zlb CHANCE 15%
+                                                                                                                ● a1746380123726 SET pokeplayerchargedattack = 20 [self] op=unshift
+                                                                                                                  ↪ a473_71a4_c938 (→ see above) MATH pokeopponenthp: var - {BGVAR_pokeplayerchargedattack} [self]
+                                                                                                              ● cc422_2s3svrd2l CHANCE 75%
+                                                                                                                ● a1746380187964 SET pokeplayerchargedattack = 10 [self] op=unshift
+                                                                                                                  ↪ a473_71a4_c938 (→ see above) MATH pokeopponenthp: var - {BGVAR_pokeplayerchargedattack} [self]
+                                                                                                        ● cc411_c6b8 BRANCH equal_to -1
+                                                                                                          ● a460_8da8_9c6d MATH pokeplayerchargedattackleft: var - 1 [self] round
+                                                                                                            ● c514_f103_9e55 COND compare: {BGVAR_pokeplayerchargedattackleft} [self]
+                                                                                                              ● $else_514_8233_2655 BRANCH else
+                                                                                                                ● a1746379815142 SET pokeplayerchargingmove = 1 [self] op=unshift
+                                                                                                                  ● a1746380849988 SET pokeplayermoveused = {BGVAR_pokeplayersname} used Thunderbolt and there… [self] op=unshift
+                                                                                                                    ↪ c608_6a75_185b (→ see above) COND compare: {BGVAR_pokeplayerbleed} [self]
+                                                                                                              ● cc517_9cfe BRANCH equal_to -1
+                                                                                                                ● a1746389151880 MSG "**Sorry but you can no longer use your charged attack!** **P…" EDIT:1746381736570 (0 embeds, 0 fields)
+                                                                                                                  ● a1746389153763 WAIT 6s
+                                                                                                                    ● a1746389155385 DELETE_MSG (of a483_464b_cf2a)
+                                                                                                  ● cc735_339e BRANCH greater_than 0
+                                                                                                    ● a1746450053445 MATH pokeplayerhp: var + 8 [self] round
+                                                                                                      ● a1746450062961 MATH pokeplayerhealturn: var - 1 [self] round
+                                                                                                        ● a764_6071_369c SET pokeplayerdebuftext = Pikachu had used Spark and gained 8 HP [self] op=unshift
+                                                                                                          ↪ c403_2d56_3a72 (→ see above) COND compare: {BGVAR_pokeplayerchargingmove} [self]
+                                                                                              ● cc479_d530 BRANCH equal_to 0
+                                                                                                ● a483_464b_cf2a MSG "**Sorry but you can no longer use your charged attack!** **P…" EDIT:1746381736570 (0 embeds, 0 fields)
+                                                                                                  ● a485_f62b_3dfa WAIT 6s
+                                                                                                    ● a487_60ca_1f5e DELETE_MSG (of a483_464b_cf2a)
+                                                                                          ● cc561_921d BRANCH greater_than_equal_to 0
+                                                                                            ● c563_2d1e_8c1e COND compare: {BGVAR_pokeplayerchargedattackleft} [self]
+                                                                                              ● $else_563_1f64_6eab BRANCH else
+                                                                                                ↪ c731_72c3_e769 (→ see above) COND compare: {BGVAR_pokeplayerhealturn} [self]
+                                                                                              ● cc568_001f BRANCH equal_to 0
+                                                                                                ↪ c731_72c3_e769 (→ see above) COND compare: {BGVAR_pokeplayerhealturn} [self]
+                                                                                      ● btn125_4b7w43wxo BUTTON "Move 3" [SUCCESS] press=user
+                                                                                        ● c441_628c_6b70 COND compare: {BGVAR_pokeplayerchargingmove} [self]
+                                                                                          ● $else_441_af10_7fac BRANCH else
+                                                                                          ● cc444_4cdc BRANCH equal_to -1
+                                                                                            ● c690_f53c_da72 COND compare: {BGVAR_pokeplayerhealmovesleft} [self]
+                                                                                              ● $else_690_27bf_2d34 BRANCH else
+                                                                                              ● cc693_c852 BRANCH greater_than 0
+                                                                                                ● c696_56ad_3aac COND compare: {BGVAR_pokeplayerhealturn} [self]
+                                                                                                  ● $else_696_abd7_24a7 BRANCH else
+                                                                                                    ● a1746575127602 SET pokeplayermoveused = Pikachu used Spark and gained 8 HP [self] op=unshift
+                                                                                                      ● a1746575155614 SET pokeplayerdebuftext = None [self] op=unshift
+                                                                                                        ● a702_c956_3ded MATH pokeplayerhealmovesleft: var - 1 [self] round
+                                                                                                          ● a723_fca4_4067 SET pokeplayerhealturn = 1 [self] op=unshift
+                                                                                                            ● a1746448220039 MATH pokeplayerhp: var + 8 [self] round
+                                                                                                              ↪ c608_6a75_185b (→ see above) COND compare: {BGVAR_pokeplayerbleed} [self]
+                                                                                                  ● cc700_2db1 BRANCH greater_than 0
+                                                                                                    ● a1746883885495 SET pokeplayermoveused = Pikachu used Spark and gained 8 HP [self] op=unshift
+                                                                                                      ● a1323_15f8_76d1 SET pokeplayerhealturn = 1 [self] op=unshift
+                                                                                                        ● a1746454088454 SET pokeplayerdebuftext = Pikachu had used Spark and gained 8 HP [self] op=unshift
+                                                                                                          ● a1746884621171 MATH pokeplayerhealmovesleft: var - 1 [self] round
+                                                                                                            ● a1746883917966 MATH pokeplayerhp: var + 8 [self] round
+                                                                                                              ● a1746448376956 MATH pokeplayerhp: var + 8 [self] round
+                                                                                                                ↪ c608_6a75_185b (→ see above) COND compare: {BGVAR_pokeplayerbleed} [self]
+                                                                                              ● cc705_5cb9 BRANCH equal_to 0
+                                                                                                ● c707_1fe8_33c5 COND compare: {BGVAR_pokeplayerhealturn} [self]
+                                                                                                  ● $else_707_6245_1503 BRANCH else
+                                                                                                    ● a1746448117117 MSG "**Sorry but you can no longer use the Spark attack!** **Plea…" EDIT:1746381736570 (0 embeds, 0 fields)
+                                                                                                      ● a1746448119058 WAIT 6s
+                                                                                                        ● a1746448120982 DELETE_MSG (of a1746448117117)
+                                                                                                  ● cc711_62c0 BRANCH greater_than 0
+                                                                                                    ● a1746572933086 SET pokeplayerdebuftext = None [self] op=unshift
+                                                                                                      ● a1746572930528 SET pokeplayermoveused = Pikachu had used Spark and gained 8 HP [self] op=unshift
+                                                                                                        ● a1746448408634 MATH pokeplayerhp: var + 8 [self] round
+                                                                                                          ● a713_c5a4_0720 MATH pokeplayerhealturn: var - 1 [self] round
+                                                                                                            ↪ c935_cc5b_1de9 (→ see above) COND chance
+                                                                                      ● btn127_z14d8zudp BUTTON "Move 4" [SUCCESS] press=user
+                                                                                        ● c435_0bde_b3c4 COND compare: {BGVAR_pokeplayerchargingmove} [self]
+                                                                                          ● $else_435_95ec_6a99 BRANCH else
+                                                                                          ● cc438_f298 BRANCH equal_to -1
+                                                                                            ● c527_c97c_4170 COND compare: {BGVAR_pokeplayeragilityleft} [self]
+                                                                                              ● $else_527_4ef4_a955 BRANCH else
+                                                                                                ● a1746390667449 MSG "**Sorry but you can no longer use your charged attack!** **P…" EDIT:1746381736570 (0 embeds, 0 fields)
+                                                                                                  ● a1746390669458 WAIT 6s
+                                                                                                    ● a1746390671850 DELETE_MSG (of a1746390667449)
+                                                                                              ● cc538_671b BRANCH greater_than_equal_to 1
+                                                                                                ● c746_0ba2_1e5d COND compare: {BGVAR_pokeplayerhealturn} [self]
+                                                                                                  ● $else_746_20f2_ed02 BRANCH else
+                                                                                                    ● a1746454090805 SET pokeplayerdebuftext = None [self] op=unshift
+                                                                                                      ● a549_eb1f_f3fa MATH pokeplayerspeed: var + 2 [self] round
+                                                                                                        ● a1746390899008 MATH pokeplayeragilityleft: var - 1 [self] round
+                                                                                                          ● a1746391260629 SET pokeplayermoveused = Pikachu used Agility and gained 2 speed [self] op=unshift
+                                                                                                            ↪ c608_6a75_185b (→ see above) COND compare: {BGVAR_pokeplayerbleed} [self]
+                                                                                                  ● cc749_dc7d BRANCH greater_than 0
+                                                                                                    ● a1746450114768 MATH pokeplayerhp: var + 8 [self] round
+                                                                                                      ● a1746450112006 MATH pokeplayerhealturn: var - 1 [self] round
+                                                                                                        ● a1746454143491 SET pokeplayerdebuftext = Pikachu had used Spark and gained 8 HP [self] op=unshift
+                                                                                                          ↪ a549_eb1f_f3fa (→ see above) MATH pokeplayerspeed: var + 2 [self] round
+                                                                                      ● btn129_jmj5dmagy BUTTON "Move 5" [SECONDARY] press=user
+                                                                                        ● c1366_042d_e517 COND compare: {BGVAR_pokeplayerchargingmove} [self]
+                                                                                          ● $else_1366_122b_52dd BRANCH else
+                                                                                          ● cc1369_0229 BRANCH equal_to -1
+                                                                                            ● c1147_bac3_a09d COND compare: {BGVAR_pokemove5disadsvantage} [self]
+                                                                                              ● $else_1147_e895_04cb BRANCH else
+                                                                                              ● cc1151_c6d5 BRANCH equal_to 0
+                                                                                                ● a1746483981223 SET pokemove5disadsvantage = 1 [self] op=unshift
+                                                                                                  ● c952_0458_e1cf COND chance
+                                                                                                    ● $else_952_c011_3256 BRANCH else
+                                                                                                    ● cc956_hatdx1kj1 CHANCE 20%
+                                                                                                      ● a1746486792614 SET pokeplayermoveused = Pikachu used Disadvantage and was unlucky thus loo… [self] op=unshift
+                                                                                                        ● a1746486816413 MATH pokeplayerhp: var - 2 [self] round
+                                                                                                          ↪ c608_6a75_185b (→ see above) COND compare: {BGVAR_pokeplayerbleed} [self]
+                                                                                                    ● cc960_sf3565gnh CHANCE 10%
+                                                                                                      ● a1746485131066 SET pokeplayerdebuftext = None [self] op=unshift
+                                                                                                        ● a1746484282861 SET pokeopponentdebuftext = None [self] op=unshift
+                                                                                                          ● a1746483630304 SET pokeplayermoveused = Pikachu used Disadvantage but was lucky enough mak… [self] op=unshift
+                                                                                                            ● a1746483541268 DELETE_MSG (of a1746363247039)
+                                                                                                              ● a1746573559057 MATH next_round: var + 1 [self] round
+                                                                                                    ● cc968_3mp0bham3 CHANCE 20%
+                                                                                                      ● a1746483745400 SET pokeplayermoveused = Pikachu used Disadvantage and was unlucky thus loo… [self] op=unshift
+                                                                                                        ● a976_50c5_6c92 MATH pokeplayerspeed: var - 2 [self] round
+                                                                                                          ↪ c608_6a75_185b (→ see above) COND compare: {BGVAR_pokeplayerbleed} [self]
+                                                                                                    ● cc972_8ix6nn1jz CHANCE 20%
+                                                                                                      ● a1746483807924 SET pokeplayermoveused = Pikachu used Disadvantage but was lucky and made i… [self] op=unshift
+                                                                                                        ↪ c608_6a75_185b (→ see above) COND compare: {BGVAR_pokeplayerbleed} [self]
+                                                                                                    ● cc980_uwr2zhfj5 CHANCE 10%
+                                                                                                      ● a1746484415968 SET pokeplayermoveused = Pikachu used Disadvantage and was super unlucky th… [self] op=unshift
+                                                                                                        ● a1746484495868 MATH pokeplayerhp: var - 6 [self] round
+                                                                                                          ↪ c608_6a75_185b (→ see above) COND compare: {BGVAR_pokeplayerbleed} [self]
+                                                                                                    ● cc989_habk3moq1 CHANCE 10%
+                                                                                                      ● a1746484579508 SET pokeplayermoveused = Pikachu used Disadvantage and was super unlucky th… [self] op=unshift
+                                                                                                        ● a1746484634167 SET pokeplayerspeed = 0 [self] op=unshift
+                                                                                                          ↪ c608_6a75_185b (→ see above) COND compare: {BGVAR_pokeplayerbleed} [self]
+                                                                                                    ● cc999_4kgig1u7i CHANCE 10%
+                                                                                                      ● a1746485158568 SET pokeopponentdebuftext = None [self] op=unshift
+                                                                                                        ● a1746484936368 SET pokeplayermoveused = Pikachu used Disadvantage and was super unlucky fo… [self] op=unshift
+                                                                                                          ● c1009_a3ca_0c40 COND compare: {BGVAR_pokeplayerchargedattackleft} [self]
+                                                                                                            ● $else_1009_2f8f_e54e BRANCH else
+                                                                                                              ● c1041_73d3_7ab2 COND compare: {BGVAR_pokeplayeragilityleft} [self]
+                                                                                                                ● $else_1041_9250_a1e1 BRANCH else
+                                                                                                                ● cc1045_0ad4 BRANCH not 0
+                                                                                                                  ● c1047_81ab_9be0 COND compare: {BGVAR_pokeplayerhealmovesleft} [self]
+                                                                                                                    ● $else_1047_de79_df4a BRANCH else
+                                                                                                                    ● cc1051_f64a BRANCH not 0
+                                                                                                                      ● c1053_e01f_1f2f COND chance
+                                                                                                                        ● $else_1053_e851_c726 BRANCH else
+                                                                                                                        ● cc1057_omottomsl CHANCE 50%
+                                                                                                                          ● a1061_4d0e_94c7 MATH pokeplayerhealmovesleft: var - 1 [self] round
+                                                                                                                            ● a1746486496054 SET pokeplayerdebuftext = You lost one of your available spark moves [self] op=unshift
+                                                                                                                              ● a1746486619318 DELETE_MSG (of a1746363247039)
+                                                                                                                                ● a1206_8990_23bc MATH next_round: var + 1 [self] round
+                                                                                                                        ● cc1059_w10uohn9b CHANCE 50%
+                                                                                                                          ● a1746486076986 MATH pokeplayeragilityleft: var - 1 [self] round
+                                                                                                                            ● a1746486514012 SET pokeplayerdebuftext = You lost one of your available agility moves [self] op=unshift
+                                                                                                                              ↪ a1746486619318 (→ see above) DELETE_MSG (of a1746363247039)
+                                                                                                            ● cc1013_bb0e BRANCH not 0
+                                                                                                              ● c1015_3f5c_92c9 COND compare: {BGVAR_pokeplayeragilityleft} [self]
+                                                                                                                ● $else_1015_eae4_67b9 BRANCH else
+                                                                                                                  ● c1065_3508_696e COND compare: {BGVAR_pokeplayerhealmovesleft} [self]
+                                                                                                                    ● $else_1065_ed02_11d4 BRANCH else
+                                                                                                                      ● a1746486199314 SET pokeplayerdebuftext = **We were unable to remove one from one of your av… [self] op=unshift
+                                                                                                                        ↪ a1746486619318 (→ see above) DELETE_MSG (of a1746363247039)
+                                                                                                                    ● cc1069_310e BRANCH not 0
+                                                                                                                      ● a1746486168198 MATH pokeplayerhealmovesleft: var - 1 [self] round
+                                                                                                                        ● a1746486354799 SET pokeplayerdebuftext = You lost one of your available spark moves [self] op=unshift
+                                                                                                                          ↪ a1746486619318 (→ see above) DELETE_MSG (of a1746363247039)
+                                                                                                                ● cc1019_2d59 BRANCH not 0
+                                                                                                                  ● c1019_4239_7c91 COND compare: {BGVAR_pokeplayerhealmovesleft} [self]
+                                                                                                                    ● $else_1019_4866_7c26 BRANCH else
+                                                                                                                    ● cc1023_5069 BRANCH not 0
+                                                                                                                      ● c1025_b5c6_88b6 COND chance
+                                                                                                                        ● $else_1025_0d84_8660 BRANCH else
+                                                                                                                        ● cc1029_m7ow98b5a CHANCE 33.3%
+                                                                                                                          ● a1035_0717_e112 MATH pokeplayerhealmovesleft: var - 1 [self] round
+                                                                                                                            ● a1746486533652 SET pokeplayerdebuftext = You lost one of your available spark moves [self] op=unshift
+                                                                                                                              ↪ a1746486619318 (→ see above) DELETE_MSG (of a1746363247039)
+                                                                                                                        ● cc1031_8d2wlxytb CHANCE 33.3%
+                                                                                                                          ● a1746485703798 MATH pokeplayeragilityleft: var - 1 [self] round
+                                                                                                                            ● a1746486539903 SET pokeplayerdebuftext = You lost one of your available agility moves [self] op=unshift
+                                                                                                                              ↪ a1746486619318 (→ see above) DELETE_MSG (of a1746363247039)
+                                                                                                                        ● cc1033_y21w4zrk9 CHANCE 33.4%
+                                                                                                                          ● a1746485722717 MATH pokeplayerchargedattackleft: var - 1 [self] round
+                                                                                                                            ● a1746486564931 SET pokeplayerdebuftext = You lost one of your available thunderbolt moves [self] op=unshift
+                                                                                                                              ↪ a1746486619318 (→ see above) DELETE_MSG (of a1746363247039)
+                                                                                              ● cc1154_b679 BRANCH equal_to 1
+                                                                                                ● a1746552962912 MSG "**Sorry but you can no longer use Disadvantage!** **Please p…" EDIT:1746381736570 (0 embeds, 0 fields)
+                                                                                                  ● a1746552964866 WAIT 6s
+                                                                                                    ● a1746552968528 DELETE_MSG (of a1746552962912)
+                                                                                  ● cc222_fea2 BRANCH less_than_equal_to 0
+                                                                                    ● a1746904319330 SET poketestifdrawisneeded = 0 [self] op=unshift
+                                                                                      ● c1102_705d_c096 COND compare: {BGVAR_pokemove5disadsvantage} [self]
+                                                                                        ● $else_1102_ceef_22df BRANCH else
+                                                                                          ● c394_324c_72dd COND compare: {BGVAR_pokeopponenthp} [self]
+                                                                                            ● $else_394_9d13_7945 BRANCH else
+                                                                                              ● a1746373277241 DELETE_MSG (of a1746363247039)
+                                                                                                ● a1746398763683 SET poketestifdrawisneeded = 0 [self] op=unshift
+                                                                                                  ● a1746378806149 BREAK_LOOP
+                                                                                                    ● a1746370417265 MSG "**{BGVAR_pokeplayersname} has Fainted!** **You retreated and…" (0 embeds, 0 fields)
+                                                                                                      ● a1746370495532 DEL pokeplayerhp [self]
+                                                                                                        ● a1746370500255 DEL pokeplayerspeed [self]
+                                                                                                          ● a1746370504596 DEL pokeopponenthp [self]
+                                                                                                            ● a1746370505899 DEL pokeopponentspeed [self]
+                                                                                                              ● a1746370508055 SET next_round = 0 [self] op=unshift
+                                                                                                                ● a1746382839422 SET pokeplayerchargingmove = -1 [self] op=unshift
+                                                                                                                  ● a1746382865062 SET pokeopponentchargingmove = -1 [self] op=unshift
+                                                                                                                    ● a1746382877224 SET pokeplayerchargedattackleft = 2 [self] op=unshift
+                                                                                                                      ● a1746390259515 SET pokeplayeragilityleft = 4 [self] op=unshift
+                                                                                                                        ● a1746461290052 SET pokeplayerdebuftext = None [self] op=unshift
+                                                                                                                          ● a1746461287992 SET pokeopponentdebuftext = None [self] op=unshift
+                                                                                                                            ● a1746464245864 SET pokeplayerchargingmove = -1 [self] op=unshift
+                                                                                                                              ● a1746552661924 SET pokeplayerhealturn = 0 [self] op=unshift
+                                                                                            ● cc397_ccf7 BRANCH less_than_equal_to 0
+                                                                                              ● a1746376469411 DELETE_MSG (of a1746363247039)
+                                                                                                ● c363_c097_4518 COND compare: {BGVAR_pokeplayerspeed} [self]
+                                                                                                  ● $else_363_9fa0_cd3e BRANCH else
+                                                                                                  ● cc367_fce8 BRANCH greater_than {BGVAR_pokeopponentspeed}
+                                                                                                    ● a1746398745704 SET poketestifdrawisneeded = 0 [self] op=unshift
+                                                                                                      ● a1746395541640 BREAK_LOOP
+                                                                                                        ● a1746650878110 MSG "**{BGVAR_pokeopponentsname} nearly knocked out {BGVAR_pokepl…" (0 embeds, 0 fields)
+                                                                                                          ↪ a1746370495532 (→ see above) DEL pokeplayerhp [self]
+                                                                                                  ● cc369_e019 BRANCH less_than {BGVAR_pokeopponentspeed}
+                                                                                                    ● a1746398695254 SET poketestifdrawisneeded = 0 [self] op=unshift
+                                                                                                      ● a1746395526362 BREAK_LOOP
+                                                                                                        ● a1746650586202 MSG "**Pikachu nearly knocked out {BGVAR_pokeopponentsname} but h…" (0 embeds, 0 fields)
+                                                                                                          ↪ a1746370495532 (→ see above) DEL pokeplayerhp [self]
+                                                                                                  ● cc371_3e6f BRANCH equal_to {BGVAR_pokeopponentspeed}
+                                                                                                    ● c373_eb9f_7e39 COND chance
+                                                                                                      ● $else_373_978a_82ce BRANCH else
+                                                                                                      ● cc377_enlzw88if CHANCE 50%
+                                                                                                        ● a580_bba9_a225 SET poketestifdrawisneeded = 0 [self] op=unshift
+                                                                                                          ● a1746395503341 BREAK_LOOP
+                                                                                                            ● a1746654952892 MSG "**Pikachu and Bulbasaur were almost to their limits but Bulb…" (0 embeds, 0 fields)
+                                                                                                              ↪ a1746370495532 (→ see above) DEL pokeplayerhp [self]
+                                                                                                      ● cc379_lcwik5wf4 CHANCE 50%
+                                                                                                        ● a1746398684968 SET poketestifdrawisneeded = 0 [self] op=unshift
+                                                                                                          ● a1746395489642 BREAK_LOOP
+                                                                                                            ● a1746655163961 MSG "**Pikachu and Bulbasaur were almost to their limits but Pika…" (0 embeds, 0 fields)
+                                                                                                              ↪ a1746370495532 (→ see above) DEL pokeplayerhp [self]
+                                                                                        ● cc1106_3d78 BRANCH equal_to 0
+                                                                                          ● a1746621841398 MSG "**{BGVAR_pokeplayersname} failed to use Disadvantage meaning…" (0 embeds, 0 fields)
+                                                                                            ● a1746621843768 DEL pokeplayerhp [self]
+                                                                                              ● a1746621845439 DEL pokeplayerspeed [self]
+                                                                                                ● a1746621846615 DEL pokeopponenthp [self]
+                                                                                                  ● a1746621848922 DEL pokeopponentspeed [self]
+                                                                                                    ● a1746621851258 SET next_round = 0 [self] op=unshift
+                                                                                                      ● a1746621853089 SET pokeplayerchargingmove = -1 [self] op=unshift
+                                                                                                        ● a1746621854907 SET pokeopponentchargingmove = -1 [self] op=unshift
+                                                                                                          ● a1746621857722 SET pokeplayerchargedattackleft = 2 [self] op=unshift
+                                                                                                            ● a1746621859550 SET pokeplayeragilityleft = 4 [self] op=unshift
+                                                                                                              ● a1746621866539 SET pokeplayerdebuftext = None [self] op=unshift
+                                                                                                                ● a1746621869997 SET pokeopponentdebuftext = None [self] op=unshift
+                                                                                                                  ● a1746621882663 SET pokeplayerchargingmove = -1 [self] op=unshift
+                                                                                                                    ● a1746621884725 SET pokeplayerhealturn = 0 [self] op=unshift
+                                                                              ● cc162_1be7 BRANCH less_than_equal_to 0
+                                                                                ● a1895_280c_da1c SET poketestifdrawisneeded = 0 [self] op=unshift
+                                                                                  ● c1110_b14c_0bf5 COND compare: {BGVAR_pokemove5disadsvantage} [self]
+                                                                                    ● $else_1110_8277_2c06 BRANCH else
+                                                                                      ● c387_7332_411c COND compare: {BGVAR_pokeplayerhp} [self]
+                                                                                        ● $else_387_ab2d_aaf5 BRANCH else
+                                                                                          ● a1746373258310 DELETE_MSG (of a1746363247039)
+                                                                                            ● a393_aabe_6426 BREAK_LOOP
+                                                                                              ● a167_69d8_d230 MSG "**{BGVAR_pokeopponentsname} has Fainted!** **They retreated …" (0 embeds, 0 fields)
+                                                                                                ● a171_eff7_b564 DEL pokeplayerhp [self]
+                                                                                                  ● a1746370454631 DEL pokeplayerspeed [self]
+                                                                                                    ● a1746370468905 DEL pokeopponenthp [self]
+                                                                                                      ● a1746370473789 DEL pokeopponentspeed [self]
+                                                                                                        ● a1746370483746 SET next_round = 0 [self] op=unshift
+                                                                                                          ● a1746382958065 SET pokeplayerchargingmove = -1 [self] op=unshift
+                                                                                                            ● a1746382961445 SET pokeopponentchargingmove = -1 [self] op=unshift
+                                                                                                              ● a1746382964129 SET pokeplayerchargedattackleft = 2 [self] op=unshift
+                                                                                                                ● a1746390268456 SET pokeplayeragilityleft = 4 [self] op=unshift
+                                                                                                                  ● a1746461083873 SET pokeplayerdebuftext = None [self] op=unshift
+                                                                                                                    ● a1746461087806 SET pokeopponentdebuftext = None [self] op=unshift
+                                                                                                                      ● a1746464264797 SET pokeplayerchargingmove = -1 [self] op=unshift
+                                                                                                                        ● a1746552657594 SET pokeplayerhealturn = 0 [self] op=unshift
+                                                                                        ● cc391_96e3 BRANCH less_than_equal_to 0
+                                                                                          ↪ a1746376469411 (→ see above) DELETE_MSG (of a1746363247039)
+                                                                                    ● cc1114_ee17 BRANCH equal_to 0
+                                                                                      ● a1746552335202 MSG "**{BGVAR_pokeplayersname} failed to use Disadvantage meaning…" (0 embeds, 0 fields)
+                                                                                        ● a1746552468904 DEL pokeplayerhp [self]
+                                                                                          ● a1746552471829 DEL pokeplayerspeed [self]
+                                                                                            ● a1746552478728 DEL pokeopponenthp [self]
+                                                                                              ● a1746552484186 DEL pokeopponentspeed [self]
+                                                                                                ● a1746552486278 SET next_round = 0 [self] op=unshift
+                                                                                                  ● a1746552488795 SET pokeplayerchargingmove = -1 [self] op=unshift
+                                                                                                    ● a1746552490767 SET pokeopponentchargingmove = -1 [self] op=unshift
+                                                                                                      ● a1746552494050 SET pokeplayerchargedattackleft = 2 [self] op=unshift
+                                                                                                        ● a1746552496117 SET pokeplayeragilityleft = 4 [self] op=unshift
+                                                                                                          ● a1746552498145 SET pokeplayerdebuftext = None [self] op=unshift
+                                                                                                            ● a1746552501433 SET pokeopponentdebuftext = None [self] op=unshift
+                                                                                                              ● a1746552503316 SET pokeplayerchargingmove = -1 [self] op=unshift
+                                                                                                                ● a1746552635024 SET pokeplayerhealturn = 0 [self] op=unshift
+                                                                      ● cc151_5c96 BRANCH equal_to 1
+                                                                        ↪ a210_8225_cbd2 (→ see above) MATH pokeroundnumber: var + 1 [self] round
+                                                                      ● cc153_7e11 BRANCH equal_to 0
+                  ● btn65_gyvxop64u BUTTON "Cancel Battle" [DANGER] press=user
+                    ● a67_3eb9_fd4b DELETE_MSG (of a52_9526_0e92)
+                      ● a1746323821638 MSG "**Match Canceled**" (0 embeds, 0 fields)
+              ● cc1854_5a3d BRANCH contains Charmander
+                ● a1746323741475 MSG "PIKACHU VS CHARMANDER" EDIT:1746323706229 (2 embeds, 10 fields)
+                  ● btn74_t6w4jk4cx BUTTON "Start Battle" [SUCCESS] press=user
+                    ● a1746370017797 SET pokeplayerhp = 30 [self] op=unshift
+                      ● a1746370019758 SET pokeplayerspeed = 14 [self] op=unshift
+                        ● a1746370039265 SET pokeopponenthp = 40 [self] op=unshift
+                          ● a1746370041038 SET pokeopponentspeed = 11 [self] op=unshift
+                            ● a1746879574974 SET pokeplayersname = Pikachu [self] op=unshift
+                              ● a1746370794032 SET pokeopponentsname = Charmander [self] op=unshift
+                                ● a1746364575009 DELETE_MSG (of a1746323741475)
+                                  ● a1746369301895 SET next_round = 1 [self] op=unshift
+                                    ● a1746372217454 SET pokeroundnumber = 0 [self] op=unshift
+                                      ● a1746372213625 SET pokeplayermoveused = *None* [self] op=unshift
+                                        ● a1746375949954 SET pokeopponentmoveused = *None* [self] op=unshift
+                                          ● a1746899044954 SET pokemove5disadsvantage = 1 [self] op=unshift
+                                            ● a1746375954078 SET pokeopponentchargingmove = -1 [self] op=unshift
+                                              ● a1746461061439 SET pokeplayerdebuftext = None [self] op=unshift
+                                                ● a1746461059128 SET pokeopponentdebuftext = None [self] op=unshift
+                                                  ● a1746896481878 SET pokeopponentchargingmove = 0 [self] op=unshift
+                                                    ● a1746899413745 SET pokeplayeragilityleft = 4 [self] op=unshift
+                                                      ● a1746899440932 SET pokeplayerhealturn = 0 [self] op=unshift
+                                                        ● a1746899475899 SET pokeplayerchargedattack = 2 [self] op=unshift
+                                                          ● a1746899626156 SET pokeplayerhealmovesleft = 3 [self] op=unshift
+                                                            ● a1746901148227 SET pokeplayerdisadvantagetext = None [self] op=unshift
+                                                              ● a1746901217442 SET pokeopponentdisadvantagetext = None [self] op=unshift
+                                                                ● a89_34f6_bfa4 LOOP x300 timeout=2000ms
+                                                                  ● loop_after92_8ab8_8743 LOOP_BODY
+                                                                  ● loop_act90_14ae_8c7a LOOP_BODY
+                                                                    ● c111_38f6_a724 COND compare: {BGVAR_next_round} [self]
+                                                                      ● $else_111_2963_778e BRANCH else
+                                                                        ● a1746372172145 MATH pokeroundnumber: var + 1 [self] round
+                                                                          ● a1746371317519 SET next_round = 0 [self] op=unshift
+                                                                            ● c190_dfca_6b6f COND compare: {BGVAR_pokeopponenthp} [self]
+                                                                              ● $else_190_1568_17d7 BRANCH else
+                                                                                ● c224_de71_5501 COND compare: {BGVAR_pokeplayerhp} [self]
+                                                                                  ● $else_224_a82f_f149 BRANCH else
+                                                                                    ● a1746369288754 SET next_round = 0 [self] op=unshift
+                                                                                      ● a1746363797169 MSG "__**ROUND #{BGVAR_pokeroundnumber}**__ ***(YOU) {BGVAR_pokep…" EDIT:1746364898665 (3 embeds, 4 fields)
+                                                                                        ● btn132_0xk6u9v2u BUTTON "Move 1" [DANGER] press=user
+                                                                                          ● c1372_9f19_02d8 COND compare: {BGVAR_pokeplayerchargingmove} [self]
+                                                                                            ● $else_1372_5470_cdfe BRANCH else
+                                                                                            ● cc1375_08a5 BRANCH equal_to -1
+                                                                                              ● c1288_7d6f_38b0 COND compare: {BGVAR_pokeplayerhealturn} [self]
+                                                                                                ● $else_1288_c828_ff71 BRANCH else
+                                                                                                  ● a1746881711841 SET pokeplayerdebuftext = None [self] op=unshift
+                                                                                                    ● a1746886627611 SET pokeplayermoveused = {BGVAR_pokeplayersname} used Thunder Shock and 5 d… [self] op=unshift
+                                                                                                      ● a1746886632311 MATH pokeopponenthp: var - 5 [self]
+                                                                                                        ● c1615_0167_3a7f COND compare: {BGVAR_pokeroundnumber} [self]
+                                                                                                          ● $else_1615_6bdb_e443 BRANCH else
+                                                                                                            ● c1524_d05f_cd1a COND compare: {BGVAR_pokeopponentchargingmove} [self]
+                                                                                                              ● $else_1524_ab01_0a40 BRANCH else
+                                                                                                              ● cc1527_00d7 BRANCH equal_to 1
+                                                                                                                ● a1560_1653_4e80 SET pokeopponentchargingmove = 0 [self] op=unshift
+                                                                                                                  ● c1540_fee0_ed34 COND chance
+                                                                                                                    ● $else_1540_d8fc_917a BRANCH else
+                                                                                                                    ● cc1544_0vq75elhr CHANCE 40%
+                                                                                                                      ● a1746891734405 SET pokeopponentmoveused = Charmander used Flamethrower and 20 damage was dea… [self] op=unshift
+                                                                                                                        ● a1746892070958 MATH pokeplayerhp: var - 20 [self] round
+                                                                                                                          ● c1775_339a_1dbb COND chance
+                                                                                                                            ● $else_1775_3925_aa93 BRANCH else
+                                                                                                                            ● cc1778_u3szdaqoh CHANCE 80%
+                                                                                                                              ● a1746892163742 DELETE_MSG (of a1746363797169)
+                                                                                                                                ● a1746892165592 MATH next_round: var + 1 [self] round
+                                                                                                                            ● cc1780_ok924hygx CHANCE 20%
+                                                                                                                              ● a1746901585152 MATH pokeplayerhp: var + 5 [self] round
+                                                                                                                                ● a1746901767261 SET pokeopponentdisadvantagetext = Charmander had gone through Burnout thus only doin… [self] op=unshift
+                                                                                                                                  ↪ a1746892163742 (→ see above) DELETE_MSG (of a1746363797169)
+                                                                                                                    ● cc1546_r0hz4o6w6 CHANCE 60%
+                                                                                                                      ● a1746892010328 SET pokeopponentmoveused = Charmander used Flamethrower and 14 damage was dea… [self] op=unshift
+                                                                                                                        ● a1556_f3ac_4b4e MATH pokeplayerhp: var - 14 [self] round
+                                                                                                                          ● c1786_2fe3_7d36 COND chance
+                                                                                                                            ● $else_1786_ce20_5331 BRANCH else
+                                                                                                                            ● cc1789_480hrufx9 CHANCE 20%
+                                                                                                                              ● a1746901672689 MATH pokeplayerhp: var + 4 [self] round
+                                                                                                                                ● a1746901904814 SET pokeopponentdisadvantagetext = Charmander had gone through Burnout thus only doin… [self] op=unshift
+                                                                                                                                  ↪ a1746892163742 (→ see above) DELETE_MSG (of a1746363797169)
+                                                                                                                            ● cc1791_nf0w46knf CHANCE 80%
+                                                                                                                              ↪ a1746892163742 (→ see above) DELETE_MSG (of a1746363797169)
+                                                                                                              ● cc1537_d11d BRANCH equal_to 0
+                                                                                                                ● c1477_9f6a_a099 COND compare: {BGVAR_pokecharmanderfullhp} [self]
+                                                                                                                  ● $else_1477_35a1_98f6 BRANCH else
+                                                                                                                    ● c1488_44cc_1578 COND compare: {BGVAR_pokeopponenthp} [self]
+                                                                                                                      ● $else_1488_9f41_c9ce BRANCH else
+                                                                                                                        ● c1494_e48c_e39a COND compare: {BGVAR_pokecharmanderdecenthp} [self]
+                                                                                                                          ● $else_1494_b4eb_5f92 BRANCH else
+                                                                                                                            ● c1500_8890_efc3 COND compare: {BGVAR_pokecharmanderlowhp} [self]
+                                                                                                                              ● $else_1500_0059_5a2f BRANCH else
+                                                                                                                                ● c1506_0806_2d16 COND compare: {BGVAR_pokeopponenthp} [self]
+                                                                                                                                  ● $else_1506_fef9_abab BRANCH else
+                                                                                                                                  ● cc1510_5a59 BRANCH less_than 0
+                                                                                                                                    ● a1746895260989 SET pokeopponentmoveused = Charmander used Ember and 8 damage was dealt to Pi… [self] op=unshift
+                                                                                                                                      ● a1746895263497 MATH pokeplayerhp: var - 8 [self] round
+                                                                                                                                        ● c1866_0671_f706 COND chance
+                                                                                                                                          ● $else_1866_0731_5319 BRANCH else
+                                                                                                                                          ● cc1869_vl8p2ux1j CHANCE 15%
+                                                                                                                                            ● a1746902548039 MATH pokeplayerhp: var + 2 [self] round
+                                                                                                                                              ● a1746902550423 SET pokeopponentdisadvantagetext = Charmander had gone through Burnout thus only doin… [self] op=unshift
+                                                                                                                                                ● a1746895265864 DELETE_MSG (of a1746363797169)
+                                                                                                                                                  ● a1746895268064 MATH next_round: var + 1 [self] round
+                                                                                                                                          ● cc1871_4sk9804cj CHANCE 85%
+                                                                                                                                            ↪ a1746895265864 (→ see above) DELETE_MSG (of a1746363797169)
+                                                                                                                              ● cc1504_7408 BRANCH array_contains {BGVAR_pokeopponenthp}
+                                                                                                                                ● c1653_b5a0_9179 COND compare: {BGVAR_pokeplayerhp} [self]
+                                                                                                                                  ● $else_1653_e453_9d44 BRANCH else
+                                                                                                                                    ● c1682_649e_bd8b COND chance
+                                                                                                                                      ● $else_1682_a7b6_e6f0 BRANCH else
+                                                                                                                                      ● cc1685_l3j8vldab CHANCE 60%
+                                                                                                                                        ● a1746895146679 SET pokeopponentmoveused = Charmander used Ember and 9 damage was dealt to Pi… [self] op=unshift
+                                                                                                                                          ● a1746895149108 MATH pokeplayerhp: var - 9 [self] round
+                                                                                                                                            ● c1853_6aa5_ff45 COND chance
+                                                                                                                                              ● $else_1853_0b0f_cff2 BRANCH else
+                                                                                                                                              ● cc1856_b90fu9aft CHANCE 15%
+                                                                                                                                                ● a1746902450208 MATH pokeplayerhp: var + 2 [self] round
+                                                                                                                                                  ● a1746902453258 SET pokeopponentdisadvantagetext = Charmander had gone through Burnout thus only doin… [self] op=unshift
+                                                                                                                                                    ● a1746895151191 DELETE_MSG (of a1746363797169)
+                                                                                                                                                      ● a1746895153474 MATH next_round: var + 1 [self] round
+                                                                                                                                              ● cc1858_gdb4zrgsg CHANCE 85%
+                                                                                                                                                ↪ a1746895151191 (→ see above) DELETE_MSG (of a1746363797169)
+                                                                                                                                      ● cc1687_jso15hrpj CHANCE 40%
+                                                                                                                                        ● a1746894917742 SET pokeopponentmoveused = Charmander used Growl and Gained 2 Speed [self] op=unshift
+                                                                                                                                          ● a1746894919991 MATH pokeopponentspeed: var + 2 [self] round
+                                                                                                                                            ● c1700_9a11_ea4e COND chance
+                                                                                                                                              ● $else_1700_79b6_3df3 BRANCH else
+                                                                                                                                              ● cc1703_nbhp0mi7o CHANCE 60%
+                                                                                                                                                ● a1746894922933 SET pokeopponentdebuftext = Charmander used Growl and Gained 5 HP [self] op=unshift
+                                                                                                                                                  ● a1746894924933 MATH pokeopponenthp: var + 5 [self] round
+                                                                                                                                                    ● a1746894931307 DELETE_MSG (of a1746363797169)
+                                                                                                                                                      ● a1746894933187 MATH next_round: var + 1 [self] round
+                                                                                                                                              ● cc1705_ic7ci9qep CHANCE 40%
+                                                                                                                                                ● a1746895083993 DELETE_MSG (of a1746363797169)
+                                                                                                                                                  ● a1746895086728 MATH next_round: var + 1 [self] round
+                                                                                                                                  ● cc1656_acbd BRANCH less_than_equal_to 8
+                                                                                                                                    ● a1746894717186 SET pokeopponentmoveused = Charmander used Ember and 9 damage was dealt to Pi… [self] op=unshift
+                                                                                                                                      ● a1746894719687 MATH pokeplayerhp: var - 9 [self] round
+                                                                                                                                        ● c1840_15a2_131a COND chance
+                                                                                                                                          ● $else_1840_ddbf_0196 BRANCH else
+                                                                                                                                          ● cc1843_f8e5u5gg4 CHANCE 15%
+                                                                                                                                            ● a1746902376805 MATH pokeplayerhp: var + 2 [self] round
+                                                                                                                                              ● a1746902374620 SET pokeopponentdisadvantagetext = Charmander had gone through Burnout thus only doin… [self] op=unshift
+                                                                                                                                                ● a1746894721791 DELETE_MSG (of a1746363797169)
+                                                                                                                                                  ● a1746894724009 MATH next_round: var + 1 [self] round
+                                                                                                                                          ● cc1845_5oihweqpl CHANCE 85%
+                                                                                                                                            ↪ a1746894721791 (→ see above) DELETE_MSG (of a1746363797169)
+                                                                                                                          ● cc1498_c77a BRANCH contains {BGVAR_pokeopponenthp}
+                                                                                                                            ● c1667_ab59_5fda COND compare: {BGVAR_pokeplayerhp} [self]
+                                                                                                                              ● $else_1667_67d0_b321 BRANCH else
+                                                                                                                                ● c1581_6c18_39b9 COND chance
+                                                                                                                                  ● $else_1581_2034_bdf5 BRANCH else
+                                                                                                                                  ● cc1585_10aq78jjp CHANCE 45%
+                                                                                                                                    ● a1746892810977 SET pokeopponentmoveused = Charmander used Ember and 9 damage was dealt to Pi… [self] op=unshift
+                                                                                                                                      ● a1746892814749 MATH pokeplayerhp: var - 9 [self] round
+                                                                                                                                        ● c1801_0e04_be14 COND chance
+                                                                                                                                          ● $else_1801_d989_09e0 BRANCH else
+                                                                                                                                          ● cc1804_wfl44vfkg CHANCE 85%
+                                                                                                                                            ● a1746892818266 DELETE_MSG (of a1746363797169)
+                                                                                                                                              ● a1746892822602 MATH next_round: var + 1 [self] round
+                                                                                                                                          ● cc1806_badjviibw CHANCE 15%
+                                                                                                                                            ● a1746902006702 MATH pokeplayerhp: var + 2 [self] round
+                                                                                                                                              ● a1746902003112 SET pokeopponentdisadvantagetext = Charmander had gone through Burnout thus only doin… [self] op=unshift
+                                                                                                                                                ↪ a1746892818266 (→ see above) DELETE_MSG (of a1746363797169)
+                                                                                                                                  ● cc1587_mxcsxwi1b CHANCE 25%
+                                                                                                                                    ● a1746893263091 SET pokeopponentmoveused = Charmander used Growl and Gained 2 Speed [self] op=unshift
+                                                                                                                                      ● a1746893269702 MATH pokeopponentspeed: var + 2 [self] round
+                                                                                                                                        ● c1600_873b_ff56 COND chance
+                                                                                                                                          ● $else_1600_4a90_b8fa BRANCH else
+                                                                                                                                          ● cc1603_2gss13tl0 CHANCE 60%
+                                                                                                                                            ● a1746893451979 SET pokeopponentdebuftext = Charmander used Growl and Gained 5 HP [self] op=unshift
+                                                                                                                                              ● a1746893517432 MATH pokeopponenthp: var + 5 [self] round
+                                                                                                                                                ● a1746893557882 DELETE_MSG (of a1746363797169)
+                                                                                                                                                  ● a1746893560013 MATH next_round: var + 1 [self] round
+                                                                                                                                          ● cc1605_p1jju4c6k CHANCE 40%
+                                                                                                                                            ● a1746893544231 DELETE_MSG (of a1746363797169)
+                                                                                                                                              ● a1746893546686 MATH next_round: var + 1 [self] round
+                                                                                                                                  ● cc1649_dz59gl6ox CHANCE 30%
+                                                                                                                                    ● a1746894581676 SET pokeopponentchargingmove = 1 [self] op=unshift
+                                                                                                                                      ● a1746894584509 SET pokeopponentmoveused = Charmander used Flamethrower and there is a 60% ch… [self] op=unshift
+                                                                                                                                        ● a1746894587123 DELETE_MSG (of a1746363797169)
+                                                                                                                                          ● a1746894590034 MATH next_round: var + 1 [self] round
+                                                                                                                              ● cc1670_b6cf BRANCH less_than_equal_to 10
+                                                                                                                                ● a1746894828965 SET pokeopponentmoveused = Charmander used Ember and 9 damage was dealt to Pi… [self] op=unshift
+                                                                                                                                  ● a1746894831090 MATH pokeplayerhp: var - 9 [self] round
+                                                                                                                                    ● c1817_90dd_5f64 COND chance
+                                                                                                                                      ● $else_1817_c99a_3b2d BRANCH else
+                                                                                                                                      ● cc1820_rou075im8 CHANCE 85%
+                                                                                                                                        ● a1746894833088 DELETE_MSG (of a1746363797169)
+                                                                                                                                          ● a1746894835358 MATH next_round: var + 1 [self] round
+                                                                                                                                      ● cc1822_wsewjprb9 CHANCE 15%
+                                                                                                                                        ● a1746902050602 MATH pokeplayerhp: var + 2 [self] round
+                                                                                                                                          ● a1746902056710 SET pokeopponentdisadvantagetext = Charmander had gone through Burnout thus only doin… [self] op=unshift
+                                                                                                                                            ↪ a1746894833088 (→ see above) DELETE_MSG (of a1746363797169)
+                                                                                                                      ● cc1492_19e5 BRANCH greater_than 40
+                                                                                                                        ● c1512_b111_887e COND chance
+                                                                                                                          ● $else_1512_5be2_047f BRANCH else
+                                                                                                                          ● cc1524_u61x2id3t CHANCE 30%
+                                                                                                                            ● a1746890751226 SET pokeopponentchargingmove = 1 [self] op=unshift
+                                                                                                                              ● a1746890738879 SET pokeopponentmoveused = Charmander used Flamethrower and there is a 60% ch… [self] op=unshift
+                                                                                                                                ● a1746890742436 DELETE_MSG (of a1746363797169)
+                                                                                                                                  ● a1746890747613 MATH next_round: var + 1 [self] round
+                                                                                                                          ● cc1528_6lijvisd5 CHANCE 55%
+                                                                                                                            ● a1746892333998 SET pokeopponentmoveused = Charmander used Ember and 9 damage was dealt to Pi… [self] op=unshift
+                                                                                                                              ● a1746892635222 MATH pokeplayerhp: var - 9 [self] round
+                                                                                                                                ● c1830_425b_3cd9 COND chance
+                                                                                                                                  ● $else_1830_84b0_283d BRANCH else
+                                                                                                                                  ● cc1833_imhewsi4t CHANCE 85%
+                                                                                                                                    ● a1746892343718 DELETE_MSG (of a1746363797169)
+                                                                                                                                      ● a1746892351135 MATH next_round: var + 1 [self] round
+                                                                                                                                  ● cc1835_yvg2aus4t CHANCE 15%
+                                                                                                                                    ● a1746902172151 DELETE_MSG (of a1746363797169)
+                                                                                                                                      ● a1746902169268 SET pokeopponentdisadvantagetext = Charmander had gone through Burnout thus only doin… [self] op=unshift
+                                                                                                                                        ↪ a1746892343718 (→ see above) DELETE_MSG (of a1746363797169)
+                                                                                                                          ● cc1746_1ggljl1tv CHANCE 15%
+                                                                                                                            ● a1746900411881 SET pokeopponentmoveused = Charmander used Growl and Gained 2 Speed [self] op=unshift
+                                                                                                                              ● a1746900413994 MATH pokeopponentspeed: var + 2 [self] round
+                                                                                                                                ● c1751_722e_c5af COND chance
+                                                                                                                                  ● $else_1751_befa_ffd4 BRANCH else
+                                                                                                                                  ● cc1754_9etex9y3u CHANCE 60%
+                                                                                                                                    ● a1746900433655 SET pokeopponentdebuftext = Charmander used Growl and Gained 5 HP [self] op=unshift
+                                                                                                                                      ● a1746900435665 MATH pokeopponenthp: var + 5 [self] round
+                                                                                                                                        ● a1746900438238 DELETE_MSG (of a1746363797169)
+                                                                                                                                          ● a1746900440896 MATH next_round: var + 1 [self] round
+                                                                                                                                  ● cc1756_9ho3y2718 CHANCE 40%
+                                                                                                                                    ● a1746900456737 DELETE_MSG (of a1746363797169)
+                                                                                                                                      ● a1746900454546 MATH next_round: var + 1 [self] round
+                                                                                                                  ● cc1486_d1cf BRANCH contains {BGVAR_pokeopponenthp}
+                                                                                                                    ↪ c1512_b111_887e (→ see above) COND chance
+                                                                                                          ● cc1620_ef4e BRANCH equal_to 1
+                                                                                                            ● a1746894002896 MATH pokeopponenthp: var + 1 [self] round
+                                                                                                              ● a1746894234716 SET pokeopponentmoveused = Charmander used Tail Whip thus lowering Pikachus d… [self] op=unshift
+                                                                                                                ● a1746894277499 DELETE_MSG (of a1746363797169)
+                                                                                                                  ● a1746894274893 MATH next_round: var + 1 [self] round
+                                                                                                          ● cc1627_ea45 BRANCH equal_to 2
+                                                                                                            ● a1746894015891 MATH pokeopponenthp: var + 1 [self] round
+                                                                                                              ● a1746902857598 SET pokeopponentdisadvantagetext = None [self] op=unshift
+                                                                                                                ● a1746902846668 SET pokeplayerdisadvantagetext = None [self] op=unshift
+                                                                                                                  ● c1876_497a_ff71 COND chance
+                                                                                                                    ● $else_1876_5115_6c19 BRANCH else
+                                                                                                                    ● cc1879_o8fql8012 CHANCE 85%
+                                                                                                                      ● a1746894069917 SET pokeopponentdebuftext = Charmander had used Tail Whip thus lowering Pikach… [self] op=unshift
+                                                                                                                        ↪ c1524_d05f_cd1a (→ see above) COND compare: {BGVAR_pokeopponentchargingmove} [self]
+                                                                                                                    ● cc1881_laq9fbh53 CHANCE 15%
+                                                                                                                      ● a1746902694493 MATH pokeplayerhp: var - 1 [self] round
+                                                                                                                        ● a1746902705051 MATH pokeplayerspeed: var - 1 [self] round
+                                                                                                                          ● a1746902720495 SET pokeplayerdisadvantagetext = Pikachu had tripped making them loose 1 HP and Spe… [self] op=unshift
+                                                                                                                            ↪ a1746894069917 (→ see above) SET pokeopponentdebuftext = Charmander had used Tail Whip thus lowering Pikach… [self] op=unshift
+                                                                                                          ● cc1629_715f BRANCH equal_to 3
+                                                                                                            ↪ a1746894015891 (→ see above) MATH pokeopponenthp: var + 1 [self] round
+                                                                                                          ● cc1631_3b68 BRANCH equal_to 4
+                                                                                                            ↪ a1746894015891 (→ see above) MATH pokeopponenthp: var + 1 [self] round
+                                                                                                          ● cc1633_62cb BRANCH equal_to 5
+                                                                                                            ↪ a1746894015891 (→ see above) MATH pokeopponenthp: var + 1 [self] round
+                                                                                                ● cc1291_da9c BRANCH greater_than 0
+                                                                                                  ● a1746881702814 MATH pokeplayerhp: var + 8 [self] round
+                                                                                                    ● a1746881706308 MATH pokeplayerhealturn: var - 1 [self] round
+                                                                                                      ● a1746881708372 SET pokeplayerdebuftext = Pikachu had used Spark and gained 8 HP [self] op=unshift
+                                                                                                        ↪ a1746886627611 (→ see above) SET pokeplayermoveused = {BGVAR_pokeplayersname} used Thunder Shock and 5 d… [self] op=unshift
+                                                                                        ● btn134_jcavikkx8 BUTTON "Move 2" [DANGER] press=user
+                                                                                          ● c1407_0c7e_daa2 COND compare: {BGVAR_pokeplayerchargingmove} [self]
+                                                                                            ● $else_1407_e7de_cb44 BRANCH else
+                                                                                              ● c1410_583f_b1d6 COND compare: {BGVAR_pokeplayerchargedattackleft} [self]
+                                                                                                ● $else_1410_8763_7890 BRANCH else
+                                                                                                  ● c1296_7db9_253b COND compare: {BGVAR_pokeplayerhealturn} [self]
+                                                                                                    ● $else_1296_8029_6571 BRANCH else
+                                                                                                      ● a1746881897659 SET pokeplayerdebuftext = None [self] op=unshift
+                                                                                                        ● c1437_492c_bd7b COND compare: {BGVAR_pokeplayerchargingmove} [self]
+                                                                                                          ● $else_1437_27af_2049 BRANCH else
+                                                                                                            ● a1901_77b7_d9c7 MSG "Failed {BGVAR_pokeplayerchargingmove}" (0 embeds, 0 fields)
+                                                                                                          ● cc1441_3970 BRANCH greater_than_equal_to 0
+                                                                                                            ● a1746887841022 MATH pokeplayerchargingmove: var - 1 [self] round
+                                                                                                              ● c1443_b45c_8a77 COND chance
+                                                                                                                ● $else_1443_bdcf_fe95 BRANCH else
+                                                                                                                ● cc1447_zzt7d4rvh CHANCE 10%
+                                                                                                                  ● a1746888070133 SET pokeplayerchargedattack = 6 [self] op=unshift
+                                                                                                                    ● a1746888082637 MATH pokeopponenthp: var - {BGVAR_pokeplayerchargedattack} [self]
+                                                                                                                      ● a1746888084664 SET pokeplayermoveused = {BGVAR_pokeplayersname} used Thunderbolt and {BGVA… [self] op=unshift
+                                                                                                                        ↪ c1615_0167_3a7f (→ see above) COND compare: {BGVAR_pokeroundnumber} [self]
+                                                                                                                ● cc1449_slq1dfhn7 CHANCE 15%
+                                                                                                                  ● a1746888073447 SET pokeplayerchargedattack = 20 [self] op=unshift
+                                                                                                                    ↪ a1746888082637 (→ see above) MATH pokeopponenthp: var - {BGVAR_pokeplayerchargedattack} [self]
+                                                                                                                ● cc1451_sgat7i1i2 CHANCE 75%
+                                                                                                                  ● a1746888078131 SET pokeplayerchargedattack = 10 [self] op=unshift
+                                                                                                                    ↪ a1746888082637 (→ see above) MATH pokeopponenthp: var - {BGVAR_pokeplayerchargedattack} [self]
+                                                                                                          ● cc1902_1763 BRANCH equal_to -1
+                                                                                                            ● a1755105083577_0a31_e4d7_115a MATH pokeplayerchargedattackleft: var - 1 [self] round
+                                                                                                              ● c1755105083578_73f2_2ff6_115a COND compare: {BGVAR_pokeplayerchargedattackleft} [self]
+                                                                                                                ● else_1755105083578_c288_edf5_115a BRANCH else
+                                                                                                                  ● a1755105083577_947a_f67f_115a SET pokeplayerchargingmove = 1 [self] op=unshift
+                                                                                                                    ● a1755105083577_6aef_1217_115a SET pokeplayermoveused = {BGVAR_pokeplayersname} used Thunderbolt and there… [self] op=unshift
+                                                                                                                      ↪ c1615_0167_3a7f (→ see above) COND compare: {BGVAR_pokeroundnumber} [self]
+                                                                                                                ● cc_1755105083578_9432_b197_115a BRANCH equal_to -1
+                                                                                                                  ● a1755105083578_1cf3_7671_115a MSG "**Sorry but you can no longer use your charged attack!** **P…" EDIT:1746381736570 (0 embeds, 0 fields)
+                                                                                                                    ● a1755105083578_71e2_c25f_115a WAIT 6s
+                                                                                                                      ● a1755105238827 DELETE_MSG (of a1755105083578_1cf3_7671_115a)
+                                                                                                    ● cc1301_d6ff BRANCH greater_than 0
+                                                                                                      ● a1746881871005 MATH pokeplayerhp: var + 8 [self] round
+                                                                                                        ● a1746881884733 MATH pokeplayerhealturn: var - 1 [self] round
+                                                                                                          ● a1746881886959 SET pokeplayerdebuftext = Pikachu had used Spark and gained 8 HP [self] op=unshift
+                                                                                                            ↪ c1437_492c_bd7b (→ see above) COND compare: {BGVAR_pokeplayerchargingmove} [self]
+                                                                                                ● cc1414_9855 BRANCH equal_to 0
+                                                                                                  ● a1746887789072 MSG "**Sorry but you can no longer use your charged attack!** **P…" EDIT:1746381736570 (0 embeds, 0 fields)
+                                                                                                    ● a1746887791025 WAIT 6s
+                                                                                                      ● a1746887793107 DELETE_MSG (of a1746887789072)
+                                                                                            ● cc1417_4efa BRANCH greater_than_equal_to 0
+                                                                                              ● c1420_1779_ce2f COND compare: {BGVAR_pokeplayerchargedattackleft} [self]
+                                                                                                ● $else_1420_fa99_0c5a BRANCH else
+                                                                                                  ↪ c1296_7db9_253b (→ see above) COND compare: {BGVAR_pokeplayerhealturn} [self]
+                                                                                                ● cc1423_1c8c BRANCH equal_to 0
+                                                                                                  ↪ c1296_7db9_253b (→ see above) COND compare: {BGVAR_pokeplayerhealturn} [self]
+                                                                                        ● btn136_f7dhflbad BUTTON "Move 3" [SUCCESS] press=user
+                                                                                          ● c1349_100a_5c57 COND compare: {BGVAR_pokeplayerchargingmove} [self]
+                                                                                            ● $else_1349_a537_2c5b BRANCH else
+                                                                                            ● cc1352_7120 BRANCH equal_to -1
+                                                                                              ● c1355_140b_298c COND compare: {BGVAR_pokeplayerhealmovesleft} [self]
+                                                                                                ● $else_1355_96cb_ee8b BRANCH else
+                                                                                                ● cc1359_ef3d BRANCH greater_than 0
+                                                                                                  ● c1728_3a43_8e53 COND compare: {BGVAR_pokeplayerhealturn} [self]
+                                                                                                    ● $else_1728_dc4a_79ee BRANCH else
+                                                                                                      ● a1746885215073 SET pokeplayermoveused = Pikachu used Spark and gained 8 HP [self] op=unshift
+                                                                                                        ● a1746885217955 SET pokeplayerdebuftext = None [self] op=unshift
+                                                                                                          ● a1746885220514 MATH pokeplayerhealmovesleft: var - 1 [self] round
+                                                                                                            ● a1746885222839 SET pokeplayerhealturn = 1 [self] op=unshift
+                                                                                                              ● a1746885225264 MATH pokeplayerhp: var + 8 [self] round
+                                                                                                                ↪ c1615_0167_3a7f (→ see above) COND compare: {BGVAR_pokeroundnumber} [self]
+                                                                                                    ● cc1732_d035 BRANCH greater_than 0
+                                                                                                      ● a1746885205711 SET pokeplayermoveused = Pikachu used Spark and gained 8 HP [self] op=unshift
+                                                                                                        ● a1746885199622 SET pokeplayerhealturn = 1 [self] op=unshift
+                                                                                                          ● a1746885193756 SET pokeplayerdebuftext = Pikachu had used Spark and gained 8 HP [self] op=unshift
+                                                                                                            ● a1746885187160 MATH pokeplayerhealmovesleft: var - 1 [self] round
+                                                                                                              ● a1746885184906 MATH pokeplayerhp: var + 8 [self] round
+                                                                                                                ● a1746885181156 MATH pokeplayerhp: var + 8 [self] round
+                                                                                                                  ↪ c1615_0167_3a7f (→ see above) COND compare: {BGVAR_pokeroundnumber} [self]
+                                                                                                ● cc1725_aa54 BRANCH equal_to 0
+                                                                                                  ● c1469_a788_8d6a COND compare: {BGVAR_pokeplayerhealturn} [self]
+                                                                                                    ● $else_1469_0b80_2a41 BRANCH else
+                                                                                                      ● a1746888913224 MSG "**Sorry but you can no longer use the Spark attack!** **Plea…" EDIT:1746381736570 (0 embeds, 0 fields)
+                                                                                                        ● a1746888915612 WAIT 6s
+                                                                                                          ● a1746888917971 DELETE_MSG (of a1746888913224)
+                                                                                                    ● cc1473_974d BRANCH greater_than 0
+                                                                                                      ● a1746885154209 SET pokeplayerdebuftext = None [self] op=unshift
+                                                                                                        ● a1746885156580 SET pokeplayermoveused = Pikachu had used Spark and gained 8 HP [self] op=unshift
+                                                                                                          ● a1746885162402 MATH pokeplayerhp: var + 8 [self] round
+                                                                                                            ● a1746885164469 MATH pokeplayerhealturn: var - 1 [self] round
+                                                                                                              ↪ c1615_0167_3a7f (→ see above) COND compare: {BGVAR_pokeroundnumber} [self]
+                                                                                        ● btn138_ny8d3ue3v BUTTON "Move 4" [SUCCESS] press=user
+                                                                                          ● c1377_b938_3f40 COND compare: {BGVAR_pokeplayerchargingmove} [self]
+                                                                                            ● $else_1377_59e7_23d9 BRANCH else
+                                                                                            ● cc1380_b22b BRANCH equal_to -1
+                                                                                              ● c1394_fa9b_cfa7 COND compare: {BGVAR_pokeplayeragilityleft} [self]
+                                                                                                ● $else_1394_c24e_ed5e BRANCH else
+                                                                                                  ● a1746886230228 MSG "**Sorry but you can no longer use your charged attack!** **P…" EDIT:1746381736570 (0 embeds, 0 fields)
+                                                                                                    ● a1746886232260 WAIT 6s
+                                                                                                      ● a1746886234766 DELETE_MSG (of a1746886230228)
+                                                                                                ● cc1397_428e BRANCH greater_than_equal_to 1
+                                                                                                  ● c1310_39b2_3dba COND compare: {BGVAR_pokeplayerhealturn} [self]
+                                                                                                    ● $else_1310_be08_9ebb BRANCH else
+                                                                                                      ● a1746881934049 SET pokeplayerdebuftext = None [self] op=unshift
+                                                                                                        ● a1746886148315 MATH pokeplayerspeed: var + 2 [self] round
+                                                                                                          ● a1746886150633 MATH pokeplayeragilityleft: var - 1 [self] round
+                                                                                                            ● a1746886194885 SET pokeplayermoveused = Pikachu used Agility and gained 2 speed [self] op=unshift
+                                                                                                              ↪ c1615_0167_3a7f (→ see above) COND compare: {BGVAR_pokeroundnumber} [self]
+                                                                                                    ● cc1314_dde8 BRANCH greater_than 0
+                                                                                                      ● a1746881922015 MATH pokeplayerhp: var + 8 [self] round
+                                                                                                        ● a1746881924348 MATH pokeplayerhealturn: var - 1 [self] round
+                                                                                                          ● a1746881926468 SET pokeplayerdebuftext = Pikachu had used Spark and gained 8 HP [self] op=unshift
+                                                                                                            ↪ a1746886148315 (→ see above) MATH pokeplayerspeed: var + 2 [self] round
+                                                                                  ● cc228_f3cc BRANCH less_than_equal_to 0
+                                                                                    ↪ c1102_705d_c096 (→ see above) COND compare: {BGVAR_pokemove5disadsvantage} [self]
+                                                                              ● cc193_78fb BRANCH less_than_equal_to 0
+                                                                                ↪ c1110_b14c_0bf5 (→ see above) COND compare: {BGVAR_pokemove5disadsvantage} [self]
+                                                                      ● cc115_40ee BRANCH equal_to 1
+                                                                        ↪ a1746372172145 (→ see above) MATH pokeroundnumber: var + 1 [self] round
+                                                                      ● cc117_00ca BRANCH contains 0
+                  ● btn76_0t87zdtza BUTTON "Cancel Battle" [DANGER] press=user
+                    ● a1746323890783 DELETE_MSG (of a1746323741475)
+                      ● a1746323888271 MSG "**Match Canceled**" (0 embeds, 0 fields)
+              ● cc1856_634f BRANCH contains chamander
+                ↪ a1746323741475 (→ see above) MSG "PIKACHU VS CHARMANDER" EDIT:1746323706229 (2 embeds, 10 fields)
+              ● cc1858_e6c3 BRANCH contains bulbasaur
+                ↪ a52_9526_0e92 (→ see above) MSG "PIKACHU VS BULBASAUR" EDIT:1746323706229 (2 embeds, 10 fields)
+              ● cc1860_c0ef BRANCH contains {BGVAR_pokemon_battle_prefix}BtCharmander
+                ↪ a1746323741475 (→ see above) MSG "PIKACHU VS CHARMANDER" EDIT:1746323706229 (2 embeds, 10 fields)
+              ● cc1862_635a BRANCH contains {BGVAR_pokemon_battle_prefix}BtBulbasaur
+                ↪ a52_9526_0e92 (→ see above) MSG "PIKACHU VS BULBASAUR" EDIT:1746323706229 (2 embeds, 10 fields)
+              ● cc1864_10cd BRANCH contains {BGVAR_pokemon_battle_prefix}Btbulbasaur
+                ↪ a52_9526_0e92 (→ see above) MSG "PIKACHU VS BULBASAUR" EDIT:1746323706229 (2 embeds, 10 fields)
+              ● cc1866_9a51 BRANCH contains {BGVAR_pokemon_battle_prefix}Btcharmander
+                ↪ a1746323741475 (→ see above) MSG "PIKACHU VS CHARMANDER" EDIT:1746323706229 (2 embeds, 10 fields)
+              ● cc1868_8b62 BRANCH equal_to {BGVAR_pokemon_battle_prefix}Btr
+                ● c27_4396_163a COND chance
+                  ● $else_27_6287_c85f BRANCH else
+                  ● cc32_7z7bgohw2 CHANCE 50%
+                    ↪ a52_9526_0e92 (→ see above) MSG "PIKACHU VS BULBASAUR" EDIT:1746323706229 (2 embeds, 10 fields)
+                  ● cc55_t9kx5lc84 CHANCE 50%
+                    ↪ a1746323741475 (→ see above) MSG "PIKACHU VS CHARMANDER" EDIT:1746323706229 (2 embeds, 10 fields)
+              ● cc1870_daf8 BRANCH equal_to {BGVAR_pokemon_battle_prefix} Btr
+                ↪ c27_4396_163a (→ see above) COND chance

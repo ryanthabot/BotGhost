@@ -1,0 +1,2233 @@
+[
+    {
+        "id": "root",
+        "type": "root",
+        "data": {
+            "title": "info github-user",
+            "description": "Get detailed info on any GitHub user",
+            "data": {
+                "ephemeral": true,
+                "permissions": {
+                    "allowed_roles": [
+                        {
+                            "name": "@everyone",
+                            "id": "everyone"
+                        }
+                    ],
+                    "banned_roles": [],
+                    "banned_channels": [],
+                    "banned_users": [],
+                    "required_permissions": []
+                },
+                "cooldown": {
+                    "type": "user",
+                    "interval": "5",
+                    "interval_type": "seconds"
+                },
+                "handleErrors": true,
+                "errors": [],
+                "addedModule": true,
+                "validated": true
+            }
+        },
+        "draggable": false,
+        "position": {
+            "x": 1116.5004973250745,
+            "y": 182
+        },
+        "width": 600,
+        "height": 200,
+        "targetPosition": "top",
+        "sourcePosition": "bottom",
+        "selected": false
+    },
+    {
+        "id": "error_handler",
+        "type": "error",
+        "position": {
+            "x": 607.5006909444368,
+            "y": 218.5
+        },
+        "draggable": false,
+        "data": {
+            "node_options": {
+                "title": "Error Handler",
+                "description": "Handle errors that occur during the command execution",
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "exclamation-triangle",
+                    "icon": [
+                        576,
+                        512,
+                        [],
+                        "f071",
+                        "M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+                    ]
+                }
+            },
+            "data": {}
+        },
+        "width": 459,
+        "height": 92,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "id": "action_error_embed",
+        "type": "action",
+        "position": {
+            "x": 672.5008673708642,
+            "y": 418.5
+        },
+        "draggable": true,
+        "data": {
+            "node_options": {
+                "title": "Embed Reply",
+                "value": "embed",
+                "label": "Bot replies with an embed response",
+                "description": "Bot replies with an embed response"
+            },
+            "data": {
+                "nodeID": "action_error_embed",
+                "embed": {
+                    "color": "#FF0000",
+                    "title": ":x: {error_message}",
+                    "description": "{error_reason}\n{error_helper_text}",
+                    "footer": "{error_block}"
+                },
+                "emojis": [],
+                "target": {
+                    "reply": true
+                },
+                "type": "embed",
+                "validated": true,
+                "linked": true
+            }
+        },
+        "width": 329,
+        "height": 92,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "error_handler",
+        "target": "action_error_embed",
+        "type": "custom",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "id": "reactflow__edge-error_handler-action_error_embed"
+    },
+    {
+        "id": "option_17_3b00_d545",
+        "type": "option",
+        "data": {
+            "node_options": {
+                "title": "String",
+                "description": "A text input for the GitHub username",
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "user",
+                    "icon": [
+                        448,
+                        512,
+                        [],
+                        "f007",
+                        "M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"
+                    ]
+                },
+                "isActionBlock": false
+            },
+            "data": {
+                "type": "string",
+                "name": "username",
+                "description": "The GitHub username to look up",
+                "required": true,
+                "validated": true,
+                "autocomplete_choices": []
+            }
+        },
+        "position": {
+            "x": 1265.000267566074,
+            "y": 18.5
+        },
+        "width": 303,
+        "height": 92,
+        "selected": false,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "option_17_3b00_d545",
+        "target": "root",
+        "type": "step",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "id": "reactflow__edge-option_17_3b00_d545-root"
+    },
+    {
+        "id": "action_7_0262_9b95",
+        "type": "action",
+        "data": {
+            "node_options": {
+                "title": "Send or Edit a Message",
+                "description": "Send or edit a message with optional buttons and select menus.",
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "reply",
+                    "icon": [
+                        512,
+                        512,
+                        [],
+                        "f3e5",
+                        "M8.309 189.836L184.313 37.851C199.719 24.546 224 35.347 224 56.015v80.053c160.629 1.839 288 34.032 288 186.258 0 61.441-39.581 122.309-83.333 154.132-13.653 9.931-33.111-2.533-28.077-18.631 45.344-145.012-21.507-183.51-176.59-185.742V360c0 20.7-24.3 31.453-39.687 18.164l-176.004-152c-11.071-9.562-11.086-26.753 0-36.328z"
+                    ]
+                }
+            },
+            "data": {
+                "type": "advanced_message",
+                "message": {
+                    "content": "",
+                    "embeds": [
+                        {
+                            "title": "",
+                            "description": "s",
+                            "author": {
+                                "name": "",
+                                "url": "",
+                                "icon_url": ""
+                            },
+                            "color": "#4f6bff",
+                            "footer": "",
+                            "footerIcon": "",
+                            "timestamp": "",
+                            "image": {
+                                "url": ""
+                            },
+                            "thumbnail": {
+                                "url": ""
+                            },
+                            "fields": [
+                                {
+                                    "name": "s",
+                                    "value": "s",
+                                    "inline": false
+                                }
+                            ],
+                            "timestamp_variable": ""
+                        }
+                    ]
+                },
+                "messageType": "advanced",
+                "components": [],
+                "componentsV2Data": null,
+                "useComponentsV2": false,
+                "target": {
+                    "reply": true
+                },
+                "validated": true,
+                "linked": true,
+                "editId": "1773803260424_65144"
+            }
+        },
+        "position": {
+            "x": 1158.5004906721008,
+            "y": 418.5
+        },
+        "width": 516,
+        "height": 92,
+        "selected": false,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "id": "action_8_520a_fea5",
+        "type": "action",
+        "data": {
+            "node_options": {
+                "title": "Send or Edit a Message",
+                "description": "Send or edit a message with optional buttons and select menus.",
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "reply",
+                    "icon": [
+                        512,
+                        512,
+                        [],
+                        "f3e5",
+                        "M8.309 189.836L184.313 37.851C199.719 24.546 224 35.347 224 56.015v80.053c160.629 1.839 288 34.032 288 186.258 0 61.441-39.581 122.309-83.333 154.132-13.653 9.931-33.111-2.533-28.077-18.631 45.344-145.012-21.507-183.51-176.59-185.742V360c0 20.7-24.3 31.453-39.687 18.164l-176.004-152c-11.071-9.562-11.086-26.753 0-36.328z"
+                    ]
+                }
+            },
+            "data": {
+                "type": "advanced_message",
+                "message": {
+                    "content": "",
+                    "embeds": []
+                },
+                "messageType": "basic",
+                "components": [],
+                "componentsV2Data": {
+                    "version": 2,
+                    "components": [
+                        {
+                            "id": "comp_1773803108992_y2ogbj4w8",
+                            "type": "container",
+                            "parent_id": null,
+                            "data": {
+                                "accent_color": "s",
+                                "spoiler": false
+                            }
+                        },
+                        {
+                            "id": "comp_1773803109639_jvqb0bdmw",
+                            "type": "section",
+                            "parent_id": null,
+                            "data": {
+                                "text_ids": [],
+                                "accessory": null
+                            }
+                        },
+                        {
+                            "id": "comp_1773803110125_5yxp4h24m",
+                            "type": "separator",
+                            "parent_id": null,
+                            "data": {}
+                        },
+                        {
+                            "id": "comp_1773803110557_nq7i8mfaw",
+                            "type": "action_row",
+                            "parent_id": null,
+                            "data": {
+                                "components": []
+                            }
+                        },
+                        {
+                            "id": "comp_1773803111523_91xbdbd7o",
+                            "type": "text",
+                            "parent_id": null,
+                            "data": {
+                                "content": "Text contefnt here",
+                                "allowed_mentions": []
+                            }
+                        },
+                        {
+                            "id": "comp_1773803111924_fvxdtp3d2",
+                            "type": "media_gallery",
+                            "parent_id": null,
+                            "data": {
+                                "items": []
+                            }
+                        },
+                        {
+                            "id": "comp_1773803112305_p5iisz2jg",
+                            "type": "file",
+                            "parent_id": null,
+                            "data": {
+                                "url": "",
+                                "spoiler": false
+                            }
+                        },
+                        {
+                            "id": "comp_1773803113161_53iqcghgl",
+                            "type": "action_row",
+                            "parent_id": null,
+                            "data": {
+                                "components": []
+                            }
+                        },
+                        {
+                            "id": "comp_1773803113297_7gpmvkmst",
+                            "type": "button",
+                            "parent_id": "comp_1773803113161_53iqcghgl",
+                            "data": {
+                                "node_options": {
+                                    "title": "Button",
+                                    "description": "ComponentsV2 button",
+                                    "v2ComponentId": "comp_1773803113297_7gpmvkmst",
+                                    "v2ParentId": "comp_1773803113161_53iqcghgl"
+                                },
+                                "data": {
+                                    "label": "Button",
+                                    "style": "PRIMARY",
+                                    "v2ComponentId": "comp_1773803113297_7gpmvkmst",
+                                    "validated": true
+                                }
+                            }
+                        },
+                        {
+                            "id": "comp_1773803113542_oua51waj3",
+                            "type": "action_row",
+                            "parent_id": null,
+                            "data": {
+                                "components": []
+                            }
+                        },
+                        {
+                            "id": "comp_1773803113669_si5280knu",
+                            "type": "select_menu",
+                            "parent_id": "comp_1773803113542_oua51waj3",
+                            "data": {
+                                "node_options": {
+                                    "title": "Select Menu",
+                                    "description": "ComponentsV2 select_menu",
+                                    "v2ComponentId": "comp_1773803113669_si5280knu",
+                                    "v2ParentId": "comp_1773803113542_oua51waj3"
+                                },
+                                "data": {
+                                    "type": "adv_select_menu",
+                                    "menu_type": "basic",
+                                    "multiselect": false,
+                                    "minOptions": "1",
+                                    "maxOptions": "1",
+                                    "basic_options": [
+                                        {
+                                            "label": "Option 1",
+                                            "description": "Option 1",
+                                            "emoji_id": "",
+                                            "value": ""
+                                        }
+                                    ],
+                                    "type_options": {},
+                                    "options": [],
+                                    "validated": true,
+                                    "customVariableName": "",
+                                    "v2ComponentId": "comp_1773803113669_si5280knu"
+                                }
+                            }
+                        },
+                        {
+                            "id": "comp_1773803114207_8q8d660qp",
+                            "type": "section",
+                            "parent_id": "comp_1773803108992_y2ogbj4w8",
+                            "data": {
+                                "text_ids": [],
+                                "accessory": null
+                            }
+                        },
+                        {
+                            "id": "comp_1773803115099_x2r2no7yu",
+                            "type": "action_row",
+                            "parent_id": "comp_1773803108992_y2ogbj4w8",
+                            "data": {
+                                "components": []
+                            }
+                        },
+                        {
+                            "id": "comp_1773803116592_matln53t1",
+                            "type": "text",
+                            "parent_id": "comp_1773803108992_y2ogbj4w8",
+                            "data": {
+                                "content": "Text content heres",
+                                "allowed_mentions": []
+                            }
+                        },
+                        {
+                            "id": "comp_1773803117574_8030nqqrg",
+                            "type": "file",
+                            "parent_id": "comp_1773803108992_y2ogbj4w8",
+                            "data": {
+                                "url": "s",
+                                "spoiler": false,
+                                "displayName": "s"
+                            }
+                        },
+                        {
+                            "id": "comp_1773803118108_pavivjtxo",
+                            "type": "section",
+                            "parent_id": "comp_1773803108992_y2ogbj4w8",
+                            "data": {
+                                "text_ids": [],
+                                "accessory": null
+                            }
+                        },
+                        {
+                            "id": "comp_1773803119559_f1y7jn1py",
+                            "type": "media_gallery",
+                            "parent_id": "comp_1773803108992_y2ogbj4w8",
+                            "data": {
+                                "items": [
+                                    {
+                                        "url": "s",
+                                        "description": "",
+                                        "spoiler": false
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "comp_1773803120159_zglbiyvur",
+                            "type": "separator",
+                            "parent_id": "comp_1773803108992_y2ogbj4w8",
+                            "data": {
+                                "spacing": "LARGE",
+                                "divider": "true"
+                            }
+                        },
+                        {
+                            "id": "comp_1773803123294_exyxnv22d",
+                            "type": "text",
+                            "parent_id": "comp_1773803114207_8q8d660qp",
+                            "data": {
+                                "content": "Text content here",
+                                "allowed_mentions": []
+                            }
+                        },
+                        {
+                            "id": "comp_1773803124223_lyxr6acxb",
+                            "type": "thumbnail",
+                            "parent_id": "comp_1773803114207_8q8d660qp",
+                            "data": {
+                                "url": "s",
+                                "description": "",
+                                "spoiler": false
+                            }
+                        },
+                        {
+                            "id": "comp_1773803127625_vzhdjvljg",
+                            "type": "button",
+                            "parent_id": "comp_1773803115099_x2r2no7yu",
+                            "data": {
+                                "node_options": {
+                                    "title": "Button",
+                                    "description": "ComponentsV2 button",
+                                    "v2ComponentId": "comp_1773803127625_vzhdjvljg",
+                                    "v2ParentId": "comp_1773803115099_x2r2no7yu"
+                                },
+                                "data": {
+                                    "label": "Button",
+                                    "style": "PRIMARY",
+                                    "v2ComponentId": "comp_1773803127625_vzhdjvljg",
+                                    "validated": true
+                                }
+                            }
+                        },
+                        {
+                            "id": "comp_1773803129241_w7i9j3abo",
+                            "type": "button",
+                            "parent_id": "comp_1773803115099_x2r2no7yu",
+                            "data": {
+                                "node_options": {
+                                    "title": "Button",
+                                    "description": "ComponentsV2 button",
+                                    "v2ComponentId": "comp_1773803129241_w7i9j3abo",
+                                    "v2ParentId": "comp_1773803115099_x2r2no7yu"
+                                },
+                                "data": {
+                                    "label": "Button",
+                                    "style": "PRIMARY",
+                                    "v2ComponentId": "comp_1773803129241_w7i9j3abo",
+                                    "validated": true
+                                }
+                            }
+                        },
+                        {
+                            "id": "comp_1773803132407_x9b4hbd6m",
+                            "type": "action_row",
+                            "parent_id": "comp_1773803108992_y2ogbj4w8",
+                            "data": {
+                                "components": []
+                            }
+                        },
+                        {
+                            "id": "comp_1773803133097_32db2z1t3",
+                            "type": "select_menu",
+                            "parent_id": "comp_1773803132407_x9b4hbd6m",
+                            "data": {
+                                "node_options": {
+                                    "title": "Select Menu",
+                                    "description": "ComponentsV2 select_menu",
+                                    "v2ComponentId": "comp_1773803133097_32db2z1t3",
+                                    "v2ParentId": "comp_1773803132407_x9b4hbd6m"
+                                },
+                                "data": {
+                                    "type": "adv_select_menu",
+                                    "menu_type": "basic",
+                                    "multiselect": false,
+                                    "minOptions": "1",
+                                    "maxOptions": "1",
+                                    "basic_options": [
+                                        {
+                                            "label": "Option 1",
+                                            "description": "Option 1",
+                                            "emoji_id": "",
+                                            "value": ""
+                                        }
+                                    ],
+                                    "type_options": {},
+                                    "options": [],
+                                    "validated": true,
+                                    "customVariableName": "",
+                                    "v2ComponentId": "comp_1773803133097_32db2z1t3"
+                                }
+                            }
+                        },
+                        {
+                            "id": "comp_1773803163177_stss53pnn",
+                            "type": "text",
+                            "parent_id": "comp_1773803118108_pavivjtxo",
+                            "data": {
+                                "content": "Text content heres",
+                                "allowed_mentions": []
+                            }
+                        },
+                        {
+                            "id": "comp_1773803164758_k9cmt2o21",
+                            "type": "button",
+                            "parent_id": "comp_1773803118108_pavivjtxo",
+                            "data": {
+                                "node_options": {
+                                    "title": "Button",
+                                    "description": "ComponentsV2 button",
+                                    "v2ComponentId": "comp_1773803164758_k9cmt2o21",
+                                    "v2ParentId": "comp_1773803118108_pavivjtxo"
+                                },
+                                "data": {
+                                    "label": "Button",
+                                    "style": "PRIMARY",
+                                    "v2ComponentId": "comp_1773803164758_k9cmt2o21",
+                                    "validated": true
+                                }
+                            }
+                        },
+                        {
+                            "id": "comp_1773803211226_e0q2zofwj",
+                            "type": "text",
+                            "parent_id": "comp_1773803109639_jvqb0bdmw",
+                            "data": {
+                                "content": "Text content here",
+                                "allowed_mentions": []
+                            }
+                        },
+                        {
+                            "id": "comp_1773803212348_zczltdsl4",
+                            "type": "thumbnail",
+                            "parent_id": "comp_1773803109639_jvqb0bdmw",
+                            "data": {
+                                "url": "f",
+                                "description": "f",
+                                "spoiler": "f"
+                            }
+                        },
+                        {
+                            "id": "comp_1773803239596_rgzki8qpk",
+                            "type": "button",
+                            "parent_id": "comp_1773803110557_nq7i8mfaw",
+                            "data": {}
+                        }
+                    ],
+                    "validation": {
+                        "isValid": true,
+                        "emptyContainers": [],
+                        "sectionsWithoutAccessories": [],
+                        "emptyActionRows": [],
+                        "sectionsWithoutText": []
+                    }
+                },
+                "useComponentsV2": true,
+                "target": {
+                    "reply": true
+                },
+                "validated": true,
+                "linked": true
+            }
+        },
+        "position": {
+            "x": 877.500352572695,
+            "y": 597.5
+        },
+        "width": 516,
+        "height": 92,
+        "selected": false,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "id": "action_9_2a38_3700",
+        "type": "action",
+        "data": {
+            "node_options": {
+                "title": "Send or Edit a Message",
+                "description": "Send or edit a message with optional buttons and select menus.",
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "reply",
+                    "icon": [
+                        512,
+                        512,
+                        [],
+                        "f3e5",
+                        "M8.309 189.836L184.313 37.851C199.719 24.546 224 35.347 224 56.015v80.053c160.629 1.839 288 34.032 288 186.258 0 61.441-39.581 122.309-83.333 154.132-13.653 9.931-33.111-2.533-28.077-18.631 45.344-145.012-21.507-183.51-176.59-185.742V360c0 20.7-24.3 31.453-39.687 18.164l-176.004-152c-11.071-9.562-11.086-26.753 0-36.328z"
+                    ]
+                }
+            },
+            "data": {
+                "type": "advanced_message",
+                "message": {
+                    "content": "",
+                    "embeds": []
+                },
+                "messageType": "advanced",
+                "components": [],
+                "componentsV2Data": null,
+                "useComponentsV2": false,
+                "target": {
+                    "reply": true
+                },
+                "validated": true,
+                "linked": true
+            }
+        },
+        "position": {
+            "x": 32.500160668881385,
+            "y": 776.5
+        },
+        "width": 516,
+        "height": 92,
+        "selected": false,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "root",
+        "sourceHandle": "action",
+        "target": "action_7_0262_9b95",
+        "targetHandle": "action",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "type": "custom",
+        "id": "reactflow__edge-rootaction-action_7_0262_9b95action"
+    },
+    {
+        "source": "action_7_0262_9b95",
+        "sourceHandle": "action",
+        "target": "action_8_520a_fea5",
+        "targetHandle": "action",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "type": "custom",
+        "id": "reactflow__edge-action_7_0262_9b95action-action_8_520a_fea5action"
+    },
+    {
+        "source": "action_8_520a_fea5",
+        "sourceHandle": "action",
+        "target": "action_9_2a38_3700",
+        "targetHandle": "action",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "type": "custom",
+        "id": "reactflow__edge-action_8_520a_fea5action-action_9_2a38_3700action"
+    },
+    {
+        "id": "adv_select_menu13_b1golo9ba",
+        "type": "advMessageSelectMenu",
+        "data": {
+            "node_options": {},
+            "data": {
+                "type": "adv_select_menu",
+                "menu_type": "basic",
+                "multiselect": false,
+                "minOptions": "1",
+                "maxOptions": "1",
+                "basic_options": [
+                    {
+                        "label": "Option 1",
+                        "description": "Option 1",
+                        "emoji_id": "",
+                        "value": ""
+                    }
+                ],
+                "type_options": {},
+                "validated": true,
+                "customVariableName": ""
+            }
+        },
+        "draggable": true,
+        "position": {
+            "x": 0.0008109621998231897,
+            "y": 962
+        },
+        "width": 178,
+        "height": 79,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "action_9_2a38_3700",
+        "target": "adv_select_menu13_b1golo9ba",
+        "type": "step",
+        "animated": false,
+        "sourceHandle": "components_source",
+        "arrowHeadType": "arrowclosed",
+        "id": "reactflow__edge-action_9_2a38_3700components_source-adv_select_menu13_b1golo9ba"
+    },
+    {
+        "id": "adv_button15_cije6pnwv",
+        "type": "advMessageButton",
+        "data": {
+            "node_options": {},
+            "data": {
+                "type": "button",
+                "label": "Button 1",
+                "style": "PRIMARY",
+                "emoji_id": "",
+                "orderComponent": false,
+                "weight": "",
+                "row": "",
+                "validated": true
+            }
+        },
+        "draggable": true,
+        "position": {
+            "x": 228.0004011372029,
+            "y": 962
+        },
+        "width": 125,
+        "height": 79,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "action_9_2a38_3700",
+        "target": "adv_button15_cije6pnwv",
+        "type": "step",
+        "sourceHandle": "components_source",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "id": "reactflow__edge-action_9_2a38_3700components_source-adv_button15_cije6pnwv"
+    },
+    {
+        "id": "adv_select_menu17_46v4zqyeh",
+        "type": "advMessageSelectMenu",
+        "data": {
+            "node_options": {},
+            "data": {
+                "type": "adv_select_menu",
+                "menu_type": "basic",
+                "multiselect": false,
+                "minOptions": "1",
+                "maxOptions": "1",
+                "basic_options": [
+                    {
+                        "label": "Option 1",
+                        "description": "Option 1",
+                        "emoji_id": "",
+                        "value": ""
+                    }
+                ],
+                "type_options": {},
+                "validated": true,
+                "customVariableName": "",
+                "editComponentId": "1773803265924_10245"
+            }
+        },
+        "draggable": true,
+        "position": {
+            "x": 1526.0000304295347,
+            "y": 604
+        },
+        "width": 178,
+        "height": 79,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "action_7_0262_9b95",
+        "target": "adv_select_menu17_46v4zqyeh",
+        "type": "step",
+        "animated": false,
+        "sourceHandle": "components_source",
+        "arrowHeadType": "arrowclosed",
+        "id": "reactflow__edge-action_7_0262_9b95components_source-adv_select_menu17_46v4zqyeh"
+    },
+    {
+        "id": "v2_button_comp_1773803113297_7gpmvkmst",
+        "type": "advMessageButton",
+        "data": {
+            "node_options": {
+                "title": "Button",
+                "description": "ComponentsV2 button",
+                "v2ComponentId": "comp_1773803113297_7gpmvkmst",
+                "v2ParentId": "comp_1773803113161_53iqcghgl"
+            },
+            "data": {
+                "label": "Button",
+                "style": "PRIMARY",
+                "v2ComponentId": "comp_1773803113297_7gpmvkmst",
+                "validated": true
+            }
+        },
+        "draggable": true,
+        "position": {
+            "x": 598.5002732592433,
+            "y": 783
+        },
+        "width": 117,
+        "height": 79,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "id": "eaction_8_520a_fea5-v2_button_comp_1773803113297_7gpmvkmst",
+        "source": "action_8_520a_fea5",
+        "target": "v2_button_comp_1773803113297_7gpmvkmst",
+        "sourceHandle": "components_source",
+        "type": "step",
+        "animated": false,
+        "arrowHeadType": "arrowclosed"
+    },
+    {
+        "id": "v2_select_menu_comp_1773803113669_si5280knu",
+        "type": "advMessageSelectMenu",
+        "data": {
+            "node_options": {
+                "title": "Select Menu",
+                "description": "ComponentsV2 select_menu",
+                "v2ComponentId": "comp_1773803113669_si5280knu",
+                "v2ParentId": "comp_1773803113542_oua51waj3"
+            },
+            "data": {
+                "type": "adv_select_menu",
+                "menu_type": "basic",
+                "multiselect": false,
+                "minOptions": "1",
+                "maxOptions": "1",
+                "basic_options": [
+                    {
+                        "label": "Option 1",
+                        "description": "Option 1",
+                        "emoji_id": "",
+                        "value": ""
+                    }
+                ],
+                "type_options": {},
+                "validated": true,
+                "customVariableName": "",
+                "v2ComponentId": "comp_1773803113669_si5280knu"
+            }
+        },
+        "draggable": true,
+        "position": {
+            "x": 765.5001042979791,
+            "y": 783
+        },
+        "width": 178,
+        "height": 79,
+        "selected": false,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "id": "eaction_8_520a_fea5-v2_select_menu_comp_1773803113669_si5280knu",
+        "source": "action_8_520a_fea5",
+        "target": "v2_select_menu_comp_1773803113669_si5280knu",
+        "sourceHandle": "components_source",
+        "type": "step",
+        "animated": false,
+        "arrowHeadType": "arrowclosed"
+    },
+    {
+        "id": "v2_button_comp_1773803127625_vzhdjvljg",
+        "type": "advMessageButton",
+        "data": {
+            "node_options": {
+                "title": "Button",
+                "description": "ComponentsV2 button",
+                "v2ComponentId": "comp_1773803127625_vzhdjvljg",
+                "v2ParentId": "comp_1773803115099_x2r2no7yu"
+            },
+            "data": {
+                "label": "Button",
+                "style": "PRIMARY",
+                "v2ComponentId": "comp_1773803127625_vzhdjvljg",
+                "validated": true
+            }
+        },
+        "draggable": true,
+        "position": {
+            "x": 993.5004826808937,
+            "y": 783
+        },
+        "width": 117,
+        "height": 79,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "id": "eaction_8_520a_fea5-v2_button_comp_1773803127625_vzhdjvljg",
+        "source": "action_8_520a_fea5",
+        "target": "v2_button_comp_1773803127625_vzhdjvljg",
+        "sourceHandle": "components_source",
+        "type": "step",
+        "animated": false,
+        "arrowHeadType": "arrowclosed"
+    },
+    {
+        "id": "v2_button_comp_1773803129241_w7i9j3abo",
+        "type": "advMessageButton",
+        "data": {
+            "node_options": {
+                "title": "Button",
+                "description": "ComponentsV2 button",
+                "v2ComponentId": "comp_1773803129241_w7i9j3abo",
+                "v2ParentId": "comp_1773803115099_x2r2no7yu"
+            },
+            "data": {
+                "label": "Button",
+                "style": "PRIMARY",
+                "v2ComponentId": "comp_1773803129241_w7i9j3abo",
+                "validated": true
+            }
+        },
+        "draggable": true,
+        "position": {
+            "x": 1160.5008560257525,
+            "y": 783
+        },
+        "width": 117,
+        "height": 79,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "id": "eaction_8_520a_fea5-v2_button_comp_1773803129241_w7i9j3abo",
+        "source": "action_8_520a_fea5",
+        "target": "v2_button_comp_1773803129241_w7i9j3abo",
+        "sourceHandle": "components_source",
+        "type": "step",
+        "animated": false,
+        "arrowHeadType": "arrowclosed"
+    },
+    {
+        "id": "v2_select_menu_comp_1773803133097_32db2z1t3",
+        "type": "advMessageSelectMenu",
+        "data": {
+            "node_options": {
+                "title": "Select Menu",
+                "description": "ComponentsV2 select_menu",
+                "v2ComponentId": "comp_1773803133097_32db2z1t3",
+                "v2ParentId": "comp_1773803132407_x9b4hbd6m"
+            },
+            "data": {
+                "type": "adv_select_menu",
+                "menu_type": "basic",
+                "multiselect": false,
+                "minOptions": "1",
+                "maxOptions": "1",
+                "basic_options": [
+                    {
+                        "label": "Option 1",
+                        "description": "Option 1",
+                        "emoji_id": "",
+                        "value": ""
+                    }
+                ],
+                "type_options": {},
+                "validated": true,
+                "customVariableName": "",
+                "v2ComponentId": "comp_1773803133097_32db2z1t3"
+            }
+        },
+        "draggable": true,
+        "position": {
+            "x": 1327.500087278075,
+            "y": 783
+        },
+        "width": 178,
+        "height": 79,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "id": "eaction_8_520a_fea5-v2_select_menu_comp_1773803133097_32db2z1t3",
+        "source": "action_8_520a_fea5",
+        "target": "v2_select_menu_comp_1773803133097_32db2z1t3",
+        "sourceHandle": "components_source",
+        "type": "step",
+        "animated": false,
+        "arrowHeadType": "arrowclosed"
+    },
+    {
+        "id": "v2_button_comp_1773803164758_k9cmt2o21",
+        "type": "advMessageButton",
+        "data": {
+            "node_options": {
+                "title": "Button",
+                "description": "ComponentsV2 button",
+                "v2ComponentId": "comp_1773803164758_k9cmt2o21",
+                "v2ParentId": "comp_1773803118108_pavivjtxo"
+            },
+            "data": {
+                "label": "Button",
+                "style": "PRIMARY",
+                "v2ComponentId": "comp_1773803164758_k9cmt2o21",
+                "validated": true
+            }
+        },
+        "draggable": true,
+        "position": {
+            "x": 1555.500366225348,
+            "y": 783
+        },
+        "width": 117,
+        "height": 79,
+        "selected": false,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "id": "eaction_8_520a_fea5-v2_button_comp_1773803164758_k9cmt2o21",
+        "source": "action_8_520a_fea5",
+        "target": "v2_button_comp_1773803164758_k9cmt2o21",
+        "sourceHandle": "components_source",
+        "type": "step",
+        "animated": false,
+        "arrowHeadType": "arrowclosed"
+    },
+    {
+        "id": "v2_button_comp_1773803239596_rgzki8qpk",
+        "type": "advMessageButton",
+        "data": {
+            "node_options": {
+                "title": "Button",
+                "description": "ComponentsV2 button",
+                "v2ComponentId": "comp_1773803239596_rgzki8qpk",
+                "v2ParentId": "comp_1773803110557_nq7i8mfaw"
+            },
+            "data": {
+                "label": "Button",
+                "style": "PRIMARY",
+                "v2ComponentId": "comp_1773803239596_rgzki8qpk",
+                "validated": true
+            }
+        },
+        "draggable": true,
+        "position": {
+            "x": 1722.5000064220103,
+            "y": 783
+        },
+        "width": 117,
+        "height": 79,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "id": "eaction_8_520a_fea5-v2_button_comp_1773803239596_rgzki8qpk",
+        "source": "action_8_520a_fea5",
+        "target": "v2_button_comp_1773803239596_rgzki8qpk",
+        "sourceHandle": "components_source",
+        "type": "step",
+        "animated": false,
+        "arrowHeadType": "arrowclosed"
+    },
+    {
+        "id": "action_33_508d_861e",
+        "type": "action",
+        "data": {
+            "node_options": {
+                "title": "Send or Edit a Message",
+                "description": "Send or edit a message with optional buttons and select menus.",
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "reply",
+                    "icon": [
+                        512,
+                        512,
+                        [],
+                        "f3e5",
+                        "M8.309 189.836L184.313 37.851C199.719 24.546 224 35.347 224 56.015v80.053c160.629 1.839 288 34.032 288 186.258 0 61.441-39.581 122.309-83.333 154.132-13.653 9.931-33.111-2.533-28.077-18.631 45.344-145.012-21.507-183.51-176.59-185.742V360c0 20.7-24.3 31.453-39.687 18.164l-176.004-152c-11.071-9.562-11.086-26.753 0-36.328z"
+                    ]
+                }
+            },
+            "data": {
+                "type": "advanced_message",
+                "message": {
+                    "content": "dd",
+                    "embeds": [
+                        {
+                            "title": "",
+                            "description": "d",
+                            "author": {
+                                "name": "",
+                                "url": "",
+                                "icon_url": ""
+                            },
+                            "color": "#4f6bff",
+                            "footer": "",
+                            "footerIcon": "",
+                            "timestamp": "",
+                            "image": {
+                                "url": ""
+                            },
+                            "thumbnail": {
+                                "url": ""
+                            },
+                            "fields": [],
+                            "timestamp_variable": ""
+                        }
+                    ]
+                },
+                "messageType": "basic",
+                "components": [],
+                "componentsV2Data": null,
+                "useComponentsV2": false,
+                "target": {
+                    "reply": true
+                },
+                "validated": true,
+                "linked": true
+            }
+        },
+        "position": {
+            "x": 692.7502021213098,
+            "y": 955.5
+        },
+        "width": 516,
+        "height": 92,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "action_9_2a38_3700",
+        "sourceHandle": "action",
+        "target": "action_33_508d_861e",
+        "targetHandle": "action",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "type": "custom",
+        "id": "reactflow__edge-action_9_2a38_3700action-action_33_508d_861eaction"
+    },
+    {
+        "width": 370,
+        "height": 92,
+        "id": "action_35_b30a_4c93",
+        "type": "action",
+        "data": {
+            "node_options": {
+                "title": "Edit a Button or Select Menu",
+                "description": "Edit a button or select menu in a message",
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "edit",
+                    "icon": [
+                        576,
+                        512,
+                        [],
+                        "f044",
+                        "M402.6 83.2l90.2 90.2c3.8 3.8 3.8 10 0 13.8L274.4 405.6l-92.8 10.3c-12.4 1.4-22.9-9.1-21.5-21.5l10.3-92.8L388.8 83.2c3.8-3.8 10-3.8 13.8 0zm162-22.9l-48.8-48.8c-15.2-15.2-39.9-15.2-55.2 0l-35.4 35.4c-3.8 3.8-3.8 10 0 13.8l90.2 90.2c3.8 3.8 10 3.8 13.8 0l35.4-35.4c15.2-15.3 15.2-40 0-55.2zM384 346.2V448H64V128h229.8c3.2 0 6.2-1.3 8.5-3.5l40-40c7.6-7.6 2.2-20.5-8.5-20.5H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V306.2c0-10.7-12.9-16-20.5-8.5l-40 40c-2.2 2.3-3.5 5.3-3.5 8.5z"
+                    ]
+                }
+            },
+            "data": {
+                "type": "edit_component",
+                "edits": [
+                    {
+                        "editComponentId": "1773803265924_10245",
+                        "component_id": "adv_select_menu17_46v4zqyeh",
+                        "select_menu": {
+                            "placeholder": "",
+                            "min_values": "1",
+                            "max_values": "1",
+                            "disabled": false,
+                            "basic_options": [
+                                {
+                                    "label": "Opdtion 1",
+                                    "description": "Option 1",
+                                    "emoji_id": "",
+                                    "value": ""
+                                }
+                            ],
+                            "reset_options": false,
+                            "multiselect": false,
+                            "menu_type": "basic"
+                        }
+                    }
+                ],
+                "action_id": "action_7_0262_9b95",
+                "target": {
+                    "editId": "1773803260424_65144"
+                },
+                "validated": true,
+                "linked": true
+            },
+            "__selected": true
+        },
+        "position": {
+            "x": 765.750247374062,
+            "y": 1134.5
+        },
+        "selected": false,
+        "positionAbsolute": {
+            "x": 310.060092050083,
+            "y": 1501.723274785147
+        },
+        "dragging": true,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "action_33_508d_861e",
+        "sourceHandle": "action",
+        "target": "action_35_b30a_4c93",
+        "targetHandle": "action",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "type": "custom",
+        "id": "reactflow__edge-action_33_508d_861eaction-action_35_b30a_4c93action"
+    },
+    {
+        "id": "action_37_5918_0f40",
+        "type": "action",
+        "data": {
+            "node_options": {
+                "title": "Send a Form",
+                "description": "Send a form or modal and wait for a response",
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "table",
+                    "icon": [
+                        512,
+                        512,
+                        [],
+                        "f0ce",
+                        "M464 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zM224 416H64v-96h160v96zm0-160H64v-96h160v96zm224 160H288v-96h160v96zm0-160H288v-96h160v96z"
+                    ]
+                }
+            },
+            "data": {
+                "type": "modal",
+                "modal_id": "dff",
+                "modal_settings": {
+                    "title": "Form Titled",
+                    "components": [
+                        {
+                            "label": "Input Labeld",
+                            "variable": "d",
+                            "maxLength": "d",
+                            "minLength": "d",
+                            "placeholder": "d",
+                            "required": false,
+                            "inputStyle": "SHORT",
+                            "defaultValue": "d",
+                            "hidden": "d"
+                        }
+                    ]
+                },
+                "ephemeral": false,
+                "validated": true,
+                "linked": true
+            }
+        },
+        "position": {
+            "x": 752.7506181441464,
+            "y": 1313.5
+        },
+        "width": 396,
+        "height": 92,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "action_35_b30a_4c93",
+        "sourceHandle": "action",
+        "target": "action_37_5918_0f40",
+        "targetHandle": "action",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "type": "custom",
+        "id": "reactflow__edge-action_35_b30a_4c93action-action_37_5918_0f40action"
+    },
+    {
+        "id": "action_39_b01f_6e82",
+        "type": "action",
+        "data": {
+            "node_options": {
+                "title": "Delete a Message",
+                "description": "Delete a message or reply",
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "trash",
+                    "icon": [
+                        448,
+                        512,
+                        [],
+                        "f1f8",
+                        "M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"
+                    ]
+                }
+            },
+            "data": {
+                "type": "delete_message",
+                "specific": false,
+                "channel_id": "",
+                "message_id": "",
+                "id": "1773803260424_65144",
+                "action_id": "action_7_0262_9b95",
+                "validated": true,
+                "linked": true
+            }
+        },
+        "position": {
+            "x": 818.7508346924143,
+            "y": 1492.5
+        },
+        "width": 264,
+        "height": 92,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "action_37_5918_0f40",
+        "sourceHandle": "action",
+        "target": "action_39_b01f_6e82",
+        "targetHandle": "action",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "type": "custom",
+        "id": "reactflow__edge-action_37_5918_0f40action-action_39_b01f_6e82action"
+    },
+    {
+        "id": "action_41_206a_aaab",
+        "type": "action",
+        "data": {
+            "node_options": {
+                "title": "Send an API Request",
+                "description": "Send a HTTP request to an external API",
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "code",
+                    "icon": [
+                        640,
+                        512,
+                        [],
+                        "f121",
+                        "M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"
+                    ]
+                }
+            },
+            "data": {
+                "type": "api_action",
+                "ephemeral": false,
+                "name": "d",
+                "request_options": {
+                    "method": "GET",
+                    "url": "tth",
+                    "params": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "body": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "options": {
+                        "excludeEmptyFields": true,
+                        "replaceParams": true,
+                        "replaceURL": true,
+                        "replaceHeaders": true,
+                        "replaceBody": true,
+                        "sanitizeResponse": false
+                    }
+                },
+                "validated": true,
+                "linked": true
+            }
+        },
+        "position": {
+            "x": 776.25050537094,
+            "y": 1671.5
+        },
+        "width": 349,
+        "height": 92,
+        "selected": false,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "action_39_b01f_6e82",
+        "sourceHandle": "action",
+        "target": "action_41_206a_aaab",
+        "targetHandle": "action",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "type": "custom",
+        "id": "reactflow__edge-action_39_b01f_6e82action-action_41_206a_aaabaction"
+    },
+    {
+        "width": 482,
+        "height": 92,
+        "id": "action_43_b893_9db5",
+        "type": "action",
+        "data": {
+            "node_options": {
+                "title": "Run a Loop",
+                "description": "Loop through actions and conditions a set amount of times",
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "hourglass-end",
+                    "icon": [
+                        384,
+                        512,
+                        [],
+                        "f253",
+                        "M360 64c13.255 0 24-10.745 24-24V24c0-13.255-10.745-24-24-24H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24 0 90.965 51.016 167.734 120.842 192C75.016 280.266 24 357.035 24 448c-13.255 0-24 10.745-24 24v16c0 13.255 10.745 24 24 24h336c13.255 0 24-10.745 24-24v-16c0-13.255-10.745-24-24-24 0-90.965-51.016-167.734-120.842-192C308.984 231.734 360 154.965 360 64zM192 208c-57.787 0-104-66.518-104-144h208c0 77.945-46.51 144-104 144z"
+                    ]
+                }
+            },
+            "data": {
+                "type": "loop",
+                "count": 5,
+                "timeout": 100,
+                "validated": true,
+                "linked": true
+            },
+            "__selected": false
+        },
+        "position": {
+            "x": 709.7501120547731,
+            "y": 1850.5
+        },
+        "selected": false,
+        "positionAbsolute": {
+            "x": 923.92134553287,
+            "y": 1630.3880622691179
+        },
+        "dragging": true,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "id": "loop_actions44_a0b3_2b7f",
+        "type": "loopChild",
+        "data": {
+            "type": "loop_actions"
+        },
+        "draggable": true,
+        "position": {
+            "x": 746.7508325910316,
+            "y": 2029
+        },
+        "width": 408,
+        "height": 93,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "action_43_b893_9db5",
+        "target": "loop_actions44_a0b3_2b7f",
+        "type": "step",
+        "sourceHandle": "loop_actions",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "id": "reactflow__edge-action_43_b893_9db5loop_actions-loop_actions44_a0b3_2b7f"
+    },
+    {
+        "id": "loop_after46_c6af_141c",
+        "type": "loopChild",
+        "data": {
+            "type": "loop_after"
+        },
+        "draggable": true,
+        "position": {
+            "x": 1204.750463630763,
+            "y": 2029
+        },
+        "width": 245,
+        "height": 93,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "action_43_b893_9db5",
+        "target": "loop_after46_c6af_141c",
+        "type": "step",
+        "sourceHandle": "loop_after",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "id": "reactflow__edge-action_43_b893_9db5loop_after-loop_after46_c6af_141c"
+    },
+    {
+        "source": "action_41_206a_aaab",
+        "sourceHandle": "action",
+        "target": "action_43_b893_9db5",
+        "targetHandle": "action",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "type": "custom",
+        "id": "reactflow__edge-action_41_206a_aaabaction-action_43_b893_9db5action"
+    },
+    {
+        "id": "action_49_db9c_c761",
+        "type": "action",
+        "data": {
+            "node_options": {
+                "title": "Wait before running another action",
+                "description": "Wait before executing another action",
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "hourglass",
+                    "icon": [
+                        384,
+                        512,
+                        [],
+                        "f254",
+                        "M360 64c13.255 0 24-10.745 24-24V24c0-13.255-10.745-24-24-24H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24 0 90.965 51.016 167.734 120.842 192C75.016 280.266 24 357.035 24 448c-13.255 0-24 10.745-24 24v16c0 13.255 10.745 24 24 24h336c13.255 0 24-10.745 24-24v-16c0-13.255-10.745-24-24-24 0-90.965-51.016-167.734-120.842-192C308.984 231.734 360 154.965 360 64z"
+                    ]
+                }
+            },
+            "data": {
+                "type": "wait_action",
+                "seconds": 5,
+                "validated": true,
+                "linked": true
+            }
+        },
+        "position": {
+            "x": 1135.7504326626265,
+            "y": 2208.5
+        },
+        "width": 383,
+        "height": 92,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "loop_after46_c6af_141c",
+        "sourceHandle": "action",
+        "target": "action_49_db9c_c761",
+        "targetHandle": "action",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "type": "custom",
+        "id": "reactflow__edge-loop_after46_c6af_141caction-action_49_db9c_c761action"
+    },
+    {
+        "id": "action_51_631c_a472",
+        "type": "action",
+        "data": {
+            "node_options": {
+                "title": "Manipulate some text",
+                "description": "Manipulate and run functions on provided text",
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "text-height",
+                    "icon": [
+                        576,
+                        512,
+                        [],
+                        "f034",
+                        "M304 32H16A16 16 0 0 0 0 48v96a16 16 0 0 0 16 16h32a16 16 0 0 0 16-16v-32h56v304H80a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h160a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16h-40V112h56v32a16 16 0 0 0 16 16h32a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zm256 336h-48V144h48c14.31 0 21.33-17.31 11.31-27.31l-80-80a16 16 0 0 0-22.62 0l-80 80C379.36 126 384.36 144 400 144h48v224h-48c-14.31 0-21.32 17.31-11.31 27.31l80 80a16 16 0 0 0 22.62 0l80-80C580.64 386 575.64 368 560 368z"
+                    ]
+                }
+            },
+            "data": {
+                "type": "string_manipulation",
+                "string": "ds",
+                "variable": "s",
+                "operation": {
+                    "type": "length"
+                },
+                "validated": true,
+                "linked": true
+            }
+        },
+        "position": {
+            "x": 1128.2503758166692,
+            "y": 2387.5
+        },
+        "width": 398,
+        "height": 92,
+        "selected": false,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "action_49_db9c_c761",
+        "sourceHandle": "action",
+        "target": "action_51_631c_a472",
+        "targetHandle": "action",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "type": "custom",
+        "id": "reactflow__edge-action_49_db9c_c761action-action_51_631c_a472action"
+    },
+    {
+        "id": "action_53_eb51_a9a3",
+        "type": "action",
+        "data": {
+            "node_options": {
+                "title": "Send an error log message",
+                "description": "Trigger an error message",
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "exclamation",
+                    "icon": [
+                        192,
+                        512,
+                        [],
+                        "f12a",
+                        "M176 432c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80zM25.26 25.199l13.6 272C39.499 309.972 50.041 320 62.83 320h66.34c12.789 0 23.331-10.028 23.97-22.801l13.6-272C167.425 11.49 156.496 0 142.77 0H49.23C35.504 0 24.575 11.49 25.26 25.199z"
+                    ]
+                }
+            },
+            "data": {
+                "type": "send_error_message",
+                "module": "d",
+                "action": "d",
+                "reason": "d",
+                "validated": true,
+                "linked": true
+            }
+        },
+        "position": {
+            "x": 1170.2509476449484,
+            "y": 2566.5
+        },
+        "width": 314,
+        "height": 92,
+        "selected": false,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "action_51_631c_a472",
+        "sourceHandle": "action",
+        "target": "action_53_eb51_a9a3",
+        "targetHandle": "action",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "type": "custom",
+        "id": "reactflow__edge-action_51_631c_a472action-action_53_eb51_a9a3action"
+    },
+    {
+        "id": "action_55_b615_de83",
+        "type": "action",
+        "data": {
+            "node_options": {
+                "title": "Set a unique variable",
+                "description": "Set a unique variable for every execution of this command or event.",
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "fingerprint",
+                    "icon": [
+                        512,
+                        512,
+                        [],
+                        "f577",
+                        "M256.12 245.96c-13.25 0-24 10.74-24 24 1.14 72.25-8.14 141.9-27.7 211.55-2.73 9.72 2.15 30.49 23.12 30.49 10.48 0 20.11-6.92 23.09-17.52 13.53-47.91 31.04-125.41 29.48-224.52.01-13.25-10.73-24-23.99-24zm-.86-81.73C194 164.16 151.25 211.3 152.1 265.32c.75 47.94-3.75 95.91-13.37 142.55-2.69 12.98 5.67 25.69 18.64 28.36 13.05 2.67 25.67-5.66 28.36-18.64 10.34-50.09 15.17-101.58 14.37-153.02-.41-25.95 19.92-52.49 54.45-52.34 31.31.47 57.15 25.34 57.62 55.47.77 48.05-2.81 96.33-10.61 143.55-2.17 13.06 6.69 25.42 19.76 27.58 19.97 3.33 26.81-15.1 27.58-19.77 8.28-50.03 12.06-101.21 11.27-152.11-.88-55.8-47.94-101.88-104.91-102.72zm-110.69-19.78c-10.3-8.34-25.37-6.8-33.76 3.48-25.62 31.5-39.39 71.28-38.75 112 .59 37.58-2.47 75.27-9.11 112.05-2.34 13.05 6.31 25.53 19.36 27.89 20.11 3.5 27.07-14.81 27.89-19.36 7.19-39.84 10.5-80.66 9.86-121.33-.47-29.88 9.2-57.88 28-80.97 8.35-10.28 6.79-25.39-3.49-33.76zm109.47-62.33c-15.41-.41-30.87 1.44-45.78 4.97-12.89 3.06-20.87 15.98-17.83 28.89 3.06 12.89 16 20.83 28.89 17.83 11.05-2.61 22.47-3.77 34-3.69 75.43 1.13 137.73 61.5 138.88 134.58.59 37.88-1.28 76.11-5.58 113.63-1.5 13.17 7.95 25.08 21.11 26.58 16.72 1.95 25.51-11.88 26.58-21.11a929.06 929.06 0 0 0 5.89-119.85c-1.56-98.75-85.07-180.33-186.16-181.83zm252.07 121.45c-2.86-12.92-15.51-21.2-28.61-18.27-12.94 2.86-21.12 15.66-18.26 28.61 4.71 21.41 4.91 37.41 4.7 61.6-.11 13.27 10.55 24.09 23.8 24.2h.2c13.17 0 23.89-10.61 24-23.8.18-22.18.4-44.11-5.83-72.34zm-40.12-90.72C417.29 43.46 337.6 1.29 252.81.02 183.02-.82 118.47 24.91 70.46 72.94 24.09 119.37-.9 181.04.14 246.65l-.12 21.47c-.39 13.25 10.03 24.31 23.28 24.69.23.02.48.02.72.02 12.92 0 23.59-10.3 23.97-23.3l.16-23.64c-.83-52.5 19.16-101.86 56.28-139 38.76-38.8 91.34-59.67 147.68-58.86 69.45 1.03 134.73 35.56 174.62 92.39 7.61 10.86 22.56 13.45 33.42 5.86 10.84-7.62 13.46-22.59 5.84-33.43z"
+                    ]
+                }
+            },
+            "data": {
+                "type": "set_unique_variable",
+                "reference": "d",
+                "value": "d",
+                "validated": true,
+                "linked": true
+            }
+        },
+        "position": {
+            "x": 1058.2508399765736,
+            "y": 2745.5
+        },
+        "width": 538,
+        "height": 92,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "action_53_eb51_a9a3",
+        "sourceHandle": "action",
+        "target": "action_55_b615_de83",
+        "targetHandle": "action",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "type": "custom",
+        "id": "reactflow__edge-action_53_eb51_a9a3action-action_55_b615_de83action"
+    },
+    {
+        "id": "$else_57_88f1_23c7",
+        "type": "conditionChild",
+        "data": {
+            "node_options": {
+                "type": "comparison"
+            },
+            "data": {
+                "type": "else"
+            }
+        },
+        "draggable": true,
+        "position": {
+            "x": 1263.7503905770186,
+            "y": 3103.5
+        },
+        "width": 127,
+        "height": 92,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "condition_57_4348_1fc2",
+        "target": "$else_57_88f1_23c7",
+        "type": "step",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "id": "reactflow__edge-condition_57_4348_1fc2-$else_57_88f1_23c7"
+    },
+    {
+        "id": "condition_57_4348_1fc2",
+        "type": "condition",
+        "data": {
+            "node_options": {
+                "title": "Comparison Condition",
+                "description": "Run actions based on the difference between two values. ",
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "greater-than-equal",
+                    "icon": [
+                        448,
+                        512,
+                        [],
+                        "f532",
+                        "M55.22 107.69l175.56 68.09-175.44 68.05c-18.39 6.03-27.88 24.39-21.2 41l12.09 30.08c6.68 16.61 26.99 25.19 45.38 19.15L393.02 214.2c13.77-4.52 22.98-16.61 22.98-30.17v-15.96c0-13.56-9.21-25.65-22.98-30.17L91.3 17.92c-18.29-6-38.51 2.53-45.15 19.06L34.12 66.9c-6.64 16.53 2.81 34.79 21.1 40.79zM424 400H24c-13.25 0-24 10.74-24 24v48c0 13.25 10.75 24 24 24h400c13.25 0 24-10.75 24-24v-48c0-13.26-10.75-24-24-24z"
+                    ]
+                }
+            },
+            "data": {
+                "type": "condition",
+                "condition_type": "comparison",
+                "base_value": "10",
+                "multiple": false,
+                "target": {
+                    "self": true
+                },
+                "validated": true,
+                "linked": true
+            }
+        },
+        "position": {
+            "x": 1093.2507511161664,
+            "y": 2924.5
+        },
+        "width": 468,
+        "height": 92,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "action_55_b615_de83",
+        "sourceHandle": "action",
+        "target": "condition_57_4348_1fc2",
+        "targetHandle": "action",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "type": "custom",
+        "id": "reactflow__edge-action_55_b615_de83action-condition_57_4348_1fc2action"
+    },
+    {
+        "id": "$else_61_0faf_bc3b",
+        "type": "conditionChild",
+        "data": {
+            "node_options": {
+                "type": "comparison"
+            },
+            "data": {
+                "type": "else"
+            }
+        },
+        "draggable": true,
+        "position": {
+            "x": 1263.750945067217,
+            "y": 3461.5
+        },
+        "width": 127,
+        "height": 92,
+        "selected": false,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "condition_61_a099_3fde",
+        "target": "$else_61_0faf_bc3b",
+        "type": "step",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "id": "reactflow__edge-condition_61_a099_3fde-$else_61_0faf_bc3b"
+    },
+    {
+        "id": "condition_61_a099_3fde",
+        "type": "condition",
+        "data": {
+            "node_options": {
+                "title": "Comparison Condition",
+                "description": "Run actions based on the difference between two values. ",
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "greater-than-equal",
+                    "icon": [
+                        448,
+                        512,
+                        [],
+                        "f532",
+                        "M55.22 107.69l175.56 68.09-175.44 68.05c-18.39 6.03-27.88 24.39-21.2 41l12.09 30.08c6.68 16.61 26.99 25.19 45.38 19.15L393.02 214.2c13.77-4.52 22.98-16.61 22.98-30.17v-15.96c0-13.56-9.21-25.65-22.98-30.17L91.3 17.92c-18.29-6-38.51 2.53-45.15 19.06L34.12 66.9c-6.64 16.53 2.81 34.79 21.1 40.79zM424 400H24c-13.25 0-24 10.74-24 24v48c0 13.25 10.75 24 24 24h400c13.25 0 24-10.75 24-24v-48c0-13.26-10.75-24-24-24z"
+                    ]
+                }
+            },
+            "data": {
+                "type": "condition",
+                "condition_type": "comparison",
+                "base_value": "10",
+                "multiple": false,
+                "target": {
+                    "self": true
+                },
+                "validated": true,
+                "linked": true
+            }
+        },
+        "position": {
+            "x": 1093.250263610252,
+            "y": 3282.5
+        },
+        "width": 468,
+        "height": 92,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "$else_57_88f1_23c7",
+        "sourceHandle": "action",
+        "target": "condition_61_a099_3fde",
+        "targetHandle": "action",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "type": "custom",
+        "id": "reactflow__edge-$else_57_88f1_23c7action-condition_61_a099_3fdeaction"
+    },
+    {
+        "id": "$else_65_5a98_c5ab",
+        "type": "conditionChild",
+        "data": {
+            "node_options": {
+                "type": "comparison"
+            },
+            "data": {
+                "type": "else"
+            }
+        },
+        "draggable": true,
+        "position": {
+            "x": 1263.7507692220297,
+            "y": 3819.5
+        },
+        "width": 127,
+        "height": 92,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "condition_65_5ade_13dd",
+        "target": "$else_65_5a98_c5ab",
+        "type": "step",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "id": "reactflow__edge-condition_65_5ade_13dd-$else_65_5a98_c5ab"
+    },
+    {
+        "id": "condition_65_5ade_13dd",
+        "type": "condition",
+        "data": {
+            "node_options": {
+                "title": "Comparison Condition",
+                "description": "Run actions based on the difference between two values. ",
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "greater-than-equal",
+                    "icon": [
+                        448,
+                        512,
+                        [],
+                        "f532",
+                        "M55.22 107.69l175.56 68.09-175.44 68.05c-18.39 6.03-27.88 24.39-21.2 41l12.09 30.08c6.68 16.61 26.99 25.19 45.38 19.15L393.02 214.2c13.77-4.52 22.98-16.61 22.98-30.17v-15.96c0-13.56-9.21-25.65-22.98-30.17L91.3 17.92c-18.29-6-38.51 2.53-45.15 19.06L34.12 66.9c-6.64 16.53 2.81 34.79 21.1 40.79zM424 400H24c-13.25 0-24 10.74-24 24v48c0 13.25 10.75 24 24 24h400c13.25 0 24-10.75 24-24v-48c0-13.26-10.75-24-24-24z"
+                    ]
+                }
+            },
+            "data": {
+                "type": "condition",
+                "condition_type": "comparison",
+                "base_value": "10",
+                "multiple": true,
+                "target": {
+                    "self": true
+                },
+                "validated": true,
+                "linked": true
+            }
+        },
+        "position": {
+            "x": 1093.2503223893275,
+            "y": 3640.5
+        },
+        "width": 468,
+        "height": 92,
+        "selected": false,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "$else_61_0faf_bc3b",
+        "sourceHandle": "action",
+        "target": "condition_65_5ade_13dd",
+        "targetHandle": "action",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "type": "custom",
+        "id": "reactflow__edge-$else_61_0faf_bc3baction-condition_65_5ade_13ddaction"
+    },
+    {
+        "id": "$else_69_1e88_2539",
+        "type": "conditionChild",
+        "data": {
+            "node_options": {
+                "type": "comparison"
+            },
+            "data": {
+                "type": "else"
+            }
+        },
+        "draggable": true,
+        "position": {
+            "x": 1263.750394823212,
+            "y": 4177.5
+        },
+        "width": 127,
+        "height": 92,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "condition_69_3e92_4511",
+        "target": "$else_69_1e88_2539",
+        "type": "step",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "id": "reactflow__edge-condition_69_3e92_4511-$else_69_1e88_2539"
+    },
+    {
+        "id": "condition_69_3e92_4511",
+        "type": "condition",
+        "data": {
+            "node_options": {
+                "title": "Comparison Condition",
+                "description": "Run actions based on the difference between two values. ",
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "greater-than-equal",
+                    "icon": [
+                        448,
+                        512,
+                        [],
+                        "f532",
+                        "M55.22 107.69l175.56 68.09-175.44 68.05c-18.39 6.03-27.88 24.39-21.2 41l12.09 30.08c6.68 16.61 26.99 25.19 45.38 19.15L393.02 214.2c13.77-4.52 22.98-16.61 22.98-30.17v-15.96c0-13.56-9.21-25.65-22.98-30.17L91.3 17.92c-18.29-6-38.51 2.53-45.15 19.06L34.12 66.9c-6.64 16.53 2.81 34.79 21.1 40.79zM424 400H24c-13.25 0-24 10.74-24 24v48c0 13.25 10.75 24 24 24h400c13.25 0 24-10.75 24-24v-48c0-13.26-10.75-24-24-24z"
+                    ]
+                }
+            },
+            "data": {
+                "type": "condition",
+                "condition_type": "comparison",
+                "base_value": "10",
+                "multiple": false,
+                "target": {
+                    "self": true
+                },
+                "validated": true,
+                "linked": true
+            }
+        },
+        "position": {
+            "x": 1093.2501209656025,
+            "y": 3998.5
+        },
+        "width": 468,
+        "height": 92,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "$else_65_5a98_c5ab",
+        "sourceHandle": "action",
+        "target": "condition_69_3e92_4511",
+        "targetHandle": "action",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "type": "custom",
+        "id": "reactflow__edge-$else_65_5a98_c5abaction-condition_69_3e92_4511action"
+    },
+    {
+        "id": "$else_73_9697_b437",
+        "type": "conditionChild",
+        "data": {
+            "node_options": {
+                "type": "comparison"
+            },
+            "data": {
+                "type": "else"
+            }
+        },
+        "draggable": true,
+        "position": {
+            "x": 1263.7505651125791,
+            "y": 4535.5
+        },
+        "width": 127,
+        "height": 92,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "condition_73_d66b_fe69",
+        "target": "$else_73_9697_b437",
+        "type": "step",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "id": "reactflow__edge-condition_73_d66b_fe69-$else_73_9697_b437"
+    },
+    {
+        "id": "condition_73_d66b_fe69",
+        "type": "condition",
+        "data": {
+            "node_options": {
+                "title": "Comparison Condition",
+                "description": "Run actions based on the difference between two values. ",
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "greater-than-equal",
+                    "icon": [
+                        448,
+                        512,
+                        [],
+                        "f532",
+                        "M55.22 107.69l175.56 68.09-175.44 68.05c-18.39 6.03-27.88 24.39-21.2 41l12.09 30.08c6.68 16.61 26.99 25.19 45.38 19.15L393.02 214.2c13.77-4.52 22.98-16.61 22.98-30.17v-15.96c0-13.56-9.21-25.65-22.98-30.17L91.3 17.92c-18.29-6-38.51 2.53-45.15 19.06L34.12 66.9c-6.64 16.53 2.81 34.79 21.1 40.79zM424 400H24c-13.25 0-24 10.74-24 24v48c0 13.25 10.75 24 24 24h400c13.25 0 24-10.75 24-24v-48c0-13.26-10.75-24-24-24z"
+                    ]
+                }
+            },
+            "data": {
+                "type": "condition",
+                "condition_type": "comparison",
+                "base_value": "10",
+                "multiple": false,
+                "target": {
+                    "self": true
+                },
+                "validated": true,
+                "linked": true
+            }
+        },
+        "position": {
+            "x": 1093.250571470752,
+            "y": 4356.5
+        },
+        "width": 468,
+        "height": 92,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "$else_69_1e88_2539",
+        "sourceHandle": "action",
+        "target": "condition_73_d66b_fe69",
+        "targetHandle": "action",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "type": "custom",
+        "id": "reactflow__edge-$else_69_1e88_2539action-condition_73_d66b_fe69action"
+    },
+    {
+        "id": "$else_77_9c0e_88a1",
+        "type": "conditionChild",
+        "data": {
+            "node_options": {
+                "type": "comparison"
+            },
+            "data": {
+                "type": "else"
+            }
+        },
+        "draggable": true,
+        "position": {
+            "x": 1263.7506069780038,
+            "y": 4893.5
+        },
+        "width": 127,
+        "height": 92,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "condition_77_779a_71eb",
+        "target": "$else_77_9c0e_88a1",
+        "type": "step",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "id": "reactflow__edge-condition_77_779a_71eb-$else_77_9c0e_88a1"
+    },
+    {
+        "id": "condition_77_779a_71eb",
+        "type": "condition",
+        "data": {
+            "node_options": {
+                "title": "Comparison Condition",
+                "description": "Run actions based on the difference between two values. ",
+                "icon": {
+                    "prefix": "fas",
+                    "iconName": "greater-than-equal",
+                    "icon": [
+                        448,
+                        512,
+                        [],
+                        "f532",
+                        "M55.22 107.69l175.56 68.09-175.44 68.05c-18.39 6.03-27.88 24.39-21.2 41l12.09 30.08c6.68 16.61 26.99 25.19 45.38 19.15L393.02 214.2c13.77-4.52 22.98-16.61 22.98-30.17v-15.96c0-13.56-9.21-25.65-22.98-30.17L91.3 17.92c-18.29-6-38.51 2.53-45.15 19.06L34.12 66.9c-6.64 16.53 2.81 34.79 21.1 40.79zM424 400H24c-13.25 0-24 10.74-24 24v48c0 13.25 10.75 24 24 24h400c13.25 0 24-10.75 24-24v-48c0-13.26-10.75-24-24-24z"
+                    ]
+                }
+            },
+            "data": {
+                "type": "condition",
+                "condition_type": "comparison",
+                "base_value": "10",
+                "multiple": false,
+                "target": {
+                    "self": true
+                },
+                "validated": true,
+                "linked": true
+            }
+        },
+        "position": {
+            "x": 1093.2501606247574,
+            "y": 4714.5
+        },
+        "width": 468,
+        "height": 92,
+        "targetPosition": "top",
+        "sourcePosition": "bottom"
+    },
+    {
+        "source": "$else_73_9697_b437",
+        "sourceHandle": "action",
+        "target": "condition_77_779a_71eb",
+        "targetHandle": "action",
+        "animated": false,
+        "arrowHeadType": "arrowclosed",
+        "type": "custom",
+        "id": "reactflow__edge-$else_73_9697_b437action-condition_77_779a_71ebaction"
+    }
+]
